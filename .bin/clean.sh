@@ -1,5 +1,14 @@
 #!/bin/bash
+set -e # Exit with nonzero exit code if anything fails
+
 echo "Starting log cleaner"
+
+export REPO_NAME='reports'
+export REPO_ADDRESS="https://github.com/wirecard/${REPO_NAME}.git"
+
+git clone ${REPO_ADDRESS}
+cd ${REPO_NAME}
+
 TODAY=$(date +%Y-%m-%d)
 
 TWO_WEEKS_AGO=$(date -d 'now - 2 week' +%Y-%m-%d)
@@ -14,3 +23,8 @@ for dir1 in paymentSDK-php/*; do
         fi
     done
 done
+
+git add ${PROJECT_FOLDER}/${GATEWAY}/${TODAY}/*
+git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
+
+git push -q https://${GITHUB_TOKEN}@github.com/wirecard/${REPO_NAME}.git master
