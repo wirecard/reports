@@ -4,4 +4,5 @@ sudo: false
 jobs:
   include:
     - stage: Clean up
+      if: type = cron
       script: bash .bin/clean.sh
