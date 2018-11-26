@@ -1,44 +1,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-<title>Send PARes to TermUrl</title>
+    <meta charset="UTF-8" />
+    <title>Wirecard AG - payment SDK for PHP Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <style>
+        #overrides h1 {
+            margin: 0px;
+            font-size: 2vw;
+        }
+
+        #overrides h2 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dedede;
+        }
+
+        #overrides h3 {
+            min-height: 52.8px;
+        }
+
+        #overrides img {
+            height: 40px;
+            margin: 0px 20px;
+        }
+
+        #overrides .align-baseline {
+            position: relative;
+        }
+
+        #overrides .bottom-align-text {
+            position: absolute;
+            bottom: -0.35vw;
+            left: 235px;
+        }
+
+        #overrides .page-header {
+            background-color: #002846;
+            margin-top: 0px;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        #overrides .list-group-item {
+            border-radius: 0px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        #overrides .list-group-item:hover {
+            color: #ff2014;
+            background-color: #F7F7F8;
+        }
+
+        #overrides .btn-primary {
+            background-color: #002846;
+        }
+
+        #overrides .btn-primary:hover {
+            background-color: #414B56;
+        }
+
+    </style>
 </head>
-<body>
-<form name="postPAResToMPIForm" action="http://34bc11d6.ngrok.io/examples/CreditCard/return.php?status=success" method="post">
-<input type="hidden" name="csrf" value="null" />
-<table border="1" cellpadding="10" cellspacing="0" align="center">
-<tbody><tr>
-<td align="center">
-<table border="0" cellpadding="5" cellspacing="0">
-
-    <tbody><tr> 
-        <th colspan="2" align="center"> 
-            <font size="+2">
-                Wirecard MPI Simulator
-            </font>
-        </th>
-    </tr>
-
-    <tr> 
-        <th align="center" colspan="2">
-            <font color="red">
-                Click Submit to proceed the transaction. 
-            </font>
-        </th>   
-    </tr>
-
-    <tr>
-        <td align="center" colspan="2">
-            <input type="submit" value="Submit" />
-            <input type="hidden" name="PaRes" value="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" />
-            <input type="hidden" name="MD" value="eyJlbnJvbGxtZW50LWNoZWNrLXRyYW5zYWN0aW9uLWlkIjoiMDc1ZDc1YTYtMDM4MC00Yjg2LWJjZjQtODYxNjE2ZDIxNjBiIiwib3BlcmF0aW9uLXR5cGUiOiJwdXJjaGFzZSJ9" />
-
-        </td>
-    </tr>
-
-</tbody></table>
-</td>
-</tr>
-</tbody></table>
-</form>
-
-
+<body id="overrides">
+<div class="container">
+    <div class="page-header">
+        <div class="row align-baseline">
+            <div class="col-sm-3">
+                <a href="../index.html"><img src="https://raw.githubusercontent.com/wirecard/paymentSDK-php/master/examples/src/img/wirecard_logo.png" alt="wirecard" /></a>
+            </div>
+            <div class="col-sm-9 bottom-align-text">
+                <h1>Payment SDK for PHP Examples</h1>
+            </div>
+        </div>
+    </div>Response validation status: true <br />Error with code 500.1087 and message "The connection to the provider was never made and timed out.  Please try again later." occurred.<br />Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authenticated." occurred.<br /></div>
 </body></html>
