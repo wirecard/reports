@@ -20,4 +20,4 @@ done
 git add -A
 git diff-index --quiet HEAD || git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
 
-git push -q https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master
+git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master
