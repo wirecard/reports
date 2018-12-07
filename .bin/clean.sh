@@ -18,6 +18,9 @@ for dir1 in paymentSDK-php/*; do
 done
 
 git add -A
+git status
 git diff-index --quiet HEAD || git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
+git status
 
 git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git tatsta-patch-1
+git status
