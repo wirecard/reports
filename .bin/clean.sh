@@ -17,13 +17,13 @@ for dir1 in paymentSDK-php/*; do
     done
 done
 echo "Before add"
-git status
+#git status
 git add -A
-echo "After add"
-git status
-git diff-index  HEAD 
-git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
-echo "After commit"
+#echo "After add"
+#git status
+#git diff-index  HEAD 
+git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}" | true
+#echo "After commit"
 git status
 
 git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git tatsta-patch-1
