@@ -21,7 +21,8 @@ git status
 git add -A
 echo "After add"
 git status
-git diff-index --quiet HEAD || git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
+git diff-index --quiet HEAD 
+git commit -m "Clean up old report files. Travis build: ${TRAVIS_BUILD_WEB_URL}"
 echo "After commit"
 git status
 
