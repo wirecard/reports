@@ -1,7 +1,13 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
+export REPO_NAME='reports'
+export REPO_LINK="https://github.com/wirecard/${REPO_NAME}"
+export REPO_ADDRESS="${REPO_LINK}.git"
 
 echo "Starting log cleaner"
+git clone ${REPO_ADDRESS}
+
+cd ${REPO_NAME}
 
 TODAY=$(date +%Y-%m-%d)
 TWO_WEEKS_AGO=$(date -d 'now - 2 week' +%Y-%m-%d)
