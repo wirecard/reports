@@ -12,13 +12,15 @@ git clone ${REPO_ADDRESS}
 cd ${REPO_NAME}
 
 LAST_REPORT_DATE=''
-for dir1 in paymentSDK-php/*; do
+for dir1 in $(pwd)/*; do
     for dir2 in $dir1/*; do
-        LAST_REPORT_DATE=$(basename -- ${dir2})
-        if [ "${LAST_REPORT_DATE}" == "${TWO_WEEKS_AGO}" ]; then
-            echo "Removing directory ${LAST_REPORT_DATE}"
-            rm -rf $dir2
-        fi
+        for dir3 in $dir2/*; do
+            LAST_REPORT_DATE=$(basename -- ${dir3})
+            if [ "${LAST_REPORT_DATE}" == "${TWO_WEEKS_AGO}" ]; then
+                echo "Removing directory ${LAST_REPORT_DATE}"
+                rm -rf $dir3
+            fi
+        done
     done
 done
 
