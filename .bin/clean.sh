@@ -8,6 +8,7 @@ echo "Starting log cleaner"
 git clone ${REPO_ADDRESS}
 
 cd ${REPO_NAME}
+git checkout tatsta-patch-1
 
 TODAY=$(date +%Y-%m-%d)
 TWO_WEEKS_AGO=$(date -d 'now - 2 week' +%Y-%m-%d)
