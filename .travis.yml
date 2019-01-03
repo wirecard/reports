@@ -8,6 +8,7 @@ jobs:
       install: 
         - python --version
         - which pip 
+        - pip install requests[security]
         - pip install junitparser
       script: python3.6.3 .bin/process.py
     - stage: Clean up
