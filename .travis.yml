@@ -5,8 +5,8 @@ jobs:
   include:
     - stage: Update test results
       if: type != cron
-      install: pip3.6 install junitparser
-      script: python3.6 .bin/process.py
+      install: pip3.6.3 install junitparser
+      script: python3.6.3 .bin/process.py
     - stage: Clean up
       if: type = cron
       script: bash .bin/clean.sh
