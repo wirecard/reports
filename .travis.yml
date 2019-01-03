@@ -6,11 +6,9 @@ jobs:
     - stage: Update test results
       if: type != cron
       install: 
-        - python --version
-        - which pip 
         - pip install requests[security]
         - pip install --user junitparser
-      script: python3.6.3 .bin/process.py
+      script: python .bin/process.py
     - stage: Clean up
       if: type = cron
       script: bash .bin/clean.sh
