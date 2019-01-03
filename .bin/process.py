@@ -48,7 +48,6 @@ def process_results_file(gateway, result_file):
 
 def process_results_files():
     test_results = {}
-    os.chdir('..')
     root_dir = os.getcwd()
     for dirs in os.listdir(root_dir):
         if dirs in PROJECTS:
