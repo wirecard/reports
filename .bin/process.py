@@ -96,21 +96,9 @@ def create_report_file():
                         result_file.writelines("| {}  | {} | {} |\n".format(project_name, test_name, test_result))
 
 
-# push updated README to the repository
-def push_to_upstream():
-    subprocess.call('git config --global user.name "Travis CI"')
-    subprocess.call('git config --global user.email "wirecard@travis-ci.org"')
-    subprocess.call('git add docs/*')
-    subprocess.call('git commit -m "[skip ci] Update docs with latest test results"')
-    subprocess.call('git push https://{}@github.com/{} HEAD:master'.format(os.environ["GITHUB_TOKEN"],
-                                                                           os.environ["TRAVIS_REPO_SLUG"]))
-    print("Updated docs/RESULTS.md")
-
-
 def main():
     create_report_file()
-    push_to_upstream()
 
-
+	
 if __name__ == "__main__":
     main()
