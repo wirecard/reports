@@ -9,7 +9,7 @@ jobs:
         - python --version
         - which pip 
         - pip install requests[security]
-        - pip install junitparser
+        - pip install --user junitparser
       script: python3.6.3 .bin/process.py
     - stage: Clean up
       if: type = cron
