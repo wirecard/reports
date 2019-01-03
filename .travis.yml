@@ -3,9 +3,13 @@ sudo: false
 
 jobs:
   include:
+    - stage: Update test results
+      if: type !=cron
+      script:
     - stage: Clean up
       if: type = cron
-      script: bash .bin/clean.sh
+      install: pip install junitparser
+      script: python .bin/process.py
 
 notifications:
   email: false
