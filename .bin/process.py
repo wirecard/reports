@@ -125,7 +125,6 @@ def create_report_file():
                     html_table += '</tr>'
         html_table += '</table>'
     # put data into html template
-    print os.getcwd()
     with open(INDEX_TEMPLATE_FILE, 'r') as template_file:
         src = Template(template_file.read())
         new_text = src.substitute({"table": html_table})
