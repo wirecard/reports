@@ -4,8 +4,8 @@ from datetime import datetime
 from string import Template
 
 REPORT_FILE_NAME = 'report.xml'
-INDEX_TEMPLATE_FILE = os.path.join('docs', 'index_template.html')
-INDEX_FILE = os.path.join('docs', 'index.html')
+INDEX_TEMPLATE_FILE = os.path.join(os.getcwd(), 'docs', 'index_template.html')
+INDEX_FILE = os.path.join(os.getcwd(), 'docs', 'index.html')
 FULL_REPORT_LINK = "http://htmlpreview.github.io/?https:" \
                    "//raw.githubusercontent.com/wirecard/reports/blob/master/" \
                    "$project/$gateway/$date/report.html"
@@ -126,6 +126,7 @@ def create_report_file():
                     html_table += '</tr>'
         html_table += '</table>'
     # put data into html template
+    print os.getcwd()
     with open(INDEX_TEMPLATE_FILE, 'r') as template_file:
         src = Template(template_file.read())
         new_text = src.substitute({"table": html_table})
