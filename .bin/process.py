@@ -108,7 +108,7 @@ def create_report_file():
     results = process_results_files()
     # create contents to put into html template
     html_table = HTML_TABLE_HEADER_LINES
-    for gateway, project_results in results.items():
+    for gateway, project_results in sorted(results.items()):
         html_table += "<h3>{}<h3>\n".format(gateway)
         html_table += HTML_TABLE_HEADER_CONTENT
         for project in project_results:
