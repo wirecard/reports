@@ -6,8 +6,8 @@ from string import Template
 REPORT_FILE_NAME = 'report.xml'
 INDEX_TEMPLATE_FILE = os.path.join(os.getcwd(), 'docs', 'index_template.html')
 INDEX_FILE = os.path.join(os.getcwd(), 'docs', 'index.html')
-FULL_REPORT_LINK = "http://htmlpreview.github.io/?https:" \
-                   "//raw.githubusercontent.com/wirecard/reports/blob/master/" \
+FULL_REPORT_LINK = "http://htmlpreview.github.io/?" \
+                   "https://github.com/wirecard/reports/blob/master/" \
                    "$project/$gateway/$date/report.html"
 FAILED_TEST = '<span style="color:red">FAIL</span>'
 PASSED_TEST = '<span style="color:green">PASS</span>'
