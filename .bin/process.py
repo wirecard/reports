@@ -7,7 +7,7 @@ REPORT_FILE_NAME = 'report.xml'
 INDEX_TEMPLATE_FILE = os.path.join(os.getcwd(), 'docs', 'index_template.html')
 INDEX_FILE = os.path.join(os.getcwd(), 'docs', 'index.html')
 FULL_REPORT_LINK = "https://rawcdn.githack.com/" \
-                   "wirecard/reports/blob/master/" \
+                   "wirecard/reports/master/" \
                    "$project/$gateway/$date/report.html"
 FAILED_TEST = '<span style="color:red">FAIL</span>'
 PASSED_TEST = '<span style="color:green">PASS</span>'
