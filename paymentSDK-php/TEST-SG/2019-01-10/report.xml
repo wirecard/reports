@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="4" assertions="12" failures="4" errors="0" time="134.319468">
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_3ds.feature" name="check_credit_card_3DS_functionality_happy_path: try purchase_check" feature="try purchase_check" assertions="4" time="40.017628">
+  <testsuite name="acceptance" tests="4" assertions="12" failures="4" errors="0" time="208.860643">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_3ds.feature" name="check_credit_card_3DS_functionality_happy_path: try purchase_check" feature="try purchase_check" assertions="4" time="79.040393">
       <failure type="PHPUnit_Framework_ExpectationFailedException">check_credit_card_3DS_functionality_happy_path: try purchase_check
 Failed asserting that  on page /examples/CreditCard/return.php?status=success
 --&gt; Payment SDK for PHP Examples
 Response validation status: true
-Error with code 500.1115 and message "acquirer:Currency not enabled for this merchant account. Please contact technical support." occurred.
-Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authenticated." occurre
-[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]
+Error with code 500.1087 and message "The connection to the provider was never made and timed out. Please try again later." occurred.
+Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authenticated." occurred.
 --&gt; contains "Payment successfully completed.".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:311
@@ -34,14 +33,13 @@ Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authe
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_3ds.feature" name="check_credit_card_3DS_functionality_happy_path: try void_purchase_check" feature="try void_purchase_check" assertions="4" time="37.777717">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_3ds.feature" name="check_credit_card_3DS_functionality_happy_path: try void_purchase_check" feature="try void_purchase_check" assertions="4" time="74.053899">
       <failure type="PHPUnit_Framework_ExpectationFailedException">check_credit_card_3DS_functionality_happy_path: try void_purchase_check
 Failed asserting that  on page /examples/CreditCard/return.php?status=success
 --&gt; Payment SDK for PHP Examples
 Response validation status: true
-Error with code 500.1115 and message "acquirer:Currency not enabled for this merchant account. Please contact technical support." occurred.
-Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authenticated." occurre
-[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]
+Error with code 500.1087 and message "The connection to the provider was never made and timed out. Please try again later." occurred.
+Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authenticated." occurred.
 --&gt; contains "Transaction ID".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:311
@@ -67,7 +65,7 @@ Information with code 200.1083 and message "3d-mpi:Cardholder Successfully authe
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_non_3ds.feature" name="check_credit_card_Non_3DS_functionality_happy_path: try purchase_check" feature="try purchase_check" assertions="2" time="28.081877">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_non_3ds.feature" name="check_credit_card_Non_3DS_functionality_happy_path: try purchase_check" feature="try purchase_check" assertions="2" time="28.800426">
       <failure type="PHPUnit_Framework_ExpectationFailedException">check_credit_card_Non_3DS_functionality_happy_path: try purchase_check
 Failed asserting that  on page /examples/CreditCard/pay_tokenize.php
 --&gt; Payment SDK for PHP Examples
@@ -97,7 +95,7 @@ Error with code 500.1115 and message "acquirer:Currency not enabled for this mer
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_non_3ds.feature" name="check_credit_card_Non_3DS_functionality_happy_path: try void_purchase_check" feature="try void_purchase_check" assertions="2" time="28.442246">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchase_check_happy_path_non_3ds.feature" name="check_credit_card_Non_3DS_functionality_happy_path: try void_purchase_check" feature="try void_purchase_check" assertions="2" time="26.965925">
       <failure type="PHPUnit_Framework_ExpectationFailedException">check_credit_card_Non_3DS_functionality_happy_path: try void_purchase_check
 Failed asserting that  on page /examples/CreditCard/pay_tokenize.php
 --&gt; Payment SDK for PHP Examples
