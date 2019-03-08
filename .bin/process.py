@@ -22,7 +22,7 @@ HTML_TABLE_HEADER_CONTENT = '''<table class="blueTable">
 <th>Report link</th>
 </tr></thead>'''
 
-PROJECTS = ["paymentSDK-php", "woocommerce-ee"]
+PROJECTS = ["paymentSDK-php", "woocommerce-ee", "prestashop-ee"]
 REPORT_LINK_DATA = {}
 
 
