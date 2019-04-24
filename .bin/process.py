@@ -68,12 +68,13 @@ def process_results_file(gateway, result_file):
     for suite in xml:
         # handle suites
         for case in suite:
-            feature_name = case.name.split(" ")[0].strip(":")
+            feature_name = case.name
             if feature_name not in features.keys():
                 features[feature_name] = PASSED_TEST
             if case.result:
                 features[feature_name] = FAILED_TEST
     gateway_res[gateway] = features
+    print(gateway_res)
     return gateway_res
 
 
