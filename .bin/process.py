@@ -22,7 +22,7 @@ HTML_TABLE_HEADER_CONTENT = '''<table class="blueTable">
 <th>Report link</th>
 </tr></thead>'''
 
-PROJECTS = ["paymentSDK-php", "woocommerce-ee", "prestashop-ee", "magento2-ee", "opencart-ee"]
+IGNORE_FOLDERS = [".bin", "docs", ".git", ".idea"]
 REPORT_LINK_DATA = {}
 
 
@@ -81,13 +81,14 @@ def process_results_file(gateway, result_file):
 def process_results_files():
     test_results = {}
     root_dir = os.getcwd()
-    for dirs in os.listdir(root_dir):
-        if dirs in PROJECTS:
-            project = dirs
+    for dir in os.listdir(root_dir):
+        if dir not in IGNORE_FOLDERS and os.path.isdir(dir):
+            print dir
+            project = dir
             gateway_results = []
-            for sub_dirs in os.listdir(os.path.join(root_dir, dirs)):
+            for sub_dirs in os.listdir(os.path.join(root_dir, dir)):
                 gateway = sub_dirs
-                result_file = find_latest_result_file(os.path.join(root_dir, dirs, sub_dirs), project, gateway)
+                result_file = find_latest_result_file(os.path.join(root_dir, dir, sub_dirs), project, gateway)
                 if result_file:
                     gateway_results.append(process_results_file(gateway, result_file))
             test_results[project] = gateway_results
