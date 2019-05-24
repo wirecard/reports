@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ui_test)" tests="1" assertions="1" failures="0" errors="1" time="23.257008">
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/checkCreditCard3DSFunctionalityHappyPath.feature" name="checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="23.257008">
-      <error type="Facebook\WebDriver\Exception\TimeOutException">checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck
-Facebook\WebDriver\Exception\TimeOutException: Waited for 10 secs but text 'Product successfully added to your shopping cart' still not found
+  <testsuite name="acceptance (ui_test)" tests="1" assertions="1" failures="1" errors="0" time="94.143487">
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/checkCreditCard3DSFunctionalityHappyPath.feature" name="checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="94.143487">
+      <failure type="Codeception\Exception\ElementNotFound">checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck
+Field by name, label, CSS or XPath element with '//*[@id="quantity_wanted"]' was not found.
 
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/WebDriverWait.php:84
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2406
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1102
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1655
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:2458
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:196
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:1483
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:194
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
@@ -25,7 +26,7 @@ Facebook\WebDriver\Exception\TimeOutException: Waited for 10 secs but text 'Prod
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:269
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
