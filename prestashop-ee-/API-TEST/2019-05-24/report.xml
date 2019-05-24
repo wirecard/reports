@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ui_test)" tests="1" assertions="1" failures="0" errors="1" time="14.936139">
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/checkCreditCard3DSFunctionalityHappyPath.feature" name="checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="14.936139">
-      <error type="Facebook\WebDriver\Exception\TimeOutException">checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck
-Facebook\WebDriver\Exception\TimeOutException: Waited for 10 secs but text 'Product successfully added to your shopping cart' still not found
+  <testsuite name="acceptance (ui_test)" tests="1" assertions="1" failures="0" errors="1" time="42.973310">
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/checkCreditCard3DSFunctionalityHappyPath.feature" name="checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="42.973310">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">checkCreditCard3DSFunctionalityHappyPath: try purchaseCheck
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@name='confirmDeliveryOption']"}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-10-121', ip: '207.254.10.121', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1088}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}), userDataDir=C:\Windows\proxy\scoped_dir4736_1383}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.131, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b1b1ec85243f70c07f27a805ccf03683
+*** Element info: {Using=xpath, value=//*[@name='confirmDeliveryOption']}
 
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/WebDriverWait.php:84
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2406
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:326
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:547
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:187
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/WebDriverWait.php:67
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2334
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:2458
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:196
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:2386
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/Page/Checkout.php:110
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/Helper/Acceptance.php:77
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:3105
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:161
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
