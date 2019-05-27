@@ -114,8 +114,8 @@ def create_report_file():
         html_table += "<h3>{}<h3>\n".format(gateway)
         html_table += HTML_TABLE_HEADER_CONTENT
         for project in sorted(project_results):
-            for project_name, test_results in project.items():
-                for test_name, test_result in test_results.items():
+            for project_name, test_results in sorted(project.items()):
+                for test_name, test_result in sorted(test_results.items()):
                     date = get_date_from_report_link_data(project_name, gateway)
                     report_link = Template(FULL_REPORT_LINK).substitute({"project": project_name,
                                                                          "gateway": gateway,
