@@ -18,16 +18,17 @@
                 <h1>Payment SDK for PHP Examples</h1>
             </div>
         </div>
-    </div>Reservation successfully completed.<br>Transaction ID: <a href="https://api-test.wirecard.com/engine/rest/merchants/53f2895a-e4de-4e82-a813-0d87a10e55e6/payments/8a3d6595-7ab8-466d-b0bb-d26067db0f12">8a3d6595-7ab8-466d-b0bb-d26067db0f12</a>    <br>
-    <form action="cancel.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="8a3d6595-7ab8-466d-b0bb-d26067db0f12">
-        <button type="submit" class="btn btn-primary">Cancel the payment</button>
-    </form>
-    <form action="pay-based-on-reserve.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="8a3d6595-7ab8-466d-b0bb-d26067db0f12">
-        <button type="submit" class="btn btn-primary">Capture the payment</button>
-    </form>
-    </div>
+    </div>Payment successfully completed.<br>Response validation status: true <br>Transaction ID: <a href="https://api-test.wirecard.com/engine/rest/merchants/508b8896-b37d-4614-845c-26bf8bf2c948/payments/5bc46e70-9190-4c77-9968-2aaf55c7cd85">5bc46e70-9190-4c77-9968-2aaf55c7cd85</a><br>Credit Card Token-Id: 4304509873471003        <br>
+        <form action="cancel.php" method="post">
+            <input type="hidden" name="parentTransactionId" value="5bc46e70-9190-4c77-9968-2aaf55c7cd85">
+            <button type="submit" class="btn btn-primary">Cancel the payment</button>
+        </form>
+        <br>Possible backend operations: Array
+(
+    [cancel] =&gt; Cancel
+    [refund] =&gt; Refund
+)
+<br><br>Is purchase final: 0<br><br>Order state: processing</div>
 <footer>
     <div class="container">
         ©
