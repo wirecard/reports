@@ -18,16 +18,12 @@
                 <h1>Payment SDK for PHP Examples</h1>
             </div>
         </div>
-    </div>Reservation successfully completed.<br>Transaction ID: <a href="https://api-test.wirecard.com/engine/rest/merchants/53f2895a-e4de-4e82-a813-0d87a10e55e6/payments/e9890b47-8550-467a-869b-3f6c148f7d08">e9890b47-8550-467a-869b-3f6c148f7d08</a>    <br>
-    <form action="cancel.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="e9890b47-8550-467a-869b-3f6c148f7d08">
-        <button type="submit" class="btn btn-primary">Cancel the payment</button>
-    </form>
-    <form action="pay-based-on-reserve.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="e9890b47-8550-467a-869b-3f6c148f7d08">
-        <button type="submit" class="btn btn-primary">Capture the payment</button>
-    </form>
-    </div>
+    </div>    <form method="POST" action="https://c3-test.wirecard.com/acssim/app/bank">
+                    <input type="hidden" name="TermUrl" value="http://1559834643api-test.ngrok.io/examples/payments/CreditCard/return.php?status=success">
+                    <input type="hidden" name="PaReq" value="eJxtU02PmzAQve+vQNyLPzDGiRyvto2qzSGrVRJaqTcKowUpfKyBJvn3HVjSbQI+MTMPz5vnN/rxXBydP2CbvCpXLvOo60CZVGlevq3c6PD9i3Kdpo3LND5WJazcCzTuo3nQh8wCrPeQdBbMg4NHb6Fp4jdw8hQvYoEQAWNUSMool8oPpPuBG7CvTzt4/4yH3MjCIAmPa3INb0FbsEkWl+1teijFyfvXzYth3BeB1GQMp7gC7GZtAkqRGR5NPhJTYBkXYH7mFpLYps4aisrZZ1WtyVCY4pOqK1t7MYpj+2swhXX2aLK2rZeEnE4n7zQ28JKq0KQv3k5M5kfWr12fbuaInPPUvPBd9INHl22xofvo1+7g747Rc5399rcrTXrE9L80bsFwyhZUUumwcMnlkglNhvyM4EU/owmphyKOwRRVjzyfruhe8rvkjJadtWjEi1mECsW8RlMgnGs0Jt6Blvn3fafgvFT62/Osi5IW3RAuhFBCBoozxqUvVBgIxeRC+IHqvTWAZtnk+OioIBvo5PcO0OT/rkjtcxH6lx42CNeL3O7XX12S52A=">
+                    <input type="hidden" name="MD" value="eyJlbnJvbGxtZW50LWNoZWNrLXRyYW5zYWN0aW9uLWlkIjoiYWUzMDcxMDktYmUxMy00ODU5LTk1OTctYjYxMzdhYTFmYTk0Iiwib3BlcmF0aW9uLXR5cGUiOiJhdXRob3JpemF0aW9uIn0=">
+                <button type="submit" class="btn btn-primary">Redirect to 3-D Secure page</button>
+    </form></div>
 <footer>
     <div class="container">
         ©

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="35" assertions="45" failures="32" errors="1" time="1052.272814">
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/Purchase3dsCheckPostProcessingPurchase.feature" name="checkCreditCard3DsFunctionalityPurchase: try purchase" feature="try purchase" assertions="3" time="52.866487">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPurchase: try purchase
+  <testsuite name="acceptance" tests="35" assertions="32" failures="30" errors="5" time="794.202258">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorization3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingAuthorization: try authorization" feature="try authorization" assertions="3" time="50.693342">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPostprocessingAuthorization: try authorization
 Failed asserting that '' contains "success".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -28,8 +28,8 @@ Failed asserting that '' contains "success".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/Purchase3dsCheckPostProcessingPurchase.feature" name="checkCreditCard3DsFunctionalityPurchase: try refund/cancel" feature="try refund/cancel" assertions="0" time="11.049938">
-      <error type="Facebook\WebDriver\Exception\ScriptTimeoutException">checkCreditCard3DsFunctionalityPurchase: try refund/cancel
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorization3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingAuthorization: try capture" feature="try capture" assertions="0" time="11.047472">
+      <error type="Facebook\WebDriver\Exception\ScriptTimeoutException">checkCreditCard3DsFunctionalityPostprocessingAuthorization: try capture
 Facebook\WebDriver\Exception\ScriptTimeoutException: A script did not complete before its timeout expired.
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:144
@@ -57,8 +57,8 @@ Facebook\WebDriver\Exception\ScriptTimeoutException: A script did not complete b
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheck3dsPostProcessingAuthorization.feature" name="checkCreditCard3DsFunctionalityAuthorization: try authorization" feature="try authorization" assertions="1" time="23.303900">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityAuthorization: try authorization
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorization3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingAuthorization: try refund" feature="try refund" assertions="1" time="24.221530">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPostprocessingAuthorization: try refund
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -84,8 +84,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheck3dsPostProcessingAuthorization.feature" name="checkCreditCard3DsFunctionalityAuthorization: try capture" feature="try capture" assertions="1" time="23.042586">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityAuthorization: try capture
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorization3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingAuthorization: try cancel" feature="try cancel" assertions="1" time="24.874179">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPostprocessingAuthorization: try cancel
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -111,8 +111,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheck3dsPostProcessingAuthorization.feature" name="checkCreditCard3DsFunctionalityAuthorization: try refund" feature="try refund" assertions="1" time="23.871564">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityAuthorization: try refund
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorizationNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try authorization" feature="try authorization" assertions="1" time="22.547231">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try authorization
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -138,8 +138,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheck3dsPostProcessingAuthorization.feature" name="checkCreditCard3DsFunctionalityAuthorization: try cancel" feature="try cancel" assertions="1" time="25.376439">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityAuthorization: try cancel
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorizationNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try capture" feature="try capture" assertions="1" time="25.075926">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try capture
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -165,8 +165,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckNon3dsPostProcessingAuthorization.feature" name="checkCreditCardNon3DsFunctionalityAuthorization: try authorization" feature="try authorization" assertions="1" time="23.858533">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityAuthorization: try authorization
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorizationNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try refund" feature="try refund" assertions="1" time="24.360642">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try refund
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -192,8 +192,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckNon3dsPostProcessingAuthorization.feature" name="checkCreditCardNon3DsFunctionalityAuthorization: try capture" feature="try capture" assertions="1" time="24.268193">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityAuthorization: try capture
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingAuthorizationNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try cancel" feature="try cancel" assertions="1" time="24.338112">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingAuthorization: try cancel
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -219,8 +219,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckNon3dsPostProcessingAuthorization.feature" name="checkCreditCardNon3DsFunctionalityAuthorization: try refund" feature="try refund" assertions="1" time="23.188571">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityAuthorization: try refund
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingPurchase3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingPurchase: try purchase" feature="try purchase" assertions="1" time="26.492541">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPostprocessingPurchase: try purchase
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -246,8 +246,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckNon3dsPostProcessingAuthorization.feature" name="checkCreditCardNon3DsFunctionalityAuthorization: try cancel" feature="try cancel" assertions="1" time="23.082470">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityAuthorization: try cancel
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingPurchase3ds.feature" name="checkCreditCard3DsFunctionalityPostprocessingPurchase: try refund/cancel" feature="try refund/cancel" assertions="1" time="23.786154">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DsFunctionalityPostprocessingPurchase: try refund/cancel
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -273,8 +273,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseNon3dsCheckPostProcessingPurchase.feature" name="checkCreditCardNon3DsFunctionalityPurchase: try purchase" feature="try purchase" assertions="1" time="22.242407">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPurchase: try purchase
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingPurchaseNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingPurchase: try purchase" feature="try purchase" assertions="1" time="24.837926">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingPurchase: try purchase
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -300,8 +300,8 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseNon3dsCheckPostProcessingPurchase.feature" name="checkCreditCardNon3DsFunctionalityPurchase: try refund/cancel" feature="try refund/cancel" assertions="1" time="22.980306">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPurchase: try refund/cancel
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PurchaseCheckPostProcessingPurchaseNon3ds.feature" name="checkCreditCardNon3DsFunctionalityPostprocessingPurchase: try refund/cancel" feature="try refund/cancel" assertions="1" time="22.853411">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DsFunctionalityPostprocessingPurchase: try refund/cancel
 Failed asserting that '' contains "pay".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
@@ -327,7 +327,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" assertions="1" time="23.095555">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" assertions="1" time="24.142397">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Card Not Enrolled VISA Data", "500.1072"
 Failed asserting that '' contains "pay".
 
@@ -354,7 +354,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" assertions="1" time="23.922447">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" assertions="1" time="25.262336">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Card Not Enrolled Mastercard Data", "500.1072"
 Failed asserting that '' contains "pay".
 
@@ -381,7 +381,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" assertions="1" time="22.932903">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" assertions="1" time="24.071666">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "MPI Error VISA Data", "500.1074"
 Failed asserting that '' contains "pay".
 
@@ -408,7 +408,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" assertions="1" time="23.068177">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" assertions="1" time="24.842902">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "MPI Error Mastercard Data", "500.1074"
 Failed asserting that '' contains "pay".
 
@@ -435,7 +435,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" assertions="1" time="24.539481">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" assertions="1" time="25.418824">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Card Not Enrolled Maestro Data", "500.1072"
 Failed asserting that '' contains "pay".
 
@@ -462,7 +462,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" assertions="1" time="24.934779">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" assertions="1" time="24.737126">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Unable to Verify Enrolment Maestro Data", "500.1073"
 Failed asserting that '' contains "pay".
 
@@ -489,7 +489,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" assertions="1" time="25.002138">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" assertions="1" time="25.154219">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Unable to Verify Enrolment VISA Data", "500.1073"
 Failed asserting that '' contains "pay".
 
@@ -516,7 +516,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" assertions="1" time="24.308673">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" assertions="1" time="25.346591">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "Unable to Verify Enrolment Mastercard Data", "500.1073"
 Failed asserting that '' contains "pay".
 
@@ -543,7 +543,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" assertions="1" time="23.559637">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorCaseNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" assertions="1" time="24.592666">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseNoRedirect3DS | "MPI Error Maestro Data", "500.1074"
 Failed asserting that '' contains "pay".
 
@@ -570,7 +570,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" assertions="1" time="27.376165">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" assertions="1" time="25.080242">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Consumer failed or Cancelled auth VISA Data", "500.1076"
 Failed asserting that '' contains "pay".
 
@@ -597,7 +597,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" assertions="1" time="22.979171">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" assertions="1" time="25.590123">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Consumer failed or Cancelled auth Mastercard Data", "500.1076"
 Failed asserting that '' contains "pay".
 
@@ -624,7 +624,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" assertions="1" time="23.302481">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" assertions="1" time="24.223656">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Consumer failed or Cancelled auth Maestro Data", "500.1076"
 Failed asserting that '' contains "pay".
 
@@ -651,7 +651,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.662109">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.489646">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Auth not completed tech problem VISA Data", "500.1077"
 Failed asserting that '' contains "pay".
 
@@ -678,7 +678,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.803629">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.261472">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Auth not completed tech problem Mastercard Data", "500.1077"
 Failed asserting that '' contains "pay".
 
@@ -705,7 +705,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.341322">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckErrorCards3ds.feature" name="checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorCaseRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" assertions="1" time="24.885597">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCard3DSFunctionalityErrorCards: purchaseErrorCaseRedirect3DS | "Auth not completed tech problem Maestro Data", "500.1077"
 Failed asserting that '' contains "pay".
 
@@ -732,7 +732,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="23.393195">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="25.241433">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCrediCard3DSFunctionalityHappyPath: try purchaseCheck
 Failed asserting that '' contains "pay".
 
@@ -759,7 +759,7 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="1" time="23.992055">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="1" time="26.404183">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCrediCard3DSFunctionalityHappyPath: try voidPurchaseCheck
 Failed asserting that '' contains "pay".
 
@@ -786,19 +786,27 @@ Failed asserting that '' contains "pay".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3dsWppv2.feature" name="checkCreditCardWppv23DSFunctionalityHappyPath: try purchase_check" feature="try purchase_check" assertions="3" time="75.405717">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardWppv23DSFunctionalityHappyPath: try purchase_check
-Failed asserting that '' contains "success".
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3dsWppv2.feature" name="checkCreditCardWppv23DSFunctionalityHappyPath: try purchase_check" feature="try purchase_check" assertions="0" time="1.813132">
+      <error type="Facebook\WebDriver\Exception\NoSuchFrameException">checkCreditCardWppv23DSFunctionalityHappyPath: try purchase_check
+Facebook\WebDriver\Exception\NoSuchFrameException: No frame element found by name or id wirecard-seamless-frame
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-214', ip: '207.254.76.214', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
+Driver info: driver.version: unknown
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:104
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:326
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:547
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteTargetLocator.php:73
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2532
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:161
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2591
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUiBase.php:38
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUIWppV2.php:22
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:150
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -811,21 +819,29 @@ Failed asserting that '' contains "success".
 /home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
 /home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
+</error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3dsWppv2.feature" name="checkCreditCardWppv23DSFunctionalityHappyPath: try void_purchase_check" feature="try void_purchase_check" assertions="3" time="78.053630">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardWppv23DSFunctionalityHappyPath: try void_purchase_check
-Failed asserting that '' contains "success".
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3dsWppv2.feature" name="checkCreditCardWppv23DSFunctionalityHappyPath: try void_purchase_check" feature="try void_purchase_check" assertions="0" time="1.252816">
+      <error type="Facebook\WebDriver\Exception\NoSuchFrameException">checkCreditCardWppv23DSFunctionalityHappyPath: try void_purchase_check
+Facebook\WebDriver\Exception\NoSuchFrameException: No frame element found by name or id wirecard-seamless-frame
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-214', ip: '207.254.76.214', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
+Driver info: driver.version: unknown
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:104
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:326
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:547
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteTargetLocator.php:73
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2532
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:161
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2591
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUiBase.php:38
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUIWppV2.php:22
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:150
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -838,9 +854,9 @@ Failed asserting that '' contains "success".
 /home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
 /home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
+</error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="34.824588">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="1" time="29.696898">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DSFunctionalityHappyPath: try purchaseCheck
 Failed asserting that '' contains "pay_tokenize".
 
@@ -867,7 +883,7 @@ Failed asserting that '' contains "pay_tokenize".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="1" time="29.216314">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="1" time="29.802279">
       <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DSFunctionalityHappyPath: try voidPurchaseCheck
 Failed asserting that '' contains "pay_tokenize".
 
@@ -894,7 +910,75 @@ Failed asserting that '' contains "pay_tokenize".
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3dsWppv2.feature" name="checkCreditCardWppv2Non3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="3" time="40.636787"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3dsWppv2.feature" name="checkCreditCardWppv2Non3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="4" time="84.790467"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3dsWppv2.feature" name="checkCreditCardWppv2Non3DSFunctionalityHappyPath: try purchaseCheck" feature="try purchaseCheck" assertions="0" time="1.558205">
+      <error type="Facebook\WebDriver\Exception\NoSuchFrameException">checkCreditCardWppv2Non3DSFunctionalityHappyPath: try purchaseCheck
+Facebook\WebDriver\Exception\NoSuchFrameException: No frame element found by name or id wirecard-seamless-frame
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-214', ip: '207.254.76.214', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
+Driver info: driver.version: unknown
+
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:104
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:326
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:547
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteTargetLocator.php:73
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2532
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2591
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUiBase.php:38
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUINon3DWppV2.php:22
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:150
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:960
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3dsWppv2.feature" name="checkCreditCardWppv2Non3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="try voidPurchaseCheck" assertions="0" time="1.205383">
+      <error type="Facebook\WebDriver\Exception\NoSuchFrameException">checkCreditCardWppv2Non3DSFunctionalityHappyPath: try voidPurchaseCheck
+Facebook\WebDriver\Exception\NoSuchFrameException: No frame element found by name or id wirecard-seamless-frame
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-214', ip: '207.254.76.214', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
+Driver info: driver.version: unknown
+
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:104
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:326
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:547
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteTargetLocator.php:73
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2532
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2591
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUiBase.php:38
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/CreditCardCreateUINon3DWppV2.php:22
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:150
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:960
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
   </testsuite>
 </testsuites>

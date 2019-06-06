@@ -18,16 +18,12 @@
                 <h1>Payment SDK for PHP Examples</h1>
             </div>
         </div>
-    </div>Reservation successfully completed.<br>Transaction ID: <a href="https://api-test.wirecard.com/engine/rest/merchants/53f2895a-e4de-4e82-a813-0d87a10e55e6/payments/e9890b47-8550-467a-869b-3f6c148f7d08">e9890b47-8550-467a-869b-3f6c148f7d08</a>    <br>
-    <form action="cancel.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="e9890b47-8550-467a-869b-3f6c148f7d08">
-        <button type="submit" class="btn btn-primary">Cancel the payment</button>
-    </form>
-    <form action="pay-based-on-reserve.php" method="post">
-        <input type="hidden" name="parentTransactionId" value="e9890b47-8550-467a-869b-3f6c148f7d08">
-        <button type="submit" class="btn btn-primary">Capture the payment</button>
-    </form>
-    </div>
+    </div>    <form method="POST" action="https://c3-test.wirecard.com/acssim/app/bank">
+                    <input type="hidden" name="TermUrl" value="http://1559834643api-test.ngrok.io/examples/payments/CreditCard/return.php?status=success">
+                    <input type="hidden" name="PaReq" value="eJxtU9tOg0AQffcrCO+yN5ZLs6xRG2Mfary0mvi2WSaWtEBdwLZ/74JUbYGEhJk5y5w5e0Zc7fON8wWmysoicYmHXQcKXaZZ8ZG4y8XdZeQ6Va2KVG3KAhL3AJV7JS/EYmUApi+gGwPywrGPmENVqQ9wsjRxeUQZj31Og4jS2A8wJ5H7g+uwj9fP8PkXd7mehbQkPCrQMTwFzcHolSrq03RXUvrzZvYgCWU+DwTqwyEuBzObSo4xJvbFAv0khsBC5SDfMgNamdSZQl46L6tyK1BXGOJ12RS1OciI2vbHYAhrzEau6no7QWi323m7voGny1ygtng6MRofWTw2bboaI7LPUpmyd67WS75c+v58Hb+m93f10+J5raezRKAWMTyXqhokxSTGAQ4cEk4YnWAiUJcfETxvZ5Qh9qyIfTBEbXue10d0K/lZckTLxhhrxIOMw8iKeYyGQNhvrTHtP6xlfr/PFByXStzej7pI19YN2OckJoxYH4csCCPCGWOU8piGpPVWBxplk9lLtwqSjk527gCB/ne11P4Wob3pboPseqHT/foGh87nRg==">
+                    <input type="hidden" name="MD" value="eyJlbnJvbGxtZW50LWNoZWNrLXRyYW5zYWN0aW9uLWlkIjoiMjc5MDYzYWEtZTkzNy00M2U1LTgyZmItZjhkYWIwMGQ3YmJmIiwib3BlcmF0aW9uLXR5cGUiOiJwdXJjaGFzZSJ9">
+                <button type="submit" class="btn btn-primary">Redirect to 3-D Secure page</button>
+    </form></div>
 <footer>
     <div class="container">
         ©
