@@ -4,7 +4,7 @@ REPO_NAME='reports'
 REPO_LINK="https://github.com/wirecard/${REPO_NAME}"
 REPO_ADDRESS="${REPO_LINK}.git"
 TODAY=$(date +%Y-%m-%d)
-TWO_WEEKS_AGO=$(date -d 'now - 2 week' +%Y-%m-%d)
+TWO_WEEKS_AGO=$(date -d 'now - 1 week' +%Y-%m-%d)
 
 echo "Starting log cleaner"
 
