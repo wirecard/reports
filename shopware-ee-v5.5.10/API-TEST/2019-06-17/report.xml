@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="60.002" tests="1" failures="1">
-  <testsuite name="Root Suite" timestamp="2019-06-17T07:00:27" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="157.611" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-06-17T07:52:24" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Guaranteed Invoice by Wirecard test" timestamp="2019-06-17T07:00:27" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/RatepayTest.js" failures="1" time="60.002">
-    <testcase name="Guaranteed Invoice by Wirecard test should check the ratepay invoice process" time="60.002" classname="should check the ratepay invoice process">
-      <failure message="Timeout of 60000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/RatepayTest.js)" type="Error"><![CDATA[Error: Timeout of 60000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/RatepayTest.js)]]></failure>
+  <testsuite name="PayPal test" timestamp="2019-06-17T07:52:25" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/PaypalTest.js" failures="0" time="99.821">
+    <testcase name="PayPal test should check the paypal payment process" time="99.821" classname="should check the paypal payment process">
+    </testcase>
+  </testsuite>
+  <testsuite name="Guaranteed Invoice by Wirecard test" timestamp="2019-06-17T07:54:13" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/RatepayTest.js" failures="1" time="57.79">
+    <testcase name="Guaranteed Invoice by Wirecard test should check the ratepay invoice process" time="57.79" classname="should check the ratepay invoice process">
+      <failure message="Waiting for element to be located By(css selector, .teaser--btn-print)
+Wait timed out after 30093ms" type="TimeoutError"><![CDATA[TimeoutError: Waiting for element to be located By(css selector, .teaser--btn-print)
+Wait timed out after 30093ms
+    at /home/travis/shopware/custom/plugins/WirecardElasticEngine/node_modules/selenium-webdriver/lib/webdriver.js:834:17
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)]]></failure>
     </testcase>
   </testsuite>
 </testsuites>
