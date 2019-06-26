@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance" tests="4" assertions="17" failures="1" errors="0" time="139.241162">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try purchaseCheck" feature="checkCrediCard3DSFunctionalityHappyPath" assertions="5" time="45.619330"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPath3ds.feature" name="checkCrediCard3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="checkCrediCard3DSFunctionalityHappyPath" assertions="6" time="46.364702"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try purchaseCheck" feature="checkCreditCardNon3DSFunctionalityHappyPath" assertions="3" time="21.878057"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/purchaseCheckHappyPathNon3ds.feature" name="checkCreditCardNon3DSFunctionalityHappyPath: try voidPurchaseCheck" feature="checkCreditCardNon3DSFunctionalityHappyPath" assertions="3" time="25.379073">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">checkCreditCardNon3DSFunctionalityHappyPath: try voidPurchaseCheck
+Failed asserting that  on page /examples/payments/CreditCard/cancel.php
+--&gt; Payment SDK for PHP Examples
+
+( ! ) Notice: Undefined index: currency in /home/travis/build/wirecard/paymentSDK-php/examples/payments/CreditCard/cancel.php on line 53
+Call Stack
+# Time Memory Function Location
+1 0.0000 399856 {main}( ) .../cancel.php:0
+Error with code 400.1012 and message "The Reque
+[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]
+--&gt; contains "Payment successfully cancelled.".
+
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:295
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2941
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:919
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:193
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:193
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:160
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:496
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:391
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
+/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
