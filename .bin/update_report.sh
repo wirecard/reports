@@ -11,5 +11,5 @@ python .bin/process.py
 
 git add -A
 git diff-index --quiet HEAD || git commit -m "[skip ci] Update docs/index.html file with latest test results"
-git push https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG HEAD:TPWDCEE-4326-clean
+git push https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG HEAD:master
 echo "Successfully updated RESULTS file"
