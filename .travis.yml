@@ -10,6 +10,7 @@ jobs:
         - pip install requests[security]
         - pip install --user junitparser
         - pip install --user gitpython
+        - pip install --user natsort
       script: bash .bin/update_report.sh
     - stage: Clean up
       if: type = cron
