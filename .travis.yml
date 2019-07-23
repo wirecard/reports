@@ -5,9 +5,11 @@ jobs:
   include:
     - stage: Update test results
       if: type != cron
-      install: 
+      install:
+        - pip install --user pip
         - pip install requests[security]
         - pip install --user junitparser
+        - pip install --user gitpython
       script: bash .bin/update_report.sh
     - stage: Clean up
       if: type = cron
