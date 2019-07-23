@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="2" assertions="1" failures="0" errors="2" time="301.942473">
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="168.216243">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@name='country_id']"}
-  (Session info: chrome=75.0.3770.80)
-  (Driver info: chromedriver=75.0.3770.8 (681f24ea911fe754973dda2fdc6d2a2e159dd300-refs/branch-heads/3770@{#40}),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-76-176', ip: '207.254.76.176', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=WIN8, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1849}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.8 (681f24ea911fe754973dda2fdc6d2a2e159dd300-refs/branch-heads/3770@{#40}), userDataDir=C:\Windows\proxy\scoped_dir3040_17211}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.80, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d6b7ead1ee211e88a5cafa2507e961b8
-*** Element info: {Using=xpath, value=//*[@name='country_id']}
+  <testsuite name="acceptance" tests="2" assertions="3" failures="2" errors="0" time="416.037745">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="214.527354">
+      <failure type="Codeception\Exception\ElementNotFound">CreditCard3DSPurchaseHappyPath: purchase
+Field by name, label, CSS or XPath element with '//*[@name='pp-cc-expiration-date']' was not found.
 
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2334
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1102
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1360
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:2386
-/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Checkout.php:53
-/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:50
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:1410
+/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Payment.php:53
+/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:52
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
 /home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3105
 /home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:141
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -45,40 +31,26 @@ Session ID: d6b7ead1ee211e88a5cafa2507e961b8
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="133.726230">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardNon3DSPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@name='country_id']"}
-  (Session info: chrome=75.0.3770.80)
-  (Driver info: chromedriver=75.0.3770.8 (681f24ea911fe754973dda2fdc6d2a2e159dd300-refs/branch-heads/3770@{#40}),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 43 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-76-176', ip: '207.254.76.176', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=WIN8, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1849}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=75.0.3770.8 (681f24ea911fe754973dda2fdc6d2a2e159dd300-refs/branch-heads/3770@{#40}), userDataDir=C:\Windows\proxy\scoped_dir3040_17211}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=75.0.3770.80, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: d6b7ead1ee211e88a5cafa2507e961b8
-*** Element info: {Using=xpath, value=//*[@name='country_id']}
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="2" time="201.510391">
+      <failure type="Codeception\Exception\ElementNotFound">CreditCardNon3DSPurchaseHappyPath: purchase
+Field by name, label, CSS or XPath element with '//*[@name='pp-cc-expiration-date']' was not found.
 
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2334
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1102
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1360
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:2386
-/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Checkout.php:53
-/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:50
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:1410
+/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Payment.php:53
+/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:52
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
 /home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3105
 /home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:141
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -91,7 +63,7 @@ Session ID: d6b7ead1ee211e88a5cafa2507e961b8
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
