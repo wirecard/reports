@@ -8,6 +8,7 @@ jobs:
       install: 
         - pip install requests[security]
         - pip install --user junitparser
+        - pip install gitpython
       script: bash .bin/update_report.sh
     - stage: Clean up
       if: type = cron
