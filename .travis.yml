@@ -3,6 +3,9 @@ sudo: false
 
 jobs:
   include:
+    - stage: Update
+      if: type != cron
+      script: python .bin/remove.py
     - stage: Update test results
       if: type != cron
       install:

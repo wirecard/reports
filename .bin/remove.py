@@ -3,6 +3,7 @@ import os
 from natsort import natsorted
 import shutil
 import sys
+import subprocess
 
 REPO_NAME = "reports"
 REPO_LINK = "git://github.com/wirecard/"+REPO_NAME
@@ -42,3 +43,10 @@ for dirs in os.listdir(PATH):
         if plugin in dirs:
             shutil.rmtree(os.path.join(PATH, plugin), ignore_errors=True)
 
+subprocess.call(['.bin/push.py'])
+
+# r = git.Repo('https://github.com/wirecard/reports.git')
+# r.git.add(u=True)
+# r.index.commit('Update reports')
+# origin = r.remote(name='TPWDCEE-4326')
+# origin.push()
