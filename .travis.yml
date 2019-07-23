@@ -5,6 +5,12 @@ jobs:
   include:
     - stage: Update
       if: type != cron
+      install:
+        - pip install --user pip
+        - pip install requests[security]
+        - pip install --user junitparser
+        - pip install --user gitpython
+        - pip install --user natsort
       script: python .bin/remove.py
     - stage: Update test results
       if: type != cron
