@@ -209,13 +209,13 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 4</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 5</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (208.4s)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (132.3s)</small></h1>
 
 
 
@@ -224,379 +224,15 @@
  <td>
      <h3>Acceptance Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioFailed">
+</tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">CrediCard3DSTokenizePurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">80.02s</span></p>
-    </td>
-   </tr>
-   <tr class="scenarioRow scenarioFailed">
-    <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
-
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
-      </tr>
-
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabe31', this)"><span class="toggle">+</span> Given i am on "create credit card ui page" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabe31">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabe7d', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabe7d">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4012000300001003&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;003&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;01&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2023&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabed2', this)"><span class="toggle">+</span> And i enter "70" in field "amount"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabed2">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;70&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabf11', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabf11">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;EUR&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabf4c', this)"><span class="toggle">+</span> And i click "save"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabf4c">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabf90', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabf90">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;pay&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdabfcd', this)"><span class="toggle">+</span> And i click "redirect to 3-d secure page"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdabfcd">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdac00a', this)"><span class="toggle">+</span> When i am redirected to "verified page" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdac00a">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">10</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;bank&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdac088', this)"><span class="toggle">+</span> And i enter "wirecard" in field "password"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdac088">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;wirecard&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdac0cd', this)"><span class="toggle">+</span> And i click "continue"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdac0cd">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5d5e35bdac10b', this)"><span class="toggle">+</span> And i am redirected to "credit card success page" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdac10b">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName failedStep" ><p onclick="showHide('5d5e35bdac14a', this)"><span class="toggle">+</span> Then i see text "payment successfully completed."</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35bdac14a">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Payment successfully completed.&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-
-         <tr >
-    <td class="error">
-        Failed asserting that  on page /examples/payments/CreditCard/return.php?status=success<br />
---&gt; Payment SDK for PHP Examples<br />
-Response validation status: true<br />
-Error with code 500.1156 and message &quot;The issuer returned Declined. Please check with Issuer, or use different card.&quot; occurred.<br />
-&copy; 2019 Wirecard<br />
---&gt; contains &quot;Payment successfully completed.&quot;.
-    </td>
-</tr>
-
-         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSPurchaseHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
-         <tr><td class='error'>See <a href='CreditCard3DSPurchaseHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
-     </table>
-
-
-    </td>
-   </tr>
-
-
-   <tr class="scenarioRow scenarioSuccess">
-    <td>
-     <p class="scenarioSuccess" onclick="showHide('2', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot; <span style="color: #34495e; font-size: 70%;">31.63s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot; <span style="color: #34495e; font-size: 70%;">17.51s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
 
 
       <tr>
@@ -608,13 +244,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f494', this)"><span class="toggle">+</span> Given i am on "create credit card ui page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f867f9', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f494">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f867f9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -636,13 +272,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f4e0', this)"><span class="toggle">+</span> Given i fill fields with "card not enrolled visa data"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f86846', this)"><span class="toggle">+</span> Given i fill fields with "card not enrolled visa data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f4e0">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f86846">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -684,13 +320,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f536', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f8689a', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f536">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f8689a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -708,13 +344,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f575', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f868d9', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f575">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f868d9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -732,13 +368,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f5b2', this)"><span class="toggle">+</span> When i click "save"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f86918', this)"><span class="toggle">+</span> When i click "save"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f5b2">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f86918">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -760,19 +396,23 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f5f9', this)"><span class="toggle">+</span> Then i am redirected to "credit card reserve page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f86961', this)"><span class="toggle">+</span> Then i am redirected to "credit card tokenize reserve page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f5f9">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f86961">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
       <tr>
@@ -784,13 +424,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35dd5f636', this)"><span class="toggle">+</span> And i see text "500.1072"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e5f869a1', this)"><span class="toggle">+</span> And i see text "500.1072"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35dd5f636">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e5f869a1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -816,13 +456,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
 
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('3', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot; <span style="color: #34495e; font-size: 70%;">31.71s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('2', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot; <span style="color: #34495e; font-size: 70%;">15.92s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
 
 
       <tr>
@@ -834,13 +474,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d35b', this)"><span class="toggle">+</span> Given i am on "create credit card ui page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f845cb', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d35b">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f845cb">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -862,13 +502,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d421', this)"><span class="toggle">+</span> Given i fill fields with "card not enrolled mastercard data"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f84615', this)"><span class="toggle">+</span> Given i fill fields with "card not enrolled mastercard data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d421">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f84615">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -910,13 +550,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d485', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f8466a', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d485">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f8466a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -934,13 +574,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d4ca', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f846a9', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d4ca">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f846a9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -958,13 +598,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d509', this)"><span class="toggle">+</span> When i click "save"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f846e7', this)"><span class="toggle">+</span> When i click "save"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d509">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f846e7">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -986,19 +626,23 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d54c', this)"><span class="toggle">+</span> Then i am redirected to "credit card reserve page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f8472b', this)"><span class="toggle">+</span> Then i am redirected to "credit card tokenize reserve page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d54c">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f8472b">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
       <tr>
@@ -1010,13 +654,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e35fd3d592', this)"><span class="toggle">+</span> And i see text "500.1072"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e6f8476b', this)"><span class="toggle">+</span> And i see text "500.1072"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e35fd3d592">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e6f8476b">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1042,13 +686,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
 
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('4', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot; <span style="color: #34495e; font-size: 70%;">33.02s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('3', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot; <span style="color: #34495e; font-size: 70%;">17.2s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
 
 
       <tr>
@@ -1060,13 +704,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5ddf3', this)"><span class="toggle">+</span> Given i am on "create credit card ui page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c1788', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5ddf3">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c1788">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1088,13 +732,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5de87', this)"><span class="toggle">+</span> Given i fill fields with "mpi error visa data"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c17d1', this)"><span class="toggle">+</span> Given i fill fields with "mpi error visa data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5de87">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c17d1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1136,13 +780,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5deed', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c1825', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5deed">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c1825">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1160,13 +804,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5df2d', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c1863', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5df2d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c1863">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1184,13 +828,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5df6c', this)"><span class="toggle">+</span> When i click "save"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c189f', this)"><span class="toggle">+</span> When i click "save"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5df6c">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c189f">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1212,19 +856,23 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5dfb4', this)"><span class="toggle">+</span> Then i am redirected to "credit card reserve page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c18e1', this)"><span class="toggle">+</span> Then i am redirected to "credit card tokenize reserve page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5dfb4">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c18e1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
       <tr>
@@ -1236,13 +884,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e361e5dff4', this)"><span class="toggle">+</span> And i see text "500.1074"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e80c1921', this)"><span class="toggle">+</span> And i see text "500.1074"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e361e5dff4">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e80c1921">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1268,13 +916,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
 
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('5', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot; <span style="color: #34495e; font-size: 70%;">31.97s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('4', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSTokenizePurchaseErrorCards &raquo;</span> purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot; <span style="color: #34495e; font-size: 70%;">14.93s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
 
 
       <tr>
@@ -1286,13 +934,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e6620e', this)"><span class="toggle">+</span> Given i am on "create credit card ui page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc09e3', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e6620e">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc09e3">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1314,13 +962,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e6625d', this)"><span class="toggle">+</span> Given i fill fields with "mpi error mastercard data"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0a2c', this)"><span class="toggle">+</span> Given i fill fields with "mpi error mastercard data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e6625d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0a2c">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1362,13 +1010,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e662b2', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0a85', this)"><span class="toggle">+</span> And i enter "500" in field "amount"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e662b2">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0a85">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1386,13 +1034,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e662f1', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0ac5', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e662f1">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0ac5">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1410,13 +1058,13 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e6632e', this)"><span class="toggle">+</span> When i click "save"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0b03', this)"><span class="toggle">+</span> When i click "save"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e6632e">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0b03">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1438,19 +1086,23 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e66375', this)"><span class="toggle">+</span> Then i am redirected to "credit card reserve page" page</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0b46', this)"><span class="toggle">+</span> Then i am redirected to "credit card tokenize reserve page" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e66375">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0b46">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
       <tr>
@@ -1462,19 +1114,405 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5d5e363e663b2', this)"><span class="toggle">+</span> And i see text "500.1074"</p>
+ <td class="stepName " ><p onclick="showHide('5d5e8e8fc0b86', this)"><span class="toggle">+</span> And i see text "500.1074"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e363e663b2">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8e8fc0b86">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;500.1074&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         
+         
+         
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('5', this)"><span class="toggle">+</span>
+          <span class="quiet">CrediCard3DSTokenizePurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">66.72s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288357', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288357">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed28839f', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed28839f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4012000300001003&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;003&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;01&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2023&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed2883f4', this)"><span class="toggle">+</span> And i enter "70" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed2883f4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;70&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288436', this)"><span class="toggle">+</span> And i choose "eur" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288436">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;EUR&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288471', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288471">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed2884b8', this)"><span class="toggle">+</span> Given i am redirected to "credit card tokenize reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed2884b8">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;pay&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed2884f9', this)"><span class="toggle">+</span> And i click "redirect to 3-d secure page"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed2884f9">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288536', this)"><span class="toggle">+</span> When i am redirected to "verified page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288536">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">10</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;bank&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288577', this)"><span class="toggle">+</span> And i enter "wirecard" in field "password"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288577">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;wirecard&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed2885b2', this)"><span class="toggle">+</span> And i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed2885b2">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed2885fa', this)"><span class="toggle">+</span> And i am redirected to "credit card success page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed2885fa">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed28864a', this)"><span class="toggle">+</span> Then i see text "payment successfully completed."</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed28864a">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Payment successfully completed.&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5d5e8ed288683', this)"><span class="toggle">+</span> And i see text "transaction id"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5d5e8ed288683">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Transaction ID&quot;</span></td>
       </tr>
 
 
@@ -1500,11 +1538,11 @@ Error with code 500.1156 and message &quot;The issuer returned Declined. Please 
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>4</strong></td>
+        <td class="scenarioSuccessValue"><strong>5</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>1</strong></td>
+        <td class="scenarioFailedValue"><strong>0</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
