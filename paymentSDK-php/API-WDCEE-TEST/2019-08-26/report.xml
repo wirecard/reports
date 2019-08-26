@@ -1,211 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="49" assertions="190" failures="6" errors="0" time="1559.366008">
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="5" time="38.759190"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="41.153778"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="51.962698"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="37.826821"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="30.079825"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="6" time="41.659468"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" assertions="2" time="17.942744"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" assertions="2" time="19.596119"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" assertions="2" time="17.142055"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" assertions="2" time="14.747444"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" assertions="2" time="17.037192"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" assertions="2" time="16.144053"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" assertions="2" time="17.525140"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" assertions="2" time="15.832748"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" assertions="2" time="16.268058"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" assertions="4" time="36.548985"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" assertions="4" time="35.929851"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" assertions="4" time="32.523315"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" assertions="4" time="29.918687"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" assertions="4" time="32.439327"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" assertions="4" time="31.176702"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseHappyPath.feature" name="CrediCard3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="5" time="33.903398"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseHappyPath.feature" name="CrediCard3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="42.890698"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="5" time="31.876399"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="40.405164"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="47.829834"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="41.449842"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="5" time="32.828352"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="43.076931"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="17.016286"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="4" time="20.606330"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="30.421145"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="24.254559"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="15.564632"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="20.722998"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="3" time="14.738088"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="4" time="20.936179"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="11.843093"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="20.510468"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="29.613767"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="21.354321"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="12.597981"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="20.790051"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="1" time="62.303552">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: authorization
-Failed asserting that '/examples/payments/PayPal/reserve.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="1" time="62.119306">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: capture
-Failed asserting that '/examples/payments/PayPal/reserve.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="1" time="61.700102">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: refund
-Failed asserting that '/examples/payments/PayPal/reserve.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="1" time="61.349330">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: cancel
-Failed asserting that '/examples/payments/PayPal/reserve.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="1" time="62.260801">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationHappyPath: authorization
-Failed asserting that '/examples/payments/PayPal/reserve.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="62.188200">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalPurchaseHappyPath: purchase
-Failed asserting that '/examples/payments/PayPal/pay.php' contains "express-checkout".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:151
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1167
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:735
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLogin.php:56
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/PayPalLoginPurchase.php:25
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:269
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:969
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
+  <testsuite name="acceptance" tests="49" assertions="237" failures="0" errors="0" time="1858.323955">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="65.511295"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="41.837259"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="46.672931"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="39.602180"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="34.409014"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="6" time="39.901767"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled VISA Data&quot;, &quot;500.1072&quot;" assertions="2" time="17.394308"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Mastercard Data&quot;, &quot;500.1072&quot;" assertions="2" time="16.081834"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error VISA Data&quot;, &quot;500.1074&quot;" assertions="2" time="18.570253"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error Mastercard Data&quot;, &quot;500.1074&quot;" assertions="2" time="17.558164"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Card Not Enrolled Maestro Data&quot;, &quot;500.1072&quot;" assertions="2" time="17.452846"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Maestro Data&quot;, &quot;500.1073&quot;" assertions="2" time="18.608296"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment VISA Data&quot;, &quot;500.1073&quot;" assertions="2" time="17.163277"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" feature="purchaseErrorNoRedirect3DS | &quot;Unable to Verify Enrolment Mastercard Data&quot;, &quot;500.1073&quot;" assertions="2" time="19.114468"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" feature="purchaseErrorNoRedirect3DS | &quot;MPI Error Maestro Data&quot;, &quot;500.1074&quot;" assertions="2" time="18.707171"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth VISA Data&quot;, &quot;500.1076&quot;" assertions="4" time="34.515819"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Mastercard Data&quot;, &quot;500.1076&quot;" assertions="4" time="36.872372"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" feature="purchaseErrorRedirect3DS | &quot;Consumer failed or Cancelled auth Maestro Data&quot;, &quot;500.1076&quot;" assertions="4" time="35.137730"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem VISA Data&quot;, &quot;500.1077&quot;" assertions="4" time="32.568055"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Mastercard Data&quot;, &quot;500.1077&quot;" assertions="4" time="35.949076"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseErrorCards.feature" name="CreditCard3DSTokenizePurchaseErrorCards: purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" feature="purchaseErrorRedirect3DS | &quot;Auth not completed tech problem Maestro Data&quot;, &quot;500.1077&quot;" assertions="4" time="39.243779"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseHappyPath.feature" name="CrediCard3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="5" time="40.117862"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSTokenizePurchaseHappyPath.feature" name="CrediCard3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="44.496805"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="59.576207"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="41.008004"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="47.822096"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="43.701770"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="5" time="32.926584"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="42.243678"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="18.526669"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="50.513529"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="29.025129"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="23.293801"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="15.208724"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="23.206807"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="3" time="17.645820"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="4" time="24.743443"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="6" time="37.008328"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="18.928640"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="28.650590"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="22.498867"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="12.931201"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="22.449306"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="7" time="88.573344"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="6" time="110.698124"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="8" time="120.186141"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="6" time="59.238105"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="8" time="76.458008"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="8" time="63.774479"/>
   </testsuite>
 </testsuites>
