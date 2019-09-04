@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ui_test)" tests="3" assertions="12" failures="1" errors="0" time="140.670397">
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSWppv2AuthorizationHappyPath: authorize" feature="authorize" assertions="5" time="60.124631">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSWppv2AuthorizationHappyPath: authorize
-No matching records found for criteria {"transaction_type":"authorization"} in table ps_wirecard_payment_gateway_tx
-Failed asserting that 0 is greater than 0.
+  <testsuite name="acceptance (ui_test)" tests="3" assertions="7" failures="0" errors="1" time="92.498665">
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="4" time="53.343124"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="3" time="32.171289"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="6.984252">
+      <error type="PHPUnit_Framework_Exception">PayPalPurchaseHappyPath: purchase
+PHPUnit_Framework_Exception: Undefined index: Wirecard PayPal
 
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:86
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/Db.php:769
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:3864
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:245
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Subscriber/ErrorHandler.php:83
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/Page/Base.php:78
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:155
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:175
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -26,9 +25,7 @@ Failed asserting that 0 is greater than 0.
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:272
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:148
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
+</error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="4" time="51.501278"/>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="3" time="29.044488"/>
   </testsuite>
 </testsuites>
