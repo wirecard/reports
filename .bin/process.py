@@ -4,6 +4,7 @@ from datetime import datetime
 from string import Template
 
 REPORT_FILE_NAME = 'report.xml'
+MASTER_BRANCH_NAME = 'master'
 INDEX_TEMPLATE_FILE = os.path.join(os.getcwd(), 'docs', 'index_template.html')
 INDEX_FILE = os.path.join(os.getcwd(), 'docs', 'index.html')
 FULL_REPORT_LINK = "https://rawcdn.githack.com/" \
@@ -46,16 +47,22 @@ def get_date_from_report_link_data(project_name, gateway):
     return date
 
 
-def find_latest_result_file(location, project, gateway):
+def find_latest_result_file(location, project, gateway)
     global REPORT_LINK_DATA
     dates = []
     if os.path.isdir(location):
         for sub_dirs in os.listdir(location):
             dates.append(datetime.strptime(sub_dirs, DATE_FOLDER_FORMAT))
         latest = max(d for d in dates)
-        # Also keep the date for later link in the report
-        REPORT_LINK_DATA = add_to_dict_array(REPORT_LINK_DATA, project, {gateway: latest.strftime(DATE_FOLDER_FORMAT)})
-        return os.path.join(location, latest.strftime(DATE_FOLDER_FORMAT), REPORT_FILE_NAME)
+        if os.path.isfile(os.path.join(location, latest.strftime(DATE_FOLDER_FORMAT), REPORT_FILE_NAME)):
+            # Also keep the date for later link in the report
+            REPORT_LINK_DATA = add_to_dict_array(REPORT_LINK_DATA, project, {gateway: latest.strftime(DATE_FOLDER_FORMAT)})
+            return os.path.join(location, latest.strftime(DATE_FOLDER_FORMAT), REPORT_FILE_NAME)
+        elif MASTER_BRANCH_NAME in os.listdir(os.path.join(location, latest.strftime(DATE_FOLDER_FORMAT))):
+            REPORT_LINK_DATA = add_to_dict_array(REPORT_LINK_DATA, project, {gateway: latest.strftime(DATE_FOLDER_FORMAT)})
+            return os.path.join(location, latest.strftime(DATE_FOLDER_FORMAT), MASTER_BRANCH_NAME, REPORT_FILE_NAME)
+        else:
+            return None
     else:
         return None
 
@@ -74,7 +81,6 @@ def process_results_file(gateway, result_file):
             if case.result:
                 features[feature_name] = FAILED_TEST
     gateway_res[gateway] = features
-    print(gateway_res)
     return gateway_res
 
 
