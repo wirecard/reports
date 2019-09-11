@@ -47,7 +47,7 @@ def get_date_from_report_link_data(project_name, gateway):
     return date
 
 
-def find_latest_result_file(location, project, gateway)
+def find_latest_result_file(location, project, gateway):
     global REPORT_LINK_DATA
     dates = []
     if os.path.isdir(location):
