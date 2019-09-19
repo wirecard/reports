@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="3" assertions="7" failures="1" errors="2" time="599.369702">
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="6" time="351.002010">
+  <testsuite name="acceptance" tests="3" assertions="17" failures="3" errors="0" time="958.690077">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="6" time="352.311023">
       <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSAuthorizeHappyPath: authorize
 No matching records found for criteria {"txn_type like":"authorization"} in table sales_payment_transaction
 Failed asserting that 0 is greater than 0.
@@ -28,29 +28,19 @@ Failed asserting that 0 is greater than 0.
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="245.128401">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/447ee3b4c6bacd384513cb28487f9656734e5f3c/elements with params: {"using":"xpath","value":".\/\/*[self::input | self::textarea | self::select][@name = \"\/\/*[@id='customer-email']\"]"}
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="337.126177">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSPurchaseHappyPath: purchase
+No matching records found for criteria {"txn_type like":"capture"} in table sales_payment_transaction
+Failed asserting that 0 is greater than 0.
 
-Failed to connect to hub-cloud.browserstack.com port 80: Connection timed out
-
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:223
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1091
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1655
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:86
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/Db.php:769
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:1483
-/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Checkout.php:58
-/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:50
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3121
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:157
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3864
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:233
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -63,24 +53,21 @@ Failed to connect to hub-cloud.browserstack.com port 80: Connection timed out
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="3.239291">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="269.252877">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCardNon3DSPurchaseHappyPath: purchase
+No matching records found for criteria {"txn_type like":"capture"} in table sales_payment_transaction
+Failed asserting that 0 is greater than 0.
 
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:903
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:86
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/Db.php:769
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:283
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:122
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:193
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3864
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:233
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -93,7 +80,7 @@ Facebook\WebDriver\Exception\UnknownServerException: Session not started or term
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
