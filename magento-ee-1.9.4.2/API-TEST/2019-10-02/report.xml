@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="51.016" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-10-02T16:36:30" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-10-02T16:51:03" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Credit Card 3-D Secure Authorization test" timestamp="2019-10-02T16:36:30" tests="1" file="/home/travis/build/wirecard/magento-ee/tests/Selenium/Payments/CreditCard3dsAuthorizationTest.js" failures="0" time="51.016">
-    <testcase name="Credit Card 3-D Secure Authorization test should check the credit card 3ds authorization payment process" time="51.016" classname="should check the credit card 3ds authorization payment process">
+  <testsuite name="Credit Card 3-D Secure Authorization test" timestamp="2019-10-02T16:51:03" tests="1" file="/home/travis/build/wirecard/magento-ee/tests/Selenium/Payments/CreditCard3dsAuthorizationTest.js" failures="1" time="0">
+    <testcase name="Credit Card 3-D Secure Authorization test should check the credit card 3ds authorization payment process" time="0" classname="should check the credit card 3ds authorization payment process">
+      <failure message="connect ETIMEDOUT" type="Error"><![CDATA[Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (node_modules/mysql/lib/Connection.js:412:13)
+    at Socket._onTimeout (net.js:407:8)
+    --------------------
+    at Protocol._enqueue (node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (node_modules/mysql/lib/Connection.js:119:18)
+    at Context.it (tests/Selenium/Payments/CreditCard3dsAuthorizationTest.js:43:9)]]></failure>
     </testcase>
   </testsuite>
 </testsuites>
