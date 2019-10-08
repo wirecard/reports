@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="96.823" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-10-08T13:04:48" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="197.724" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-10-08T13:12:05" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Credit Card 3-D Secure Authorization test" timestamp="2019-10-08T13:04:48" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/CreditCardThreeDAuthorizationTest.js" failures="0" time="96.823">
-    <testcase name="Credit Card 3-D Secure Authorization test should check the credit card 3ds authorization payment process" time="96.823" classname="should check the credit card 3ds authorization payment process">
+  <testsuite name="Credit Card 3-D Secure Authorization test" timestamp="2019-10-08T13:12:06" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/CreditCardThreeDAuthorizationTest.js" failures="1" time="197.724">
+    <testcase name="Credit Card 3-D Secure Authorization test should check the credit card 3ds authorization payment process" time="98.862" classname="should check the credit card 3ds authorization payment process">
+    </testcase>
+    <testcase name="Credit Card 3-D Secure Authorization test should check the credit card 3ds authorization payment process" time="98.862" classname="should check the credit card 3ds authorization payment process">
+      <failure message="expected &apos;authorization&apos; to equal &apos;purchase&apos;" type="AssertionError"><![CDATA[AssertionError: expected 'authorization' to equal 'purchase'
+    at /home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/CreditCardThreeDAuthorizationTest.js:140:49
+    at Array.forEach (<anonymous>)
+    at Query.<anonymous> (Tests/Selenium/Payments/CreditCardThreeDAuthorizationTest.js:138:33)
+    at Query.<anonymous> (node_modules/mysql/lib/Connection.js:525:10)
+    at Query._callback (node_modules/mysql/lib/Connection.js:491:16)
+    at Query.Sequence.end (node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (node_modules/mysql/lib/Connection.js:525:10)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:594:20)]]></failure>
     </testcase>
   </testsuite>
 </testsuites>
