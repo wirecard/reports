@@ -209,13 +209,13 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 4</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 3</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 2</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (348.4s)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (263.7s)</small></h1>
 
 
 
@@ -224,513 +224,26 @@
  <td>
      <h3>Acceptance Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioSuccess">
+</tr>   <tr class="scenarioRow scenarioFailed">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSAuthorizationHappyPath &raquo;</span> authorize <span style="color: #34495e; font-size: 70%;">77.16s</span></p>
+     <p class="scenarioFailed" onclick="showHide('1', this)">
+          <span class="quiet">CreditCard3DSAuthorizationHappyPath &raquo;</span> authorize <span style="color: #34495e; font-size: 70%;">0s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
 
 
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a guest  user</strong></td>
-      </tr>
 
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a Credit Card 3DS</strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that authorization was successful</strong></td>
-      </tr>
-
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826accf0a', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "reserve" in configuration</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826accf0a">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;a:19:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:7:&quot;wpp_url&quot;;s:29:&quot;https://wpp-test.wirecard....},{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_creditcard_settings&quot;}</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826accf49', this)"><span class="toggle">+</span> And i prepare credit card checkout "3 ds"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826accf49">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I prepare checkout <span style="color: #732E81">&quot;Page\\Product&quot;,&quot;3DS&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I sync cookies</td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826accf88', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826accf88">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826accfc8', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826accfc8">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill fields with data <span style="color: #732E81">&quot;Customer data&quot;,&quot;Page\\Checkout&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/CustomerData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;test&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;test&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;test&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;test@example.com&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd063', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd063">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Credit Card&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd09c', this)"><span class="toggle">+</span> And i click "place order"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd09c">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd0de', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd0de">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill fields with data <span style="color: #732E81">&quot;Valid Credit Card Data&quot;,&quot;Page\\Checkout&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/PaymentMethodData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">5</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return document.querySelector(&quot;#wirecard-integrated-payment-page-frame&quot;).getAttribute(&quot;name&quot;)&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='pp-cc-last-name']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='pp-cc-last-name']&quot;,&quot;test&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='pp-cc-account-number']&quot;,&quot;4012000300001003&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='pp-cc-cvv']&quot;,&quot;003&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='pp-cc-expiration-date']&quot;,&quot;0123&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd13c', this)"><span class="toggle">+</span> When i click "pay now"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd13c">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='seamless-submit']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='seamless-submit']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='seamless-submit']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd17e', this)"><span class="toggle">+</span> And i am redirected to "verified" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd17e">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">10</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;/bank&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd1c1', this)"><span class="toggle">+</span> And i enter "wirecard" in field "password"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd1c1">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;wirecard&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd1fc', this)"><span class="toggle">+</span> And i click "continue"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd1fc">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='authenticate']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd23d', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd23d">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">20</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;/order-received&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd278', this)"><span class="toggle">+</span> And i see "order received"</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd278">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Order received&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5da4826acd2b3', this)"><span class="toggle">+</span> And i see "creditcard" "authorization" in transaction table</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4826acd2b3">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in database <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,{&quot;transaction_type&quot;:&quot;authorization&quot;}</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I assert equals <span style="color: #732E81">&quot;authorization&quot;,&quot;authorization&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
+         <tr >
+    <td class="error">
+        Can't connect to Webdriver at http://hub-cloud.browserstack.com:80/wd/hub. Please make sure that Selenium Server or PhantomJS is running.
+    </td>
 </tr>
 
-         
-         
-         
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSAuthorizationHappyPath.authorize.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSAuthorizationHappyPath.authorize.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
      </table>
 
 
@@ -741,7 +254,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('2', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCard3DSPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">73.35s</span></p>
+          <span class="quiet">CreditCard3DSPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">72.88s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -762,13 +275,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e0ae', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "pay" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35923a', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "pay" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e0ae">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35923a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -782,13 +295,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e0ee', this)"><span class="toggle">+</span> And i prepare credit card checkout "3 ds"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35927e', this)"><span class="toggle">+</span> And i prepare credit card checkout "3 ds"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e0ee">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35927e">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -806,13 +319,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e12e', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3592c2', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e12e">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3592c2">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -826,13 +339,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e16c', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f359300', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e16c">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f359300">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -954,13 +467,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e208', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f359397', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e208">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f359397">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -974,13 +487,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e242', this)"><span class="toggle">+</span> And i click "place order"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3593d6', this)"><span class="toggle">+</span> And i click "place order"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e242">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3593d6">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1002,13 +515,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e284', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35941e', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e284">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35941e">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1066,13 +579,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e2e2', this)"><span class="toggle">+</span> When i click "pay now"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35947e', this)"><span class="toggle">+</span> When i click "pay now"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e2e2">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35947e">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1094,13 +607,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e322', this)"><span class="toggle">+</span> And i am redirected to "verified" page</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3594bf', this)"><span class="toggle">+</span> And i am redirected to "verified" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e322">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3594bf">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1118,13 +631,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e35e', this)"><span class="toggle">+</span> And i enter "wirecard" in field "password"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3594fe', this)"><span class="toggle">+</span> And i enter "wirecard" in field "password"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e35e">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3594fe">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1142,13 +655,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e399', this)"><span class="toggle">+</span> And i click "continue"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35953b', this)"><span class="toggle">+</span> And i click "continue"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e399">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35953b">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1170,13 +683,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e3d9', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
+ <td class="stepName " ><p onclick="showHide('5da482f35957b', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e3d9">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f35957b">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1194,13 +707,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e415', this)"><span class="toggle">+</span> And i see "order received"</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3595b6', this)"><span class="toggle">+</span> And i see "order received"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e415">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3595b6">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1214,13 +727,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482b43e453', this)"><span class="toggle">+</span> And i see "creditcard" "purchase" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5da482f3595f1', this)"><span class="toggle">+</span> And i see "creditcard" "purchase" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482b43e453">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f3595f1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1255,7 +768,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('3', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCardNon3DSAuthorizationHappyPath &raquo;</span> authorize <span style="color: #34495e; font-size: 70%;">60.41s</span></p>
+          <span class="quiet">CreditCardNon3DSAuthorizationHappyPath &raquo;</span> authorize <span style="color: #34495e; font-size: 70%;">57.01s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -1276,13 +789,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8844', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "reserve" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81843', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "reserve" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8844">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81843">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1296,13 +809,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8885', this)"><span class="toggle">+</span> And i prepare credit card checkout "non3 ds"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81884', this)"><span class="toggle">+</span> And i prepare credit card checkout "non3 ds"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8885">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81884">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1320,13 +833,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b88c3', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c818c1', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b88c3">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c818c1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1340,13 +853,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8900', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c818ff', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8900">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c818ff">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1468,13 +981,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b899b', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81993', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b899b">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81993">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1488,13 +1001,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b89d3', this)"><span class="toggle">+</span> And i click "place order"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c819cb', this)"><span class="toggle">+</span> And i click "place order"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b89d3">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c819cb">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1516,13 +1029,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8a15', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81a0c', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8a15">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81a0c">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1580,13 +1093,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8a7a', this)"><span class="toggle">+</span> When i click "pay now"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81a6c', this)"><span class="toggle">+</span> When i click "pay now"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8a7a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81a6c">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1608,13 +1121,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8abb', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81aaf', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8abb">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81aaf">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1632,13 +1145,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8af7', this)"><span class="toggle">+</span> And i see "order received"</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81aea', this)"><span class="toggle">+</span> And i see "order received"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8af7">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81aea">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1652,13 +1165,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da482f0b8b32', this)"><span class="toggle">+</span> And i see "creditcard" "authorization" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5da4832c81b25', this)"><span class="toggle">+</span> And i see "creditcard" "authorization" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da482f0b8b32">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832c81b25">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1693,7 +1206,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('4', this)"><span class="toggle">+</span>
-          <span class="quiet">CreditCardNon3DSPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">60.05s</span></p>
+          <span class="quiet">CreditCardNon3DSPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">57.23s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -1714,13 +1227,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd69bf', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "pay" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e667a', this)"><span class="toggle">+</span> Given i activate "creditcard" payment action "pay" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd69bf">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e667a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1734,13 +1247,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6a01', this)"><span class="toggle">+</span> And i prepare credit card checkout "non3 ds"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e66bb', this)"><span class="toggle">+</span> And i prepare credit card checkout "non3 ds"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6a01">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e66bb">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1758,13 +1271,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6a42', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e66fa', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6a42">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e66fa">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1778,13 +1291,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6a82', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e6739', this)"><span class="toggle">+</span> And i fill fields with "customer data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6a82">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e6739">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1906,13 +1419,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6b1d', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e67cf', this)"><span class="toggle">+</span> Then i see "wirecard credit card"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6b1d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e67cf">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1926,13 +1439,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6b60', this)"><span class="toggle">+</span> And i click "place order"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e6808', this)"><span class="toggle">+</span> And i click "place order"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6b60">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e6808">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1954,13 +1467,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6ba3', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e684a', this)"><span class="toggle">+</span> Given i fill fields with "valid credit card data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6ba3">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e684a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2018,13 +1531,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6c0d', this)"><span class="toggle">+</span> When i click "pay now"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e68a7', this)"><span class="toggle">+</span> When i click "pay now"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6c0d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e68a7">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2046,13 +1559,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6c50', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e68ec', this)"><span class="toggle">+</span> Then i am redirected to "order received" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6c50">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e68ec">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2070,13 +1583,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6c90', this)"><span class="toggle">+</span> And i see "order received"</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e6928', this)"><span class="toggle">+</span> And i see "order received"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6c90">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e6928">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2090,13 +1603,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4832cd6ccb', this)"><span class="toggle">+</span> And i see "creditcard" "purchase" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5da48365e6962', this)"><span class="toggle">+</span> And i see "creditcard" "purchase" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4832cd6ccb">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da48365e6962">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2131,7 +1644,7 @@
    <tr class="scenarioRow scenarioFailed">
     <td>
      <p class="scenarioFailed" onclick="showHide('5', this)"><span class="toggle">+</span>
-          <span class="quiet">PayPalPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">77.41s</span></p>
+          <span class="quiet">PayPalPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">76.59s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioFailed">
@@ -2152,13 +1665,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c53032', this)"><span class="toggle">+</span> Given i activate "paypal" payment action "pay" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e2554', this)"><span class="toggle">+</span> Given i activate "paypal" payment action "pay" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c53032">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e2554">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2172,13 +1685,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c53070', this)"><span class="toggle">+</span> And i prepare pay pal checkout</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e2598', this)"><span class="toggle">+</span> And i prepare pay pal checkout</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c53070">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e2598">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2196,13 +1709,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c530ae', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e25d5', this)"><span class="toggle">+</span> When i am on "checkout" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c530ae">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e25d5">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2216,13 +1729,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c530ea', this)"><span class="toggle">+</span> Then i fill fields with "customer data"</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e2611', this)"><span class="toggle">+</span> Then i fill fields with "customer data"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c530ea">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e2611">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2344,13 +1857,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c53180', this)"><span class="toggle">+</span> And i click "wirecard pay pal"</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e26aa', this)"><span class="toggle">+</span> And i click "wirecard pay pal"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c53180">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e26aa">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2372,13 +1885,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c531bf', this)"><span class="toggle">+</span> Given i click "place order"</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e26e9', this)"><span class="toggle">+</span> Given i click "place order"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c531bf">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e26e9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2400,13 +1913,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5da4837c531ff', this)"><span class="toggle">+</span> And i am redirected to "pay pal log in" page</p>
+ <td class="stepName " ><p onclick="showHide('5da483b3e272e', this)"><span class="toggle">+</span> And i am redirected to "pay pal log in" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c531ff">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e272e">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2424,13 +1937,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName failedStep" ><p onclick="showHide('5da4837c5323a', this)"><span class="toggle">+</span> And i login to paypal</p>
+ <td class="stepName failedStep" ><p onclick="showHide('5da483b3e276a', this)"><span class="toggle">+</span> And i login to paypal</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c5323a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e276a">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2480,13 +1993,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName failedStep" ><p onclick="showHide('5da4837c53292', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+ <td class="stepName failedStep" ><p onclick="showHide('5da483b3e27c3', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da4837c53292">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5da483b3e27c3">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2506,7 +2019,7 @@
 
          <tr >
     <td class="error">
-        Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-40N26186E7230670M&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US#/checkout/selectFi' contains &quot;review&quot;.
+        Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-3WW1003447768552F&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US#/checkout/selectFi' contains &quot;review&quot;.
     </td>
 </tr>
 
@@ -2527,11 +2040,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>4</strong></td>
+        <td class="scenarioSuccessValue"><strong>3</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>1</strong></td>
+        <td class="scenarioFailedValue"><strong>2</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
