@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="3" assertions="11" failures="2" errors="1" time="1235.003613">
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="0" time="177.929518">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSAuthorizeHappyPath: authorize
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class="action primary checkout"]"}
-  (Session info: chrome=77.0.3865.75)
-  (Driver info: chromedriver=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 18 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '208-78-111-18', ip: '208.78.111.18', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1547}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Windows\proxy\scoped_dir2324_2020356620}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=77.0.3865.75, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3593f84b2428fe6f5f6f1a49f5b90417
-*** Element info: {Using=xpath, value=//*[@class="action primary checkout"]}
+  <testsuite name="acceptance" tests="3" assertions="10" failures="1" errors="2" time="1356.966669">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="6" time="588.720044">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSAuthorizeHappyPath: authorize
+Failed asserting that true matches expected false.
 
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverWait.php:67
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:37
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/Asserts.php:36
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3151
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:283
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
+/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:893
+/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
+/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
+</failure>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="2" time="385.053760">
+      <error type="Facebook\WebDriver\Exception\TimeOutException">CreditCard3DSPurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\TimeOutException: 
+
+/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverWait.php:84
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2334
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
 /home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:2386
 /home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:35
-/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:57
-/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Product3DS.php:48
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:245
+/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:46
+/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Payment.php:61
+/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:52
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3121
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:209
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -45,16 +60,23 @@ Session ID: 3593f84b2428fe6f5f6f1a49f5b90417
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="573.127808">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSPurchaseHappyPath: purchase
-Failed asserting that true matches expected false.
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="2" time="383.192865">
+      <error type="Facebook\WebDriver\Exception\TimeOutException">CreditCardNon3DSPurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\TimeOutException: 
 
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:37
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/Asserts.php:36
+/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/WebDriverWait.php:84
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2334
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3151
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:283
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:2386
+/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:35
+/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:46
+/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Payment.php:61
+/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:52
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3121
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:209
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
@@ -69,33 +91,7 @@ Failed asserting that true matches expected false.
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
 /home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="483.946287">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCardNon3DSPurchaseHappyPath: purchase
-Failed asserting that true matches expected false.
-
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:37
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/Asserts.php:36
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3151
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:283
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:893
-/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:262
-/home/travis/build/wirecard/magento2-ee/vendor/symfony/console/Application.php:145
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
+</error>
     </testcase>
   </testsuite>
 </testsuites>
