@@ -1,0 +1,4232 @@
+<html>
+ <head>
+	<title>Test results</title>
+	<meta charset='utf-8'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round&v2' rel='stylesheet' type='text/css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <style>
+		 .layout {
+		 margin: 0 auto;
+		 max-width: 1000px;
+
+		 }
+		 body { font-family: arial, serif; margin: 0; padding: 0; background: #ecf0f1; font-size: 20px; }
+		 h1,h2,h3 { font-family: arial, serif; color: #7f8c8d; }
+		 h1 { font-size: 2.5em; }
+		 h2 { font-size: 1.3em; }
+         h3 { font-size: 1em; color: #84BBDD; margin: 0.5em 0; }
+
+		 table { border: none; margin: 0; padding: 0; font-size: 0.9em;}
+		 .scenarioStepsTable .stepName { padding: 5px; }
+
+		 .scenarioStepsTable td {
+            background: #fff;
+		 }
+
+         .quiet {
+             color: #333;
+             font-size: 0.8em;
+         }
+
+         .screenshot {
+             max-height: 400px;
+             overflow-y: scroll;
+             display: block;
+         }
+         .screenshot img {
+             zoom: 0.5;
+         }
+
+         @media (max-width: 1200px) {
+           #toolbar-filter {
+             display: none !important;
+           }
+         }
+
+         .scenarioStepsTable .nostyle {
+             background: none;
+             border: none;
+         }
+
+		 p {
+		    cursor: pointer;
+		 }
+
+         .scenarioRow>td>p {
+             padding: 5px;
+         }
+
+         .scenarioStepsTable .failedStep {
+             padding: 10px;
+             background: #ecf0f1;
+             border: 2px solid #e74c3c;
+             border-radius: 0px;
+             color:  #e74c3c;
+         }
+
+         .scenarioStepsTable .error {
+             background:  #999;
+             padding: 10px;
+             color: #fff;
+             border-radius: 0px;
+         }
+
+         .scenarioStepsTable .error a {
+             color: #eef;
+         }
+
+         .scenarioStepsTable.substeps td {
+             background: #bdc3c7;
+         }
+
+		 .header { font-size: large; font-weight: bold; }
+		 p.scenarioSuccess {
+    		 background: rgb(157,213,58); /* Old browsers */
+		 }
+
+
+		 .scenario { color: black; }
+		 p.scenarioFailed, p.scenarioError { color: black;
+		   background: #e74c3c
+		 }
+
+		 table.scenarioFailed tr:last-child { font-weight: bold; }
+
+		 td.scenarioSuccess { color: green }
+		 td.scenarioFailed { color: red }
+		 .scenarioSkipped { color: teal; }
+		 .scenarioIncomplete { color: gray; }
+		 .scenarioStepsTable { margin-left: 10px; display: none; color: #333; }
+
+		 #stepContainerSummary {
+		 background: white;
+		 -webkit-border-radius: 5px;
+		 -moz-border-radius: 5px;
+		 border-radius: 5px;
+		 padding: 20px;
+		 }
+
+         .toggle {
+             background: rgba(255,255,255,0.5);
+             border-radius: 10px;
+             display: inline-block;
+             width: 20px;
+             height: 20px;
+             text-align: center;
+             margin: auto;
+             color: #666
+         }
+
+		 ul#toolbar-filter {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 0px;
+            padding: 0px;
+		 }
+		 ul#toolbar-filter li {
+		    list-style: none;
+		    text-align: center;
+			padding: 20px;
+			background-color: #3498db;
+		 }
+		 ul#toolbar-filter li a, ul#toolbar-filter li a:hover, ul#toolbar-filter li a:visited {
+		    color: #34495e;
+		    text-decoration: none;
+		 }
+		 ul#toolbar-filter li.disabled {
+			background-color: #bdc3c7;
+		 }
+	 </style>
+
+  <script type="text/javascript">
+  var showAll = true;
+  function showHide(nodeId, linkObj)
+  {
+    var subObj = document.getElementById('stepContainer' + nodeId);
+    var toggle = linkObj.childNodes[0];
+    if (toggle.innerHTML != '-') {
+      toggle.innerHTML = '-';
+      subObj.style.display='block';
+      subObj.style.width = '100%';
+    } else {
+      toggle.innerHTML = '+';
+      subObj.style.display='none';
+    }
+  }
+
+  function showAllScenarios() {
+    var toolbar = document.getElementById('toolbar-filter');
+    for (var i = 0; i < toolbar.children.length; i++) {
+      toolbar.children[i].className = '';
+    }
+
+    var trs = document.getElementsByTagName('tr');
+    for(var z = 0; z < trs.length; z++) {
+      trs[z].style.display = '';
+    }
+    showAll = true;
+  }
+
+  function toggleScenarios(name, linkObj) {
+    var links = document.getElementById('toolbar-filter').children;
+    var rows = document.getElementsByClassName('scenarioRow');
+    if (showAll) {
+        for (var i = 0; i < links.length; i++) {
+            links[i].className = 'disabled';
+        }
+
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].style.display = 'none';
+        }
+
+    }
+    showAll = false;
+
+    if (linkObj.className == '') {
+        linkObj.className = 'disabled';
+        for (var i = 0; i < rows.length; i++) {
+          if (rows[i].classList.contains(name)) {
+                rows[i].style.display = 'none';
+          }
+        }
+        return;
+    }
+    if (linkObj.className == 'disabled') {
+        linkObj.className = '';
+        for (var i = 0; i < rows.length; i++) {
+          if (rows[i].classList.contains(name)) {
+                rows[i].style.display = 'table-row';
+          }
+        }
+        return;
+    }
+
+  }
+  </script>
+ </head>
+
+ <body>
+   <ul id="toolbar-filter">
+     <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 8</a></li>
+     <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
+     <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
+   </ul>
+ <div class="layout">
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (397s)</small></h1>
+
+
+
+	 <table border="0" style="width: 100%;">
+		<tr>
+ <td>
+     <h3>Acceptance Tests</h3>
+ </td>
+</tr>   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">63.24s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7ba77dff37', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77dff37">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7ba77dff8d', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77dff8d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7ba77dfff2', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77dfff2">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7ba77e0030', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77e0030">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7ba77e0069', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77e0069">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7ba77e00ae', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7ba77e00ae">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('2', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">59.03s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bab416dca', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416dca">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bab416e21', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416e21">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bab416ec4', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416ec4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bab416f0f', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416f0f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bab416f4e', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416f4e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bab416fa8', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bab416fa8">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('3', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">58.57s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7baefa65e2', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa65e2">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7baefa6630', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa6630">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7baefa668f', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa668f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7baefa66cc', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa66cc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7baefa6707', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa6707">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7baefa676c', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7baefa676c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('4', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">56.99s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb299cfbc', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299cfbc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb299d010', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299d010">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb299d06f', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299d06f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb299d0ac', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299d0ac">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb299d0e7', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299d0e7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bb299d132', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb299d132">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPathSg.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('5', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">58.99s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer5">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb65a3294', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a3294">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb65a32e3', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a32e3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb65a3340', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a3340">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb65a337d', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a337d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bb65a33b7', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a33b7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bb65a33fb', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bb65a33fb">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('6', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">59.66s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer6">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bba24f15f', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f15f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bba24f1b5', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f1b5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bba24f21c', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f21c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bba24f25c', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f25c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bba24f297', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f297">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bba24f2dd', this)"><span class="toggle">+</span> Given i am redirected to "credit card reserve page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bba24f2dd">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;reserve&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that '/examples/payments/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25' contains &quot;reserve&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseAndPostprocessingHappyPathSg.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('7', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSTokenizePurchaseHappyPathSg &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">20.55s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer7">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non-3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803d2f', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803d2f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803d7c', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803d7c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803ddb', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803ddb">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803e18', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803e18">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803e53', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803e53">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbb803e97', this)"><span class="toggle">+</span> Given i am redirected to "credit card success page non 3 d page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803e97">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;pay_tokenize&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bbb803edb', this)"><span class="toggle">+</span> Then i see text "reservation successfully completed."</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbb803edb">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Reservation successfully completed.&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /examples/payments/CreditCard/pay_tokenize.php<br />
+--&gt; Payment SDK for PHP Examples<br />
+Error with code 400.1048 and message &quot;This Merchant Account does not have a Provider Account associated with it. Please contact technical support.&quot; occurred.<br />
+&copy; 2019 Wirecard<br />
+--&gt; contains &quot;Reservation successfully completed.&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseHappyPathSg.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseHappyPathSg.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('8', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSTokenizePurchaseHappyPathSg &raquo;</span> voidPurchase <span style="color: #34495e; font-size: 70%;">19.94s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer8">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non-3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d608', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d608">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d65d', this)"><span class="toggle">+</span> When i fill fields with "valid credit card data"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d65d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get card data from data file <span style="color: #732E81">&quot;Valid Credit Card Data&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get gateway</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='first_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='last_name']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='account_number']&quot;,&quot;4005550000000001&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='card_security_code']&quot;,&quot;602&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_month_list']&quot;,&quot;12&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='expiration_year_list']&quot;,&quot;2021&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d6c5', this)"><span class="toggle">+</span> And i enter "25" in field "amount"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d6c5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='amount']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='amount']&quot;,&quot;25&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d716', this)"><span class="toggle">+</span> And i choose "sgd" in field "currency"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d716">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='currency']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@id='currency']&quot;,&quot;SGD&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d7a1', this)"><span class="toggle">+</span> And i click "save"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d7a1">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='btn btn-primary']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5dc7bbcd1d7f7', this)"><span class="toggle">+</span> Given i am redirected to "credit card success page non 3 d page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d7f7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;pay_tokenize&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5dc7bbcd1d83d', this)"><span class="toggle">+</span> And i see text "transaction id"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5dc7bbcd1d83d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Transaction ID&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /examples/payments/CreditCard/pay_tokenize.php<br />
+--&gt; Payment SDK for PHP Examples<br />
+Error with code 400.1048 and message &quot;This Merchant Account does not have a Provider Account associated with it. Please contact technical support.&quot; occurred.<br />
+&copy; 2019 Wirecard<br />
+--&gt; contains &quot;Transaction ID&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseHappyPathSg.voidPurchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseHappyPathSg.voidPurchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+	    <h2>Summary</h2>
+     <div id="stepContainerSummary">
+      <table border="0">
+       <tr>
+        <td width="250" class="scenarioSuccess">Successful scenarios:</td>
+        <td class="scenarioSuccessValue"><strong>0</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioFailed">Failed scenarios:</td>
+        <td class="scenarioFailedValue"><strong>8</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioSkipped">Skipped scenarios:</td>
+        <td class="scenarioSkippedValue"><strong>0</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioIncomplete">Incomplete scenarios:</td>
+        <td class="scenarioIncompleteValue"><strong>0</strong></td>
+       </tr>
+      </table>
+     </div>
+    </td>
+   </tr>
+  </table>
+ </div>
+ </body>
+</html>
