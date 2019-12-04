@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="201.35199999999998" tests="2" failures="1">
-  <testsuite name="Root Suite" timestamp="2019-12-04T08:38:39" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="234.017" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2019-12-04T09:12:01" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Credit Card One-Click Checkout test" timestamp="2019-12-04T08:38:39" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/CreditCardOneClickTest.js" failures="0" time="95.377">
-    <testcase name="Credit Card One-Click Checkout test should check the credit card one-click payment process" time="95.377" classname="should check the credit card one-click payment process">
+  <testsuite name="Credit Card One-Click Checkout test" timestamp="2019-12-04T09:12:01" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/CreditCardOneClickTest.js" failures="0" time="100.543">
+    <testcase name="Credit Card One-Click Checkout test should check the credit card one-click payment process" time="100.543" classname="should check the credit card one-click payment process">
     </testcase>
   </testsuite>
-  <testsuite name="Alipay Cross-border test" timestamp="2019-12-04T08:40:23" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/AlipayTest.js" failures="1" time="105.975">
-    <testcase name="Alipay Cross-border test should check the alipay crossborder payment process" time="105.975" classname="should check the alipay crossborder payment process">
-      <failure message="Waiting for element to be located By(css selector, .sixDigitPassword)
-Wait timed out after 50112ms" type="TimeoutError"><![CDATA[TimeoutError: Waiting for element to be located By(css selector, .sixDigitPassword)
-Wait timed out after 50112ms
-    at /home/travis/shopware/custom/plugins/WirecardElasticEngine/node_modules/selenium-webdriver/lib/webdriver.js:841:17
+  <testsuite name="Alipay Cross-border test" timestamp="2019-12-04T09:13:55" tests="1" file="/home/travis/shopware/custom/plugins/WirecardElasticEngine/Tests/Selenium/Payments/AlipayTest.js" failures="2" time="133.474">
+    <testcase name="Alipay Cross-border test should check the alipay crossborder payment process" time="132.167" classname="should check the alipay crossborder payment process">
+      <failure message="ETIMEDOUT connect ETIMEDOUT 207.254.8.4:80" type="Error"><![CDATA[Error: ETIMEDOUT connect ETIMEDOUT 207.254.8.4:80
+    at ClientRequest.<anonymous> (node_modules/selenium-webdriver/http/index.js:258:15)
+    at Socket.socketErrorListener (_http_client.js:387:9)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)]]></failure>
+    </testcase>
+    <testcase name="Alipay Cross-border test &quot;after all&quot; hook" time="1.307" classname="&quot;after all&quot; hook">
+      <failure message="Session not started or terminated" type="WebDriverError"><![CDATA[WebDriverError: Session not started or terminated
+    at Object.checkLegacyResponse (node_modules/selenium-webdriver/lib/error.js:585:15)
+    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:554:13)
+    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:489:26)
     at <anonymous>
     at process._tickCallback (internal/process/next_tick.js:188:7)]]></failure>
     </testcase>
