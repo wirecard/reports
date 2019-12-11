@@ -1,0 +1,36 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Wirecard AG - payment SDK for PHP Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="application/javascript"></script>
+</head>
+<body id="overrides">
+<div class="container">
+    <div class="content">
+    <div class="page-header">
+        <div class="row align-baseline">
+            <div class="col-sm-3">
+                <a href="../../index.html"><img src="https://raw.githubusercontent.com/wirecard/paymentSDK-php/master/examples/assets/img/wirecard_logo.png" alt="wirecard"></a>
+            </div>
+            <div class="col-sm-9 bottom-align-text">
+                <h1>Payment SDK for PHP Examples</h1>
+            </div>
+        </div>
+    </div><br>
+<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
+<tbody><tr><th align="left" bgcolor="#f57900" colspan="5"><span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught GuzzleHttp\Exception\RequestException: cURL error 56: SSL read: error:00000000:lib(0):func(0):reason(0), errno 104 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) in /home/travis/build/tatsta/paymentSDK-php/vendor/php-http/guzzle6-adapter/src/Promise.php on line <i>135</i></th></tr>
+<tr><th align="left" bgcolor="#f57900" colspan="5"><span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Http\Client\Exception\RequestException: cURL error 56: SSL read: error:00000000:lib(0):func(0):reason(0), errno 104 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) in /home/travis/build/tatsta/paymentSDK-php/vendor/php-http/guzzle6-adapter/src/Promise.php on line <i>135</i></th></tr>
+<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
+<tr><th align="center" bgcolor="#eeeeec">#</th><th align="left" bgcolor="#eeeeec">Time</th><th align="left" bgcolor="#eeeeec">Memory</th><th align="left" bgcolor="#eeeeec">Function</th><th align="left" bgcolor="#eeeeec">Location</th></tr>
+<tr><td bgcolor="#eeeeec" align="center">1</td><td bgcolor="#eeeeec" align="center">0.0000</td><td bgcolor="#eeeeec" align="right">400560</td><td bgcolor="#eeeeec">{main}(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/examples/payments/CreditCard/cancel.php" bgcolor="#eeeeec">.../cancel.php<b>:</b>0</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">2</td><td bgcolor="#eeeeec" align="center">0.0027</td><td bgcolor="#eeeeec" align="right">781192</td><td bgcolor="#eeeeec">Wirecard\PaymentSdk\TransactionService-&gt;cancel(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/examples/payments/CreditCard/cancel.php" bgcolor="#eeeeec">.../cancel.php<b>:</b>67</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">3</td><td bgcolor="#eeeeec" align="center">0.0028</td><td bgcolor="#eeeeec" align="right">781512</td><td bgcolor="#eeeeec">Wirecard\PaymentSdk\TransactionService-&gt;process(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/src/TransactionService.php" bgcolor="#eeeeec">.../TransactionService.php<b>:</b>400</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">4</td><td bgcolor="#eeeeec" align="center">0.0028</td><td bgcolor="#eeeeec" align="right">781512</td><td bgcolor="#eeeeec">Wirecard\PaymentSdk\TransactionService-&gt;getTransactionByTransactionId(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/src/TransactionService.php" bgcolor="#eeeeec">.../TransactionService.php<b>:</b>509</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">5</td><td bgcolor="#eeeeec" align="center">0.0028</td><td bgcolor="#eeeeec" align="right">781832</td><td bgcolor="#eeeeec">Wirecard\PaymentSdk\TransactionService-&gt;sendGetRequest(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/src/TransactionService.php" bgcolor="#eeeeec">.../TransactionService.php<b>:</b>616</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">6</td><td bgcolor="#eeeeec" align="center">0.0030</td><td bgcolor="#eeeeec" align="right">790560</td><td bgcolor="#eeeeec">Http\Client\Common\HttpMethodsClient-&gt;sendRequest(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/src/TransactionService.php" bgcolor="#eeeeec">.../TransactionService.php<b>:</b>470</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">7</td><td bgcolor="#eeeeec" align="center">0.0030</td><td bgcolor="#eeeeec" align="right">790560</td><td bgcolor="#eeeeec">Http\Adapter\Guzzle6\Client-&gt;sendRequest(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/vendor/php-http/client-common/src/HttpMethodsClient.php" bgcolor="#eeeeec">.../HttpMethodsClient.php<b>:</b>208</td></tr>
+<tr><td bgcolor="#eeeeec" align="center">8</td><td bgcolor="#eeeeec" align="center">0.0039</td><td bgcolor="#eeeeec" align="right">878432</td><td bgcolor="#eeeeec">Http\Adapter\Guzzle6\Promise-&gt;wait(  )</td><td title="/home/travis/build/tatsta/paymentSDK-php/vendor/php-http/guzzle6-adapter/src/Client.php" bgcolor="#eeeeec">.../Client.php<b>:</b>56</td></tr>
+</tbody></table></font>
+</div></div></body></html>
