@@ -1,0 +1,186 @@
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Transaction Details</title>
+		<style type="text/css">
+			table {border-collapse: collapse; font-family: verdana; font-size: 11px; margin: 0 auto;}
+			th {background-color: #ddd; padding: 5px; font-size: 13px;min-width: 300px;}
+			td {padding: 5px;}
+			td.label {background-color: #eee; font-weight: 900;min-width: 300px;}
+			td.value {min-width: 100px;}
+			tr.toggle{}
+			div.toggleMe{				
+				width: 800px ;
+	  			margin-left: auto;
+	  			margin-right: auto;
+	  			text-align:left;
+	  			color: blue;
+	  			font-size:16px;
+				cursor: pointer;
+	  			}
+		</style>
+		<script src="/engine/includes/jquery-1.7.2.min.js" type="text/javascript"></script>
+		 <script type="text/javascript">                                         
+			 $(document).ready(function(){
+			  					
+					$("td.value").each(function(){
+						if ( $(this).text().trim() == ""){
+							$(this).parent().addClass("toggle");
+						}
+					});
+					
+					$(".toggle").hide();
+				   		
+					$(".toggleMe").click(function() {  
+				        $(".toggle").toggle();
+				        //$(this).text("Please click to show fields");
+				        centerDiv();
+				    }).toggle(
+				    		function(){
+				    			$(this).html("<b>Please click to SHOW blank fields</b>");
+				    		},
+				    		function(){
+				    			$(this).html("<b>Please click to HIDE blank fields</b>");
+				    		});
+					
+					centerDiv();
+				});
+			 
+			 function centerDiv(){
+				// center div
+			    var width = $("#mainTable").width();
+			    $(".toggleMe").css("width", width+"px");	
+			 }
+		 </script>
+	</head>
+	<body><div class="toggleMe" style="width: 961px;"><b>Please click to SHOW blank fields</b></div>
+	
+		<table id="mainTable" border="1">
+			<tbody><tr><th colspan="2"><b>Transaction Details</b></th></tr>			
+			<tr><td class="label">Transaction Id</td><td class="value">63dc7b54-80ae-4892-9bc0-30dff9e61fad</td></tr>
+			<tr><td class="label">Parent Transaction Id</td><td class="value">74703318-7986-413a-9082-37ca69cf92bc</td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Group Transaction Id</td><td class="value"></td></tr>
+			<tr><td class="label">Completion Timestamp (GMT)</td><td class="value">2019-12-18T14:34:41.000Z</td></tr>	
+			<tr><td class="label">Merchant Account Id</td><td class="value">49ee1355-cdd3-4205-920f-85391bb3865d</td></tr>	
+			<tr><td class="label">Transaction Type</td><td class="value">authorization</td></tr>
+			<tr><td class="label">Transaction State</td><td class="value">SUCCESS</td></tr>
+			<tr><td class="label">Requested Amount</td>
+			<td class="value">70</td></tr>
+			<tr><td class="label">Currency</td><td class="value">EUR</td></tr>
+			
+                <tr><td class="label">Payment Method</td><td>CREDITCARD</td></tr>                                               
+            
+			<tr><td class="label">Authorization Code</td><td class="value">504149</td></tr>
+			<tr><td class="label">Request Id</td><td class="value">fe033b9eadf7b52603859a8a6a0f5ca21cbc33bc2b695dc150945958bd0ad077</td></tr>							
+			<tr class="toggle" style="display: none;"><td class="label">Expiration Date</td><td class="value"></td></tr> 
+			<tr class="toggle" style="display: none;"><td class="label">Consumer Id</td><td class="value"></td></tr>
+			<tr><td class="label">IP Address</td><td class="value">199.7.165.130</td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Entry Mode</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Periodic Type</td><td class="value"></td></tr>				
+			<tr><td class="label">Order Number</td><td class="value">A2</td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Order Details</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Descriptor</td><td class="value"></td></tr>
+			<tr><td class="label">API Name</td><td class="value">wpp-nvp</td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">API Transaction Id</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Instrument Country</td><td class="value"></td></tr>
+			<tr><th colspan="2"><b>Card holder Details</b></th></tr>			
+			<tr class="toggle" style="display: none;"><td class="label">First Name</td><td class="value"></td></tr>
+			<tr><td class="label">Last Name</td><td class="value">test</td></tr>
+			<tr><td class="label">Date Of Birth</td><td class="value">1973-12-07</td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Gender</td><td class="value"></td></tr>
+			<tr><td class="label">Email</td><td class="value">john.doe@test.com</td></tr>
+			<tr><td class="label">Phone</td><td class="value">03018425165</td></tr>
+			<tr><td class="label">Street Line 1</td><td class="value">Teststrasse</td></tr>
+            <tr><td class="label">Street Line 2</td><td class="value">Test street 2</td></tr>
+			<tr><td class="label">City</td><td class="value">Berlin</td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">State</td><td class="value"></td></tr>
+            <tr><td class="label">Country</td><td class="value">DE</td></tr>
+            <tr><td class="label">Post Code</td><td class="value">13353</td></tr>
+			<tr><th colspan="2"><b>Card Details</b></th></tr>	
+			<tr><td class="label">Card Type</td><td class="value">VISA</td></tr>		
+			<tr><td class="label">Card Token Id</td><td class="value">4397423476101003</td></tr>
+			<tr><td class="label">Masked Account Number</td><td class="value">401200******1003</td></tr>
+			<tr><td class="label">Expiration Month</td><td class="value">1</td></tr>
+			<tr><td class="label">Expiration Year</td><td class="value">2023</td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Avs Code</td><td class="value"></td></tr>
+			<tr><td class="label">Csc Code</td><td class="value">P</td></tr>
+            <tr><th colspan="2"><b>3D Secure</b></th></tr>
+            <tr><td class="label">Eci</td><td class="value">05</td></tr>
+            <tr><td class="label">Xid</td><td class="value">UzBGNjZjU3pwSmUzc3FUYW1Bc2g=</td></tr>
+            <tr><td class="label">Cardholder authentication value</td><td class="value">AAABD///////////////AAAAAAA=</td></tr>
+            <tr><td class="label">Cardholder authentication status</td><td class="value">Y</td></tr>
+			<tr><th colspan="2"><b>Bank Account</b></th></tr>
+			<tr class="toggle" style="display: none;"><td class="label">BIC</td><td class="value"></td></tr>		
+			<tr class="toggle" style="display: none;"><td class="label">IBAN</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Bank Code</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Account Number</td><td class="value"></td></tr>
+			<tr><th colspan="2"><b>Device</b></th></tr>	
+			<tr class="toggle" style="display: none;"><td class="label">Finger Print</td><td class="value"></td></tr>		
+			<tr class="toggle" style="display: none;"><td class="label">Policy Score</td><td class="value"></td></tr>
+			<tr><th colspan="2"><b>Statuses</b></th></tr>			
+			
+				<tr><td class="label">200.1083</td><td>INFORMATION - Cardholder Successfully authenticated.</td></tr>
+				<tr><td class="label">Provider Transactions Id</td><td></td></tr>
+			
+				<tr><td class="label">201.0000</td><td>INFORMATION - The resource was successfully created.</td></tr>
+				<tr><td class="label">Provider Transactions Id</td><td></td></tr>
+			
+			<tr><th colspan="2"><b>Notifications</b></th></tr>			
+			
+				<tr><td class="label">http://1576679392api-wdcee-test.ngrok.io/examples/payments/CreditCard/notify.php</td><td></td></tr>
+			
+			<tr><th colspan="2"><b>Custom Fields</b></th></tr>			
+			
+				<tr><td class="label">paysdk_orderId</td><td>123</td></tr>
+			
+				<tr><td class="label">elastic-page-api.3d.original_txn_type</td><td>authorization</td></tr>
+			          
+            <tr><th colspan="2"><b>Shipping</b></th></tr>
+            <tr class="toggle" style="display: none;"><td class="label">First Name</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Last Name</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Email</td><td class="value"></td></tr>
+            <tr><td class="label">Phone</td><td class="value">03018425165</td></tr>
+            <tr><td class="label">Street Line 1</td><td class="value">Teststrasse</td></tr>
+            <tr><td class="label">Street Line 2</td><td class="value">Test street 2</td></tr>
+            <tr><td class="label">City</td><td class="value">Berlin</td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">State</td><td class="value"></td></tr>
+            <tr><td class="label">Country</td><td class="value">DE</td></tr>
+            <tr><td class="label">Post Code</td><td class="value">13353</td></tr>           
+            <tr><th colspan="2"><b>Charge Back</b></th></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Id</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Date</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Retrieval Date</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Parent Transaction Amount</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Conversion Rate</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Reason Code</td><td class="value"></td></tr>
+			<tr class="toggle" style="display: none;"><td class="label">Chargeback Provider Transaction Id</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Provider Account Id</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Chargeback Additional Info.</td><td class="value"></td></tr>            
+            <tr><th colspan="2"><b>Airline</b></th></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Airline Code</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Airline Name</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Code</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Name</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Phone</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Email</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Ip Address</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Ticket Number</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Ticket Issue Date</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Ticket Restricted Flag</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Passenger Name File Id</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Ticket Check Digit</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Agent Code</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Agent Name</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Non-Taxable Net Amount</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Number Of Passengers</td><td class="value"></td></tr>
+            <tr class="toggle" style="display: none;"><td class="label">Reservation Code</td><td class="value"></td></tr>
+			
+			
+            
+
+			<tr><th colspan="2"><b>Travel Industry</b></th></tr>
+			
+
+			<tr><th colspan="2">&nbsp;</th></tr>
+		</tbody></table>
+	
+</body></html>
