@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance" tests="30" assertions="64" failures="1" errors="20" time="518.741609">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="54.918806"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="36.032118"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="43.523522"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="36.537225"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="29.823265"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="3" time="70.631840">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel
+Failed asserting that '/engine/rest/hpp/acs/787e5be0-41b3-4b4e-a669-d3eda1fd05a1/' contains "success".
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:190
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</failure>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="47.188059"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="33.382005"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="43.129868"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="35.608534"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="0" time="64.097100">
+      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSWppv2PurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/7b77160f1e6d5639f50e1a3728682939adf6f1c2/timeouts/implicit_wait with params: {"ms":30000}
+
+Connection timed out after 60001 milliseconds
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverTimeouts.php:46
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:3353
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2849
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1031
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:985
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="0" time="1.206153">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCard3DSWppv2PurchaseHappyPath: voidPurchase
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="0" time="1.198531">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="0" time="1.258041">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="0" time="1.228711">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="0" time="1.232688">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="0" time="1.202947">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="0" time="1.601808">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="0" time="1.272433">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="0" time="1.205787">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="0" time="1.232931">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="0" time="1.224046">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="0" time="1.231913">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2PurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="0" time="1.235713">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="0" time="1.433568">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: authorization
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="0" time="1.248706">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: capture
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="0" time="1.236814">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: refund
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="0" time="1.215412">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: cancel
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="0" time="1.204765">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationHappyPath: authorization
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="1.198299">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalPurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\UnknownServerException: Session not started or terminated
+
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:244
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:913
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:305
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:175
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1011
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+</error>
+    </testcase>
+  </testsuite>
+</testsuites>
