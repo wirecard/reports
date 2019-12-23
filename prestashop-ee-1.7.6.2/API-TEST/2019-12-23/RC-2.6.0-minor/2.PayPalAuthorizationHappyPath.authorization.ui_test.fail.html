@@ -179,7 +179,7 @@ var pendingStartTime;
 
 	
 	
-	var pollingUrl = '/engine/hpp/merchants/2a0e9351-24ed-4110-9a1b-fd0fee6bec26/payments/hppsearch?request_id=bb6a29bdac304980f3930d818bf1b273&request_signature=187a34a34551adbdfe4afe76730595a5e4958b7a11f89b41adf4d90e44181567&request_time_stamp=20191223091301';
+	var pollingUrl = '/engine/hpp/merchants/2a0e9351-24ed-4110-9a1b-fd0fee6bec26/payments/hppsearch?request_id=e2ebf6a3512ae05853592695c964bf95&request_signature=1bf74002227ee5e0efb8ebb73add3811769e21bc4bd1dd5dfb590d5e6613b843&request_time_stamp=20191223092958';
 	
 
 	var pollingPendingUrl = pollingUrl + (pollingUrl.indexOf('?') === -1 ? '?' : '&') + 'search_pending=true';
@@ -227,7 +227,7 @@ function doAfterTimeout() {
 		if (typeof mobileTransactionHandler != 'undefined' && mobileTransactionHandler.onTransactionChange) {
 			mobileTransactionHandler.onTransactionChange('timeout');
 		} else {
-			$("#frmprocessing").attr('action', 'merchants/2a0e9351-24ed-4110-9a1b-fd0fee6bec26/timeout/bb6a29bdac304980f3930d818bf1b273');
+			$("#frmprocessing").attr('action', 'merchants/2a0e9351-24ed-4110-9a1b-fd0fee6bec26/timeout/e2ebf6a3512ae05853592695c964bf95');
 			$("#frmprocessing").attr("method", "post");
 			$('#frmprocessing').submit();
 		}
