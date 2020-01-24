@@ -1,320 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="32" assertions="133" failures="0" errors="8" time="1165.640809">
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="66.530397"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="43.017963"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="0" time="68.750405">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/5ec6030517b3235c2a853b91c8458ac82833f116/elements with params: {"using":"xpath","value":".\/\/*[self::input | self::textarea | self::select][@name = \"\/\/*[@id='currency']\"]"}
-
-Connection timed out after 60001 milliseconds
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:223
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1101
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1122
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1370
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:1432
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:218
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="41.035098"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="37.963987"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="0" time="68.881667">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/5ec6030517b3235c2a853b91c8458ac82833f116/element with params: {"using":"xpath","value":"\/\/*[@id='currency']"}
-
-Connection timed out after 60001 milliseconds
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2344
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:217
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="70.841810"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="38.266425"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="46.578170"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="40.781563"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="5" time="31.014174"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="41.606152"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="18.193036"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="44.956878"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="32.666835"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="24.233285"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="17.490777"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="24.584259"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="3" time="17.008449"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="4" time="24.787216"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="6" time="39.626652"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="17.701920"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="24.574854"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="18.192645"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="10.475760"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="20.124186"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="1" time="41.091389">
+  <testsuite name="acceptance" tests="30" assertions="140" failures="0" errors="6" time="1002.176079">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="70.204072"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="39.941475"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="42.992249"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="47.742276"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="30.984952"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="6" time="39.672549"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="50.229937"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="35.295732"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="47.799085"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="38.211534"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="5" time="38.910964"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="37.956294"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="13.102920"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="37.334458"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="25.261309"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="20.627596"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="12.982707"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="20.474776"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="6" time="29.591375"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="16.663186"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="26.541643"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="17.281972"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="11.515913"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="18.958266"/>
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="1" time="39.200896">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: authorization
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.17 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.14 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="1" time="38.365827">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="1" time="39.565750">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: capture
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.10 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.15 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="1" time="38.197498">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="1" time="39.443013">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: refund
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.17 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.20 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="1" time="39.271313">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="1" time="36.637301">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationAndPostProcessingHappyPath: cancel
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.19 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.13 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="1" time="39.453067">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="1" time="37.538360">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationHappyPath: authorization
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.12 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.07 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="39.377152">
+    <testcase file="/home/travis/build/tatsta/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="39.513519">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (325, 598). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;div id="button" class="buttons reviewButton"&gt;...&lt;/div&gt; is not clickable at point (321, 554). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.18 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.11 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-35', ip: '199.7.164.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-19-66', ip: '207.254.19.66', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1518}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir2556_1178311310}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b64e656f79cb06cc409b81d209d8bcb0
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1835}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir10084_462849494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3496798a646a0d799490aa09d2d14c55
 
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
+/home/travis/build/tatsta/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:997
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/tatsta/paymentSDK-php/tests/_support/AcceptanceTester.php:228
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:1012
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:272
+/home/travis/build/tatsta/paymentSDK-php/vendor/symfony/console/Application.php:148
+/home/travis/build/tatsta/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </error>
     </testcase>
   </testsuite>
