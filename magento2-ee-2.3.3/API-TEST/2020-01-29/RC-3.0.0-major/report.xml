@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="3" assertions="12" failures="0" errors="1" time="1238.895198">
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="1" time="289.962692">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSAuthorizeHappyPath: authorize
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http GET to /session/1ac6e2a73d62f16ea92102b6428f544488d892c7/element/3/name
+  <testsuite name="acceptance" tests="3" assertions="14" failures="0" errors="1" time="1452.241478">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSAuthorizeHappyPath.feature" name="CreditCard3DSAuthorizeHappyPath: authorize" feature="authorize" assertions="6" time="558.095569"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="3" time="465.390238">
+      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSPurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/5c4c0e46b6a34e65d3ffdb0a9dc3636f69904039/element/47/clear
 
 Connection timed out after 60001 milliseconds
 
 /home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
 /home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
 /home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:259
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1361
+/home/travis/build/wirecard/magento2-ee/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:66
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1656
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:1410
-/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/Page/Checkout.php:56
-/home/travis/build/wirecard/magento2-ee/tests/_support/Helper/Acceptance.php:50
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:3121
-/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:209
+/home/travis/build/wirecard/magento2-ee/tests/_support/_generated/AcceptanceTesterActions.php:1483
+/home/travis/build/wirecard/magento2-ee/tests/_support/ActorExtendedWithWrappers.php:47
+/home/travis/build/wirecard/magento2-ee/tests/_support/AcceptanceTester.php:220
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
+/home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -38,7 +34,6 @@ Connection timed out after 60001 milliseconds
 /home/travis/build/wirecard/magento2-ee/vendor/codeception/codeception/src/Codeception/Application.php:108
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="526.435605"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="422.496901"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="428.755671"/>
   </testsuite>
 </testsuites>
