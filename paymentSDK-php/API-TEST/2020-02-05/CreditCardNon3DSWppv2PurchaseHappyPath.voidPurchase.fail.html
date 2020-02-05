@@ -1,0 +1,102 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Wirecard AG - payment SDK for PHP Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="application/javascript"></script>
+</head>
+<body id="overrides">
+<div class="container">
+    <div class="content">
+    <div class="page-header">
+        <div class="row align-baseline">
+            <div class="col-sm-3">
+                <a href="../../index.html"><img src="https://raw.githubusercontent.com/wirecard/paymentSDK-php/master/examples/assets/img/wirecard_logo.png" alt="wirecard"></a>
+            </div>
+            <div class="col-sm-9 bottom-align-text">
+                <h1>Payment SDK for PHP Examples</h1>
+            </div>
+        </div>
+    </div>    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="application/javascript"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://wpp-test.wirecard.com/loader/paymentPage.js" type="text/javascript"></script>
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="https://doc.wirecard.com/WPP.html" target="_blank"><h3>WPP v2</h3></a>
+        </div>
+    </div>
+    <form id="payment-form" method="post" action="reserve.php">
+                        <div id="creditcard-form-div"></div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+<script type="application/javascript">
+
+    // This function will render the credit card UI in the specified div.
+    WPP.seamlessRender({
+
+        
+        // We fill the _requestData_ with the return value
+        // from the `getCreditCardUiWithData` method of the `transactionService` which expects a transaction with all desired parameters.
+        requestData: {"request_time_stamp":"20200205074233","request_id":"0c45a92ae2f4f495cb6528da3d0195cadcb8d460de78200826a238ab21bea3ac","transaction_type":"authorization","merchant_account_id":"53f2895a-e4de-4e82-a813-0d87a10e55e6","requested_amount":25,"requested_amount_currency":"EUR","locale":"en","payment_method":"creditcard","attempt_three_d":false,"shop_system_name":"paymentSDK-php","shop_system_version":"4.0.0","email":"john.doe@test.com","date_of_birth":"07-12-1973","phone":"03018425165","city":"Berlin","country":"DE","postal_code":"13353","street1":"Teststrasse","shipping_phone":"03018425165","shipping_city":"Berlin","shipping_country":"DE","shipping_postal_code":"13353","shipping_street1":"Teststrasse","orderItems1.name":"Item 1","orderItems1.quantity":1,"orderItems1.amount.value":10,"orderItems1.amount.currency":"EUR","orderItems1.articleNumber":"A1","orderItems1.taxRate":10,"orderItems2.name":"Item 2","orderItems2.quantity":2,"orderItems2.amount.value":10,"orderItems2.amount.currency":"EUR","orderItems2.articleNumber":"B2","orderItems2.taxRate":20,"field_name_1":"paysdk_orderId","field_value_1":"123","success_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=success","cancel_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=cancel","fail_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=failure","notification_transaction_url":"notify.php","notifications_format":"application\/xml","order_number":"A2","ip_address":"207.254.11.194","request_signature":"68d93bd1259281d171db333deb9b98b0a5e73953e4a57a460396fb6d95fbaf2f"},
+        wrappingDivId: "creditcard-form-div",
+        onSuccess: logCallback,
+        onError: logCallback
+    });
+
+    function logCallback(response) {
+        console.log(response);
+    }
+
+    // ### Submit handler for the form
+
+    // To prevent the data to be submitted on any other server than the Wirecard server, the credit card UI form
+    // is sent to Wirecard via javascript. You receive a token ID which you need for processing the payment.
+    $('#payment-form').submit(submit);
+
+    function submit(event) {
+
+        // We check if the response fields are already set.
+        if ($("input#jsresponse").length ) {
+            console.log('Sending the following request to your server..');
+            console.log($(event.target).serialize());
+        } else {
+            // If not, we will prevent the submission of the form and submit the form of credit card UI instead.
+            event.preventDefault();
+
+            WPP.seamlessSubmit({
+                onSuccess: setParentTransactionId,
+                onError: logCallback
+            })
+        }
+    }
+
+    // If the submit to Wirecard is successful, `seamlessSubmitForm` will set the form fields and submit your form to
+    // to your server.
+    function setParentTransactionId(response) {
+        var form = $('#payment-form');
+        for(var key in response){
+            if(response.hasOwnProperty(key)) {
+                form.append("<input type='hidden' name='" + key + "' value='" + response[key] + "'>");
+            }
+        }
+        form.append("<input id='jsresponse' type='hidden' name='jsresponse' value='true'>");
+        form.submit();
+    }
+
+</script>
+
+</div>
+<footer>
+    <div class="container">
+        ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>2020
+        Wirecard
+    </div>
+</footer>
+</div>
+
+</body></html>

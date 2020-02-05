@@ -1,0 +1,118 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Wirecard AG - payment SDK for PHP Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="application/javascript"></script>
+</head>
+<body id="overrides">
+<div class="container">
+    <div class="content">
+    <div class="page-header">
+        <div class="row align-baseline">
+            <div class="col-sm-3">
+                <a href="../../index.html"><img src="https://raw.githubusercontent.com/wirecard/paymentSDK-php/master/examples/assets/img/wirecard_logo.png" alt="wirecard"></a>
+            </div>
+            <div class="col-sm-9 bottom-align-text">
+                <h1>Payment SDK for PHP Examples</h1>
+            </div>
+        </div>
+    </div>    <script src="https://api-test.wirecard.com/engine/hpp/paymentPageLoader.js" type="text/javascript"></script>
+    <div>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="https://doc.wirecard.com/PP.html" target="_blank"><h3>WPP v1</h3></a>
+            </div>
+        </div>
+    </div>
+    <form id="payment-form" method="post" action="reserve.php">
+                        <div id="creditcard-form-div"></div>
+        <div class="col-sm-6" style="margin: 0; padding: 0;">
+            <label data-i18n="amount">Amount</label>
+            <small data-i18n="optional" class="pull-right">Mandatory</small>
+            <div class="form-group has-feedback">
+                <input type="number" class="form-control ee-request-nvp" id="amount" name="amount" placeholder="Amount"><i class="form-control-feedback fv-icon-no-label" data-fv-icon-for="amount" style="display: none;"></i>
+            </div>
+        </div>
+        <div class="col-sm-6" style="margin-top: 25px;">
+            <div class="form-group has-select-feedback has-feedback">
+                <select id="currency" class="form-control ee-request-nvp" name="currency">
+                    <option value="" data-i18n="month" disabled="true" selected="true">Currency</option>
+                    <option value="SGD">SGD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+<script type="application/javascript">
+
+    // This function will render the credit card UI in the specified div.
+    WirecardPaymentPage.seamlessRenderForm({
+
+        
+        // We fill the _requestData_ with the return value
+        // from the `getCreditCardUiWithData` method of the `transactionService` which expects a transaction
+        // with all desired parameters.
+        requestData: {"request_time_stamp":"20200205074207","request_id":"e9402b9fd7c31508eaf5ade67b7b8a31596fc0009b4b8e92e84d49d9db636aec","transaction_type":"purchase","merchant_account_id":"53f2895a-e4de-4e82-a813-0d87a10e55e6","requested_amount":25,"requested_amount_currency":"EUR","locale":"en","payment_method":"creditcard","attempt_three_d":false,"shop_system_name":"paymentSDK-php","shop_system_version":"4.0.0","email":"john.doe@test.com","date_of_birth":"07-12-1973","phone":"03018425165","city":"Berlin","country":"DE","postal_code":"13353","street1":"Teststrasse","shipping_phone":"03018425165","shipping_city":"Berlin","shipping_country":"DE","shipping_postal_code":"13353","shipping_street1":"Teststrasse","orderItems1.name":"Item 1","orderItems1.quantity":1,"orderItems1.amount.value":400,"orderItems1.amount.currency":"EUR","orderItems1.articleNumber":"A1","orderItems1.taxRate":10,"orderItems2.name":"Item 2","orderItems2.quantity":2,"orderItems2.amount.value":1000,"orderItems2.amount.currency":"EUR","orderItems2.articleNumber":"B2","orderItems2.taxRate":20,"field_name_1":"paysdk_orderId","field_value_1":"123","success_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=success","cancel_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=cancel","fail_redirect_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/return.php?status=failure","notification_transaction_url":"http:\/\/1580888469api-test.ngrok.io\/examples\/payments\/CreditCard\/notify.php","notifications_format":"application\/xml","order_number":"A2","ip_address":"207.254.11.194","request_signature":"b81ded5972d8d05edeadaa2fe4d80a951cda2b39a0258b666fbfae7a8edfde26"},
+        wrappingDivId: "creditcard-form-div",
+        onSuccess: logCallback,
+        onError: logCallback
+    });
+
+    function logCallback(response) {
+        console.log(response);
+    }
+
+    // ### Submit handler for the form
+    var form = $('#payment-form');
+    // To prevent the data to be submitted on any other server than the Wirecard server, the credit card UI form
+    // is sent to Wirecard via javascript. You receive a token ID which you need for processing the payment.
+    form.submit(submit);
+
+    function submit(event) {
+
+        // We check if the response fields are already set.
+        if ($("input#jsresponse").length ) {
+            console.log('Sending the following request to your server..');
+            console.log($(event.target).serialize());
+        } else {
+            // If not, we will prevent the submission of the form and submit the form of credit card UI instead.
+            event.preventDefault();
+
+            WirecardPaymentPage.seamlessSubmitForm({
+                onSuccess: setParentTransactionId,
+                onError: logCallback
+            })
+        }
+    }
+
+    // If the submit to Wirecard is successful, `seamlessSubmitForm` will set the form fields and submit your form to
+    // to your server.
+    function setParentTransactionId(response) {
+        for(var key in response){
+            if(response.hasOwnProperty(key)) {
+                form.append("<input type='hidden' name='" + key + "' value='" + response[key] + "'>");
+            }
+        }
+        form.append("<input id='jsresponse' type='hidden' name='jsresponse' value='true'>");
+        form.submit();
+    }
+
+</script>
+
+
+</div>
+<footer>
+    <div class="container">
+        ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>2020
+        Wirecard
+    </div>
+</footer>
+</div>
+
+</body></html>

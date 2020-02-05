@@ -1,0 +1,4270 @@
+<html>
+ <head>
+	<title>Test results</title>
+	<meta charset='utf-8'>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round&v2' rel='stylesheet' type='text/css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <style>
+		 .layout {
+		 margin: 0 auto;
+		 max-width: 1000px;
+
+		 }
+		 body { font-family: arial, serif; margin: 0; padding: 0; background: #ecf0f1; font-size: 20px; }
+		 h1,h2,h3 { font-family: arial, serif; color: #7f8c8d; }
+		 h1 { font-size: 2.5em; }
+		 h2 { font-size: 1.3em; }
+         h3 { font-size: 1em; color: #84BBDD; margin: 0.5em 0; }
+
+		 table { border: none; margin: 0; padding: 0; font-size: 0.9em;}
+		 .scenarioStepsTable .stepName { padding: 5px; }
+
+		 .scenarioStepsTable td {
+            background: #fff;
+		 }
+
+         .quiet {
+             color: #333;
+             font-size: 0.8em;
+         }
+
+         .screenshot {
+             max-height: 400px;
+             overflow-y: scroll;
+             display: block;
+         }
+         .screenshot img {
+             zoom: 0.5;
+         }
+
+         @media (max-width: 1200px) {
+           #toolbar-filter {
+             display: none !important;
+           }
+         }
+
+         .scenarioStepsTable .nostyle {
+             background: none;
+             border: none;
+         }
+
+		 p {
+		    cursor: pointer;
+		 }
+
+         .scenarioRow>td>p {
+             padding: 5px;
+         }
+
+         .scenarioStepsTable .failedStep {
+             padding: 10px;
+             background: #ecf0f1;
+             border: 2px solid #e74c3c;
+             border-radius: 0px;
+             color:  #e74c3c;
+         }
+
+         .scenarioStepsTable .error {
+             background:  #999;
+             padding: 10px;
+             color: #fff;
+             border-radius: 0px;
+         }
+
+         .scenarioStepsTable .error a {
+             color: #eef;
+         }
+
+         .scenarioStepsTable.substeps td {
+             background: #bdc3c7;
+         }
+
+		 .header { font-size: large; font-weight: bold; }
+		 p.scenarioSuccess {
+    		 background: rgb(157,213,58); /* Old browsers */
+		 }
+
+
+		 .scenario { color: black; }
+		 p.scenarioFailed, p.scenarioError { color: black;
+		   background: #e74c3c
+		 }
+
+		 table.scenarioFailed tr:last-child { font-weight: bold; }
+
+		 td.scenarioSuccess { color: green }
+		 td.scenarioFailed { color: red }
+		 .scenarioSkipped { color: teal; }
+		 .scenarioIncomplete { color: gray; }
+		 .scenarioStepsTable { margin-left: 10px; display: none; color: #333; }
+
+		 #stepContainerSummary {
+		 background: white;
+		 -webkit-border-radius: 5px;
+		 -moz-border-radius: 5px;
+		 border-radius: 5px;
+		 padding: 20px;
+		 }
+
+         .toggle {
+             background: rgba(255,255,255,0.5);
+             border-radius: 10px;
+             display: inline-block;
+             width: 20px;
+             height: 20px;
+             text-align: center;
+             margin: auto;
+             color: #666
+         }
+
+		 ul#toolbar-filter {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 0px;
+            padding: 0px;
+		 }
+		 ul#toolbar-filter li {
+		    list-style: none;
+		    text-align: center;
+			padding: 20px;
+			background-color: #3498db;
+		 }
+		 ul#toolbar-filter li a, ul#toolbar-filter li a:hover, ul#toolbar-filter li a:visited {
+		    color: #34495e;
+		    text-decoration: none;
+		 }
+		 ul#toolbar-filter li.disabled {
+			background-color: #bdc3c7;
+		 }
+	 </style>
+
+  <script type="text/javascript">
+  var showAll = true;
+  function showHide(nodeId, linkObj)
+  {
+    var subObj = document.getElementById('stepContainer' + nodeId);
+    var toggle = linkObj.childNodes[0];
+    if (toggle.innerHTML != '-') {
+      toggle.innerHTML = '-';
+      subObj.style.display='block';
+      subObj.style.width = '100%';
+    } else {
+      toggle.innerHTML = '+';
+      subObj.style.display='none';
+    }
+  }
+
+  function showAllScenarios() {
+    var toolbar = document.getElementById('toolbar-filter');
+    for (var i = 0; i < toolbar.children.length; i++) {
+      toolbar.children[i].className = '';
+    }
+
+    var trs = document.getElementsByTagName('tr');
+    for(var z = 0; z < trs.length; z++) {
+      trs[z].style.display = '';
+    }
+    showAll = true;
+  }
+
+  function toggleScenarios(name, linkObj) {
+    var links = document.getElementById('toolbar-filter').children;
+    var rows = document.getElementsByClassName('scenarioRow');
+    if (showAll) {
+        for (var i = 0; i < links.length; i++) {
+            links[i].className = 'disabled';
+        }
+
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].style.display = 'none';
+        }
+
+    }
+    showAll = false;
+
+    if (linkObj.className == '') {
+        linkObj.className = 'disabled';
+        for (var i = 0; i < rows.length; i++) {
+          if (rows[i].classList.contains(name)) {
+                rows[i].style.display = 'none';
+          }
+        }
+        return;
+    }
+    if (linkObj.className == 'disabled') {
+        linkObj.className = '';
+        for (var i = 0; i < rows.length; i++) {
+          if (rows[i].classList.contains(name)) {
+                rows[i].style.display = 'table-row';
+          }
+        }
+        return;
+    }
+
+  }
+  </script>
+ </head>
+
+ <body>
+   <ul id="toolbar-filter">
+     <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 32</a></li>
+     <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
+     <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
+   </ul>
+ <div class="layout">
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (285.8s)</small></h1>
+
+
+
+	 <table border="0" style="width: 100%;">
+		<tr>
+ <td>
+     <h3>Acceptance Tests</h3>
+ </td>
+</tr>   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">5.33s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71a8e8f17', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71a8e8f17">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSAuthorizationAndPostprocessingHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSAuthorizationAndPostprocessingHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('2', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">1.96s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71abd3135', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71abd3135">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSAuthorizationAndPostprocessingHappyPath.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSAuthorizationAndPostprocessingHappyPath.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('3', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">1.92s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71ae89781', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71ae89781">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSAuthorizationAndPostprocessingHappyPath.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSAuthorizationAndPostprocessingHappyPath.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('4', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">1.89s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71b136ad9', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71b136ad9">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSAuthorizationAndPostprocessingHappyPath.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSAuthorizationAndPostprocessingHappyPath.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('5', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSPurchaseAndPostprocessingHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">1.76s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer5">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71b3b0cb3', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71b3b0cb3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSPurchaseAndPostprocessingHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSPurchaseAndPostprocessingHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('6', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSPurchaseAndPostprocessingHappyPath &raquo;</span> refundOrcancel <span style="color: #34495e; font-size: 70%;">1.8s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer6">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71b644c24', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71b644c24">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSPurchaseAndPostprocessingHappyPath.refundOrcancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSPurchaseAndPostprocessingHappyPath.refundOrcancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('7', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">1.83s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer7">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71b8dcdf9', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71b8dcdf9">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('8', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">1.8s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer8">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71bb5a605', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71bb5a605">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('9', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">1.7s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer9">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71bdb89bc', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71bdb89bc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('10', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">1.72s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer10">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71c0290c3', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71c0290c3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php?paymentAction=authorization&amp;amount=70&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('11', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2PurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">1.74s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer11">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71c2a2624', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71c2a2624">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2PurchaseHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2PurchaseHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('12', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCard3DSWppv2PurchaseHappyPath &raquo;</span> voidPurchase <span style="color: #34495e; font-size: 70%;">1.95s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer12">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71c556af3', this)"><span class="toggle">+</span> Given i am on "create credit card ui wp pv2 page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71c556af3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCard3DSWppv2PurchaseHappyPath.voidPurchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCard3DSWppv2PurchaseHappyPath.voidPurchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('13', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">2s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer13">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71c808bf6', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71c808bf6">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('14', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">1.9s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer14">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71caad879', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71caad879">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('15', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">1.76s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer15">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71cd22af7', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71cd22af7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('16', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSAuthorizationAndPostprocessingHappyPath &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">1.87s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer16">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71cfa5f96', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71cfa5f96">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('17', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSPurchaseAndPostprocessingHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">1.69s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer17">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71d220fe3', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71d220fe3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseAndPostprocessingHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseAndPostprocessingHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('18', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSPurchaseAndPostprocessingHappyPath &raquo;</span> refundOrcancel <span style="color: #34495e; font-size: 70%;">2.1s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer18">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel/refund the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71d4e3d90', this)"><span class="toggle">+</span> Given i am on "create credit card ui payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71d4e3d90">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi.php?paymentAction=purchase&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSPurchaseAndPostprocessingHappyPath.refundOrcancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSPurchaseAndPostprocessingHappyPath.refundOrcancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('19', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSTokenizePurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">1.79s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer19">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non-3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71d76b390', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71d76b390">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSTokenizePurchaseHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSTokenizePurchaseHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('20', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSTokenizePurchaseHappyPath &raquo;</span> voidPurchase <span style="color: #34495e; font-size: 70%;">1.72s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer20">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card Non-3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71d9ca384', this)"><span class="toggle">+</span> Given i am on "create credit card ui tokenize page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71d9ca384">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUi_tokenize.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-seamless-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-seamless-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-seamless-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-seamless-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSTokenizePurchaseHappyPath.voidPurchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSTokenizePurchaseHappyPath.voidPurchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('21', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">1.75s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer21">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71dc55edb', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71dc55edb">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('22', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">1.76s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer22">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71e1d04bc', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71e1d04bc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('23', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">1.69s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer23">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71e436e8d', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71e436e8d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('24', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">1.77s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer24">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71e6a5bb4', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 payment action page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71e6a5bb4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php?paymentAction=authorization&amp;amount=25&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('25', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2PurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">1.69s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer25">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71e913ac5', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71e913ac5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2PurchaseHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2PurchaseHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('26', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardNon3DSWppv2PurchaseHappyPath &raquo;</span> voidPurchase <span style="color: #34495e; font-size: 70%;">1.72s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer26">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a Credit Card 3DS</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a71eb964f9', this)"><span class="toggle">+</span> Given i am on "create credit card ui non 3 d wp pv2 page" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a71eb964f9">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/CreditCard/createUiWppV2NonThreeD.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;jQuery(&quot;.wirecard-integrated-payment-page-frame&quot;).attr(&quot;name&quot;, &quot;wirecard-integrated-payment-page-frame&quot;)&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I switch to i frame <span style="color: #732E81">&quot;wirecard-integrated-payment-page-frame&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        No frame element found by name or id wirecard-integrated-payment-page-frame<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: driver.version: unknown
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardNon3DSWppv2PurchaseHappyPath.voidPurchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardNon3DSWppv2PurchaseHappyPath.voidPurchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('27', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalAuthorizationAndPostProcessingHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">41.29s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer27">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a7218c4b5c', this)"><span class="toggle">+</span> Given i am on "pay pal log in" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a7218c4b5c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/reserve.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a7218c4b9a', this)"><span class="toggle">+</span> And i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a7218c4b9a">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='email']&quot;,&quot;paypal.buyer2@wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;Wirecardbuyer&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a7218c4bf4', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a7218c4bf4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a7218c4c31', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a7218c4c31">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        element click intercepted: Element &lt;div id=&quot;button&quot; class=&quot;buttons reviewButton&quot;&gt;...&lt;/div&gt; is not clickable at point (313, 554). Other element would receive the click: &lt;div class=&quot;gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom&quot;&gt;...&lt;/div&gt;<br />
+  (Session info: chrome=79.0.3945.79)<br />
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)<br />
+Command duration or timeout: 1.20 seconds<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br />
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1686}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir3984_12156363}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]<br />
+Session ID: d0e5a62d2f72d51cafc16d169f16f04c
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalAuthorizationAndPostProcessingHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalAuthorizationAndPostProcessingHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('28', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalAuthorizationAndPostProcessingHappyPath &raquo;</span> capture <span style="color: #34495e; font-size: 70%;">35.58s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer28">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a723d7e85d', this)"><span class="toggle">+</span> Given i am on "pay pal log in" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a723d7e85d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/reserve.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a723d7e89c', this)"><span class="toggle">+</span> And i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a723d7e89c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='email']&quot;,&quot;paypal.buyer2@wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;Wirecardbuyer&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a723d7e8f7', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a723d7e8f7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a723d7e933', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a723d7e933">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        element click intercepted: Element &lt;div id=&quot;button&quot; class=&quot;buttons reviewButton&quot;&gt;...&lt;/div&gt; is not clickable at point (313, 554). Other element would receive the click: &lt;div class=&quot;gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom&quot;&gt;...&lt;/div&gt;<br />
+  (Session info: chrome=79.0.3945.79)<br />
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)<br />
+Command duration or timeout: 1.07 seconds<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '207-254-11-194', ip: '207.254.11.194', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'<br />
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br />
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1686}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir3984_12156363}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]<br />
+Session ID: d0e5a62d2f72d51cafc16d169f16f04c
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalAuthorizationAndPostProcessingHappyPath.capture.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalAuthorizationAndPostProcessingHappyPath.capture.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('29', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalAuthorizationAndPostProcessingHappyPath &raquo;</span> refund <span style="color: #34495e; font-size: 70%;">41.83s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer29">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a726848e02', this)"><span class="toggle">+</span> Given i am on "pay pal log in" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848e02">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/reserve.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a726848e3e', this)"><span class="toggle">+</span> And i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848e3e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='email']&quot;,&quot;paypal.buyer2@wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;Wirecardbuyer&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a726848e98', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848e98">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a726848ed4', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848ed4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a726848f06', this)"><span class="toggle">+</span> Then i click "pay now"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848f06">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a726848f3a', this)"><span class="toggle">+</span> And i am redirected to "pay pal success" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848f3a">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a726848f7a', this)"><span class="toggle">+</span> Given i see text "transaction id"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a726848f7a">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Transaction ID&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /engine/notification/paypal/success?payment.transaction-id=eb8885c7-392a-4d74-b5c1-3832bf2cd68d&amp;payment.transaction-type=authorization&amp;payment.locale=en&amp;token=EC-64N02544PS105540E&amp;PayerID=ZNKTXUBNSQE2Y<br />
+--&gt; Your connection is not private<br />
+Attackers might be trying to steal your information from api-test.wirecard.com (for example, passwords, messages, or credit cards). Learn more<br />
+NET::ERR_CERT_AUTHORITY_INVALID<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+B<br />
+[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]<br />
+--&gt; contains &quot;Transaction ID&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalAuthorizationAndPostProcessingHappyPath.refund.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalAuthorizationAndPostProcessingHappyPath.refund.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('30', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalAuthorizationAndPostProcessingHappyPath &raquo;</span> cancel <span style="color: #34495e; font-size: 70%;">38.7s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer30">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that transaction was successful</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to capture the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to refund the transaction</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to be able to cancel the transaction</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a728ff3adc', this)"><span class="toggle">+</span> Given i am on "pay pal log in" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3adc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/reserve.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a728ff3b1a', this)"><span class="toggle">+</span> And i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3b1a">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;express-checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a728ff3b56', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3b56">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a728ff3b92', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3b92">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a728ff3bc5', this)"><span class="toggle">+</span> Then i click "pay now"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3bc5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a728ff3bf7', this)"><span class="toggle">+</span> And i am redirected to "pay pal success" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3bf7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a728ff3c33', this)"><span class="toggle">+</span> Given i see text "transaction id"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a728ff3c33">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Transaction ID&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /engine/notification/paypal/success?payment.transaction-id=1486c668-26e0-4486-8ccb-3503c564f9b4&amp;payment.transaction-type=authorization&amp;payment.locale=en&amp;token=EC-5FT007263U3958152&amp;PayerID=ZNKTXUBNSQE2Y<br />
+--&gt; Your connection is not private<br />
+Attackers might be trying to steal your information from api-test.wirecard.com (for example, passwords, messages, or credit cards). Learn more<br />
+NET::ERR_CERT_AUTHORITY_INVALID<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+B<br />
+[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]<br />
+--&gt; contains &quot;Transaction ID&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalAuthorizationAndPostProcessingHappyPath.cancel.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalAuthorizationAndPostProcessingHappyPath.cancel.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('31', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalAuthorizationHappyPath &raquo;</span> authorization <span style="color: #34495e; font-size: 70%;">40.04s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer31">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an authorization with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that authorization was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72b9028ad', this)"><span class="toggle">+</span> Given i am on "pay pal log in" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b9028ad">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/reserve.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a72b9028f4', this)"><span class="toggle">+</span> And i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b9028f4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;express-checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72b902931', this)"><span class="toggle">+</span> When i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b902931">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72b90296e', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b90296e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72b9029a0', this)"><span class="toggle">+</span> Then i click "pay now"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b9029a0">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72b9029d4', this)"><span class="toggle">+</span> And i am redirected to "pay pal success" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b9029d4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a72b902a11', this)"><span class="toggle">+</span> Given i see text "reservation successfully completed."</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72b902a11">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Reservation successfully completed.&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /engine/notification/paypal/success?payment.transaction-id=8d20c47b-bb79-43c1-a952-4a83e16ada61&amp;payment.transaction-type=authorization&amp;payment.locale=en&amp;token=EC-5UY52964J0944994J&amp;PayerID=ZNKTXUBNSQE2Y<br />
+--&gt; Your connection is not private<br />
+Attackers might be trying to steal your information from api-test.wirecard.com (for example, passwords, messages, or credit cards). Learn more<br />
+NET::ERR_CERT_AUTHORITY_INVALID<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+B<br />
+[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]<br />
+--&gt; contains &quot;Reservation successfully completed.&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalAuthorizationHappyPath.authorization.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalAuthorizationHappyPath.authorization.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('32', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalPurchaseHappyPath &raquo;</span> purchase <span style="color: #34495e; font-size: 70%;">37.76s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer32">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make a purchase with a PayPal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that purchase was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72dfbc891', this)"><span class="toggle">+</span> Given i am on "pay pal log in purchase" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc891">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;PayPal/pay.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a72dfbc8cc', this)"><span class="toggle">+</span> When i login to paypal</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc8cc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;tests/_data/payPalData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,15</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;express-checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72dfbc905', this)"><span class="toggle">+</span> And i am redirected to "pay pal review" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc905">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;checkout&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72dfbc941', this)"><span class="toggle">+</span> Then i click "continue"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc941">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72dfbc973', this)"><span class="toggle">+</span> Then i click "pay now"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc973">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='confirmButtonTop']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5e3a72dfbc9a7', this)"><span class="toggle">+</span> And i am redirected to "pay pal success" page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc9a7">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from current url</td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in current url <span style="color: #732E81">&quot;success&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5e3a72dfbc9e5', this)"><span class="toggle">+</span> Given i see text "payment successfully completed."</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5e3a72dfbc9e5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Payment successfully completed.&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /engine/notification/paypal/success?payment.transaction-id=87bef7d5-309d-4f5c-b26d-6a8ba7bf19e8&amp;payment.transaction-type=debit&amp;payment.locale=en&amp;token=EC-9FV84007657396234&amp;PayerID=ZNKTXUBNSQE2Y<br />
+--&gt; Your connection is not private<br />
+Attackers might be trying to steal your information from api-test.wirecard.com (for example, passwords, messages, or credit cards). Learn more<br />
+NET::ERR_CERT_AUTHORITY_INVALID<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+B<br />
+[Content too long to display. See complete response in '/home/travis/build/wirecard/paymentSDK-php/tests/_output/' directory]<br />
+--&gt; contains &quot;Payment successfully completed.&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalPurchaseHappyPath.purchase.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalPurchaseHappyPath.purchase.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+
+   <tr>
+    <td>
+	    <h2>Summary</h2>
+     <div id="stepContainerSummary">
+      <table border="0">
+       <tr>
+        <td width="250" class="scenarioSuccess">Successful scenarios:</td>
+        <td class="scenarioSuccessValue"><strong>0</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioFailed">Failed scenarios:</td>
+        <td class="scenarioFailedValue"><strong>32</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioSkipped">Skipped scenarios:</td>
+        <td class="scenarioSkippedValue"><strong>0</strong></td>
+       </tr>
+       <tr>
+        <td class="scenarioIncomplete">Incomplete scenarios:</td>
+        <td class="scenarioIncompleteValue"><strong>0</strong></td>
+       </tr>
+      </table>
+     </div>
+    </td>
+   </tr>
+  </table>
+ </div>
+ </body>
+</html>
