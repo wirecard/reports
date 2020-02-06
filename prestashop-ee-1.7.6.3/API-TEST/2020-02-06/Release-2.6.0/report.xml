@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ui_test)" tests="5" assertions="19" failures="0" errors="2" time="260.308940">
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/1-PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="2" time="77.193130">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;input track-submit="" type="submit" value="Jetzt bezahlen" id="confirmButtonTop" class="btn full confirmButton continueButton" ng-disabled="onPayButtonDisabled" data-test-id="continueButton" validate-submit="onPay()" pa-marked="1"&gt; is not clickable at point (313, 601). Other element would receive the click: &lt;div class="gdprCookieBanner_buttonWrapper gdprCookieBanner_buttonWrapper-custom"&gt;...&lt;/div&gt;
+  <testsuite name="acceptance (ui_test)" tests="5" assertions="17" failures="1" errors="1" time="270.503694">
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/1-PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="8.220278">
+      <error type="Facebook\WebDriver\Exception\StaleElementReferenceException">PayPalPurchaseHappyPath: purchase
+Facebook\WebDriver\Exception\StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.17 seconds
+  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 286 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-165-225', ip: '199.7.165.225', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
+System info: host: '207-254-10-46', ip: '207.254.10.46', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1854}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir3860_911682375}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b12b542ff6504e832c72f6c3fbb2be0c
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1683}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir4224_1323030931}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a88d21eaac08c9d637923ed1b6288f4c
 
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:108
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
@@ -23,9 +24,10 @@ Session ID: b12b542ff6504e832c72f6c3fbb2be0c
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:606
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/ActorExtendedWithWrappers.php:35
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:167
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:237
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:226
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/phpunit-wrapper/src/Runner.php:110
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
@@ -40,24 +42,13 @@ Session ID: b12b542ff6504e832c72f6c3fbb2be0c
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
 </error>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/2-PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="0" time="11.010121">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalAuthorizationHappyPath: authorization
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;input name="id_gender" type="radio" value="1" checked=""&gt; is not clickable at point (362, 228). Other element would receive the click: &lt;span&gt;&lt;/span&gt;
-  (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.13 seconds
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-165-225', ip: '199.7.165.225', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1854}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir3860_911682375}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: b12b542ff6504e832c72f6c3fbb2be0c
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/2-PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="0" time="70.367733">
+      <failure type="Codeception\Exception\ElementNotFound">PayPalAuthorizationHappyPath: authorization
+Field by name, label, CSS or XPath element with '//*[@name='id_gender']' was not found.
 
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1373
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1102
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
+/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1360
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:1410
@@ -81,10 +72,10 @@ Session ID: b12b542ff6504e832c72f6c3fbb2be0c
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:272
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:148
 /home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
+</failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/3-CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="44.886213"/>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/4-CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSWppv2AuthorizationHappyPath: authorize" feature="authorize" assertions="6" time="61.184021"/>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/6-CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="66.035455"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/3-CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="51.369904"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/4-CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSWppv2AuthorizationHappyPath: authorize" feature="authorize" assertions="6" time="69.286815"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/6-CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="71.258964"/>
   </testsuite>
 </testsuites>
