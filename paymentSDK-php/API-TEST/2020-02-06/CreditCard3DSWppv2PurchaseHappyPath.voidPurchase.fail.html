@@ -1,0 +1,46 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Wirecard AG - payment SDK for PHP Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="application/javascript"></script>
+</head>
+<body id="overrides">
+<div class="container">
+    <div class="content">
+    <div class="page-header">
+        <div class="row align-baseline">
+            <div class="col-sm-3">
+                <a href="../../index.html"><img src="https://raw.githubusercontent.com/wirecard/paymentSDK-php/master/examples/assets/img/wirecard_logo.png" alt="wirecard"></a>
+            </div>
+            <div class="col-sm-9 bottom-align-text">
+                <h1>Payment SDK for PHP Examples</h1>
+            </div>
+        </div>
+    </div>Payment successfully completed.<br>Response validation status: true <br>Transaction ID: <a href="https://api-test.wirecard.com/engine/rest/merchants/508b8896-b37d-4614-845c-26bf8bf2c948/payments/8e463d2f-3f30-42ab-920c-8308a8f46663">8e463d2f-3f30-42ab-920c-8308a8f46663</a><br>Credit Card Token-Id: 4304509873471003        <br>
+        <form action="cancel.php" method="post">
+            <input type="hidden" name="parentTransactionId" value="8e463d2f-3f30-42ab-920c-8308a8f46663">
+            <input type="hidden" name="amount" value="70">
+            <input type="hidden" name="currency" value="EUR">
+            <button type="submit" class="btn btn-primary">Cancel the payment</button>
+        </form>
+        <br>Possible backend operations: Array
+(
+    [pay] =&gt; Capture
+    [cancel] =&gt; Cancel
+)
+<br><br>Is authorization final: 0<br><br>Order state: authorized
+</div>
+<footer>
+    <div class="container">
+        ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>2020
+        Wirecard
+    </div>
+</footer>
+</div>
+
+</body></html>
