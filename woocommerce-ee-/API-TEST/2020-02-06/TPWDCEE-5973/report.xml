@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="6" assertions="27" failures="0" errors="1" time="440.862631">
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSAuthorizationHappyPath: authorize" feature="CreditCard3DSAuthorizationHappyPath" assertions="6" time="77.918426"/>
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="CreditCard3DSPurchaseHappyPath" assertions="6" time="73.388539"/>
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCardNon3DSAuthorizationHappyPath.feature" name="CreditCardNon3DSAuthorizationHappyPath: authorize" feature="CreditCardNon3DSAuthorizationHappyPath" assertions="5" time="65.274166"/>
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="CreditCardNon3DSPurchaseHappyPath" assertions="5" time="70.323373"/>
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/GiropayPurchaseHappyPath.feature" name="GiropayPurchaseHappyPath: purchase" feature="GiropayPurchaseHappyPath" assertions="3" time="60.482226"/>
-    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="PayPalPurchaseHappyPath" assertions="2" time="93.475901">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='acceptAllButton']"}
-  (Session info: chrome=79.0.3945.79)
-  (Driver info: chromedriver=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 16 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-210', ip: '199.7.164.210', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1511}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=79.0.3945.16 (93fcc21110c10dbbd49bbff8f472335360e31d05-refs/branch-heads/3945@{#262}), userDataDir=C:\Windows\proxy\scoped_dir5508_1766069850}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=79.0.3945.79, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6d0fe854bb57af64b9df5adad1cc505d
-*** Element info: {Using=xpath, value=//*[@id='acceptAllButton']}
+  <testsuite name="acceptance" tests="6" assertions="29" failures="1" errors="0" time="498.634314">
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSAuthorizationHappyPath: authorize" feature="CreditCard3DSAuthorizationHappyPath" assertions="6" time="79.632632"/>
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="CreditCard3DSPurchaseHappyPath" assertions="6" time="76.191365"/>
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCardNon3DSAuthorizationHappyPath.feature" name="CreditCardNon3DSAuthorizationHappyPath: authorize" feature="CreditCardNon3DSAuthorizationHappyPath" assertions="5" time="63.582773"/>
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="CreditCardNon3DSPurchaseHappyPath" assertions="5" time="64.702492"/>
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/GiropayPurchaseHappyPath.feature" name="GiropayPurchaseHappyPath: purchase" feature="GiropayPurchaseHappyPath" assertions="3" time="56.667155"/>
+    <testcase file="/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="PayPalPurchaseHappyPath" assertions="4" time="157.857897">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalPurchaseHappyPath: purchase
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-3RD721994X369814G&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US#/checkout/selectFi' contains "/order-received".
 
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/module-webdriver/src/Codeception/Module/WebDriver.php:2358
+/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
+/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/lib-asserts/src/Codeception/Util/Shared/Asserts.php:449
+/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/module-webdriver/src/Codeception/Module/WebDriver.php:1191
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Step.php:266
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Scenario.php:76
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/_support/AcceptanceTester.php:172
+/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/_support/_generated/AcceptanceTesterActions.php:736
+/home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/tests/_support/AcceptanceTester.php:185
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
@@ -47,7 +33,7 @@ Session ID: 6d0fe854bb57af64b9df5adad1cc505d
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/src/Codeception/Application.php:117
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/app.php:46
 /home/travis/build/wirecard/woocommerce-ee/wirecard-woocommerce-extension/vendor/codeception/codeception/app.php:47
-</error>
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
