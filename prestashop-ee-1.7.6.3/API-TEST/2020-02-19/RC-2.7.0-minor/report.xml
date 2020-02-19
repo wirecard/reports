@@ -1,81 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ui_test)" tests="5" assertions="17" failures="1" errors="1" time="273.527596">
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/1-PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="0" time="8.596752">
-      <error type="Facebook\WebDriver\Exception\StaleElementReferenceException">PayPalPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=80.0.3987.87)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 184 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-164-4', ip: '199.7.164.4', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1586}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir4228_1932347674}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: fef2f742630c930a162ebbc1225709da
-
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:108
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:987
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:606
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/ActorExtendedWithWrappers.php:35
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:237
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:226
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Codecept.php:181
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/2-PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="0" time="72.140257">
-      <failure type="Codeception\Exception\ElementNotFound">PayPalAuthorizationHappyPath: authorization
-Field by name, label, CSS or XPath element with '//*[@name='id_gender']' was not found.
-
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1102
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1112
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1360
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:1410
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/Page/Checkout.php:82
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/Helper/Acceptance.php:55
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/_generated/AcceptanceTesterActions.php:3121
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Test/Test.php:89
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Codecept.php:181
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Command/Run.php:495
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Command/Run.php:390
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:1012
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:272
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/symfony/console/Application.php:148
-/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/vendor/codeception/codeception/src/Codeception/Application.php:108
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/3-CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="53.928389"/>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/4-CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSWppv2AuthorizationHappyPath: authorize" feature="authorize" assertions="6" time="67.558144"/>
-    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/6-CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="71.304054"/>
+  <testsuite name="acceptance (ui_test)" tests="5" assertions="29" failures="0" errors="0" time="369.177339">
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/1-PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="101.254390"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/2-PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="6" time="73.359896"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/3-CreditCardNon3DSPurchaseHappyPath.feature" name="CreditCardNon3DSPurchaseHappyPath: purchase" feature="purchase" assertions="5" time="55.495577"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/4-CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSWppv2AuthorizationHappyPath: authorize" feature="authorize" assertions="6" time="73.746561"/>
+    <testcase file="/home/travis/build/wirecard/prestashop-ee/wirecardpaymentgateway/tests/acceptance/6-CreditCard3DSPurchaseHappyPath.feature" name="CreditCard3DSPurchaseHappyPath: purchase" feature="purchase" assertions="6" time="65.320915"/>
   </testsuite>
 </testsuites>
