@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="3" assertions="7" errors="2" failures="0" skipped="0" time="255.668052">
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSAuthorizationHappyPath: authorize" feature="CreditCard3DSAuthorizationHappyPath" assertions="3" time="58.823540"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCard3DSOneClickHappyPath.feature" name="CreditCard3DSOneClickHappyPath: authorize" feature="CreditCard3DSOneClickHappyPath" assertions="3" time="121.069085">
+  <testsuite name="acceptance (ci)" tests="4" assertions="8" errors="3" failures="0" skipped="0" time="368.813796">
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCard3DSAuthorizationHappyPath.feature" name="CreditCard3DSAuthorizationHappyPath: authorize" feature="CreditCard3DSAuthorizationHappyPath" assertions="3" time="56.803057"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCard3DSOneClickHappyPath.feature" name="CreditCard3DSOneClickHappyPath: authorize" feature="CreditCard3DSOneClickHappyPath" assertions="3" time="120.639765">
       <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSOneClickHappyPath: authorize
 Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='btn btn-success']"}
   (Session info: chrome=80.0.3987.87)
   (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 14 milliseconds
+Command duration or timeout: 16 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-11-35', ip: '207.254.11.35', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+System info: host: '199-7-165-51', ip: '199.7.165.51', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1621}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir7896_1560113494}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 45d095a96cadb36d601013fe8458881c
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1516}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir5460_149924369}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 28e853c1524900c59d5a7d7a9eba5dfc
 *** Element info: {Using=xpath, value=//*[@class='btn btn-success']}
 
 /repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
@@ -31,17 +31,17 @@ Session ID: 45d095a96cadb36d601013fe8458881c
 /repo/codecept:43
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="PayPalPurchaseHappyPath" assertions="1" time="75.775427">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalPurchaseHappyPath: purchase
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;button track-submit="choose_FI_interstitial" class="btn full confirmButton continueButton" ng-click="continue()" pa-marked="1"&gt;...&lt;/button&gt; is not clickable at point (317, 598). Other element would receive the click: &lt;div id="gdprCookieContent_wrapper" class="col-sm-12"&gt;...&lt;/div&gt;
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="1" time="61.667461">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;button track-submit="choose_FI_interstitial" class="btn full confirmButton continueButton" ng-click="continue()" pa-marked="1"&gt;...&lt;/button&gt; is not clickable at point (313, 554). Other element would receive the click: &lt;div id="gdprCookieContent_wrapper" class="col-sm-12"&gt;...&lt;/div&gt;
   (Session info: chrome=80.0.3987.87)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.61 seconds
+  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.11 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-165-78', ip: '199.7.165.78', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+System info: host: '207-254-77-95', ip: '207.254.77.95', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1536}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir2932_577411538}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c37a10daef2ee46e645ef9f5ad8a94f
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1692}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir7144_432591009}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a8b08c6ec3b71815abc9ffd353b94996
 
 /repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
 /repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
@@ -51,6 +51,35 @@ Session ID: 5c37a10daef2ee46e645ef9f5ad8a94f
 /repo/src/Codeception/Module/WebDriver.php:997
 /project/tests/_support/_generated/AcceptanceTesterActions.php:628
 /project/tests/_support/Step/Acceptance/GenericStep.php:49
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:26
+/project/tests/_support/AcceptanceTester.php:182
+/repo/codecept:43
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="1" time="129.703513">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='btn full confirmButton continueButton']"}
+  (Session info: chrome=80.0.3987.87)
+  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-10-255', ip: '207.254.10.255', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1473}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir7112_1481717676}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.87, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 185c6253e893733996ff0891ae02e017
+*** Element info: {Using=xpath, value=//*[@class='btn full confirmButton continueButton']}
+
+/repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
+/repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:204
+/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
+/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:432
+/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:67
+/repo/src/Codeception/Module/WebDriver.php:2385
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2453
+/project/tests/_support/Step/Acceptance/GenericStep.php:48
 /project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:26
 /project/tests/_support/AcceptanceTester.php:182
 /repo/codecept:43
