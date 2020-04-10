@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="7" assertions="3" errors="6" failures="1" skipped="0" time="916.604277">
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="401.410370">
+  <testsuite name="acceptance (ci)" tests="7" assertions="10" errors="6" failures="1" skipped="0" time="1144.523934">
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="400.954752">
       <error type="Facebook\WebDriver\Exception\TimeOutException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "20", "authorization"
 Facebook\WebDriver\Exception\TimeOutException: 
 
@@ -15,60 +15,18 @@ Facebook\WebDriver\Exception\TimeOutException:
 /repo/codecept:43
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="38.263603">
-      <error type="Facebook\WebDriver\Exception\TimeOutException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "pay", "20", "purchase"
-Facebook\WebDriver\Exception\TimeOutException: 
-
-/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:84
-/repo/src/Codeception/Module/WebDriver.php:2385
-/project/tests/_support/_generated/AcceptanceTesterActions.php:2453
-/project/tests/_support/Step/Acceptance/GenericStep.php:50
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:99
-/project/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:137
-/project/tests/_support/AcceptanceTester.php:125
-/repo/codecept:43
-</error>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="94.023297">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "reserve", "100", "authorization"
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="108.619094">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "pay", "20", "purchase"
 Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='customer-email']"}
   (Session info: chrome=80.0.3987.132)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 13 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-10-110', ip: '207.254.10.110', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1900}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir7936_1302065053}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ab0bb580213b612bebe72cb7d4f6bed1
-*** Element info: {Using=xpath, value=//*[@id='customer-email']}
-
-/repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:204
-/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/repo/src/Codeception/Module/WebDriver.php:2344
-/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/project/tests/_support/Step/Acceptance/GenericStep.php:39
-/project/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:148
-/project/tests/_support/AcceptanceTester.php:127
-/repo/codecept:43
-</error>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="85.068452">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase"
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='customer-email']"}
-  (Session info: chrome=80.0.3987.132)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
+  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 30 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-76-73', ip: '207.254.76.73', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
+System info: host: '199-7-165-28', ip: '199.7.165.28', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1961}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir4488_407890403}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 79c9a76adacdff2b4483ef6b5964c0de
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1538}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir2232_1823717582}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 432bef4dd50086579dfe0b64b0aa294b
 *** Element info: {Using=xpath, value=//*[@id='customer-email']}
 
 /repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
@@ -85,37 +43,36 @@ Session ID: 79c9a76adacdff2b4483ef6b5964c0de
 /repo/codecept:43
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="0" time="117.581377">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='button action continue primary']"}
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="101.958154">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "reserve", "100", "authorization"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='customer-email']"}
   (Session info: chrome=80.0.3987.132)
-  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 28 milliseconds
+  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 33 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-11-175', ip: '207.254.11.175', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+System info: host: '199-7-165-65', ip: '199.7.165.65', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1505}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir5704_1783354278}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 88675b38503fbd1c8df4c8a9a71ccb9a
-*** Element info: {Using=xpath, value=//*[@class='button action continue primary']}
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1752}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir3136_1087253833}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5cd18e353d2ea212fcc31042b24f98d8
+*** Element info: {Using=xpath, value=//*[@id='customer-email']}
 
 /repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
 /repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
 /repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
 /repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:204
 /repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:432
 /repo/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/repo/src/Codeception/Module/WebDriver.php:2385
-/project/tests/_support/_generated/AcceptanceTesterActions.php:2453
-/project/tests/_support/Step/Acceptance/GenericStep.php:50
-/project/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:157
+/repo/src/Codeception/Module/WebDriver.php:2344
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/project/tests/_support/Step/Acceptance/GenericStep.php:39
+/project/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:148
 /project/tests/_support/AcceptanceTester.php:127
 /repo/codecept:43
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="1" time="123.395297">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="1" time="128.827037">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase"
 Failed asserting that  on page /index.php/checkout/#payment
 --&gt; Checkout
 Sign In
@@ -131,17 +88,16 @@ Flat Rate - Fixed
 €25.00
 Order Total €145.00
 5 Item in Cart
+Savvy Shoulder Tote
+Qty 5
+€120.00
 Ship To:
 edit
 Test Guest Test
 Some Street
-Graz, 8010
-Austria
-123456
-Shipping Method:
-
+Graz, 8
 [Content too long to display. See complete response in '/project/tests/_output/' directory]
---&gt; contains "Wirecard PayPal".
+--&gt; contains "Wirecard Credit Card".
 
 /repo/src/Codeception/Module/WebDriver.php:2939
 /repo/src/Codeception/Module/WebDriver.php:919
@@ -150,29 +106,74 @@ Shipping Method:
 /repo/codecept:43
 </failure>
     </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="2" time="56.861881">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
-Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;input type="radio" name="payment[method]" class="radio" data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()" id="wirecard_elasticengine_paypal" value="wirecard_elasticengine_paypal"&gt; is not clickable at point (26, 368). Other element would receive the click: &lt;div class="loading-mask" data-role="loader"&gt;...&lt;/div&gt;
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="3" time="211.894788">
+      <error type="Facebook\WebDriver\Exception\TimeOutException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
+Facebook\WebDriver\Exception\TimeOutException: 
+
+/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:84
+/repo/src/Codeception/Module/WebDriver.php:2344
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/project/tests/_support/Step/Acceptance/GenericStep.php:39
+/project/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:29
+/project/tests/_support/AcceptanceTester.php:157
+/repo/codecept:43
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="3" time="95.043252">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='email']"}
   (Session info: chrome=80.0.3987.132)
   (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.08 seconds
+Command duration or timeout: 45 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-10-32', ip: '207.254.10.32', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+System info: host: '199-7-164-103', ip: '199.7.164.103', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1763}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir8108_578431990}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e8be8ae088de80398df1bc0274c6550e
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1827}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir1792_663085017}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dec5257314de1b792d409bb9b0e808fa
+*** Element info: {Using=xpath, value=//*[@id='email']}
 
-/repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:114
+/repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
 /repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
 /repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/repo/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebElement.php:81
-/repo/src/Codeception/Module/WebDriver.php:1383
-/project/tests/_support/_generated/AcceptanceTesterActions.php:1432
-/project/tests/_support/Step/Acceptance/GenericStep.php:100
-/project/tests/_support/Step/Acceptance/GenericStep.php:66
-/project/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:113
-/project/tests/_support/AcceptanceTester.php:146
+/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:204
+/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
+/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:67
+/repo/src/Codeception/Module/WebDriver.php:2344
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/project/tests/_support/Step/Acceptance/GenericStep.php:39
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:43
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:23
+/project/tests/_support/AcceptanceTester.php:194
+/repo/codecept:43
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="3" time="97.226857">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='email']"}
+  (Session info: chrome=80.0.3987.132)
+  (Driver info: chromedriver=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-176', ip: '207.254.76.176', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1492}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.16 (320f6526c1632ad4f205ebce69b99a062ed78647-refs/branch-heads/3987@{#185}), userDataDir=C:\Windows\proxy\scoped_dir4260_914654450}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=80.0.3987.132, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 173dd66443a1ab48b18dcf5aa74ca0f6
+*** Element info: {Using=xpath, value=//*[@id='email']}
+
+/repo/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
+/repo/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
+/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
+/repo/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:204
+/repo/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
+/repo/vendor/facebook/webdriver/lib/WebDriverWait.php:67
+/repo/src/Codeception/Module/WebDriver.php:2344
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/project/tests/_support/Step/Acceptance/GenericStep.php:39
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:43
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:23
+/project/tests/_support/AcceptanceTester.php:194
 /repo/codecept:43
 </error>
     </testcase>
