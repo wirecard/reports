@@ -1,415 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance" tests="32" assertions="92" failures="12" errors="6" time="1812.135544">
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="1" time="110.846043">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http GET to /session/4c92f62d92f5bf5d611f3cdd0297e08bc0a38fd8/url
-
-Connection timed out after 60001 milliseconds
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:256
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:693
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1208
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:977
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/Page/Base.php:131
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:188
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="3" time="78.914773">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture
-Failed asserting that '/examples/payments/CreditCard/return.php?status=failure' contains "success".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="2" time="54.090379">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='password']"}
-  (Session info: chrome=81.0.4044.129)
-  (Driver info: chromedriver=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 14 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '208-78-111-201', ip: '208.78.111.201', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1754}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}), userDataDir=C:\Windows\proxy\scoped_dir8764_1509440769}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=81.0.4044.129, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 28bac0e9652db26eefbaf80304f3b35f
-*** Element info: {Using=xpath, value=//*[@id='password']}
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2344
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:207
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="2" time="52.852720">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='password']"}
-  (Session info: chrome=81.0.4044.129)
-  (Driver info: chromedriver=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 31 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '208-78-111-201', ip: '208.78.111.201', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1754}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}), userDataDir=C:\Windows\proxy\scoped_dir8764_1509440769}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=81.0.4044.129, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 28bac0e9652db26eefbaf80304f3b35f
-*** Element info: {Using=xpath, value=//*[@id='password']}
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2344
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:207
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="2" time="69.128088">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase
-Failed asserting that '/examples/payments/CreditCard/cancel.php' contains "bank".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="0" time="71.760430">
-      <error type="Facebook\WebDriver\Exception\WebDriverCurlException">CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel
-Facebook\WebDriver\Exception\WebDriverCurlException: Curl error thrown for http POST to /session/4c92f62d92f5bf5d611f3cdd0297e08bc0a38fd8/timeouts/implicit_wait with params: {"ms":0}
-
-Connection timed out after 60001 milliseconds
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:297
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteExecuteMethod.php:40
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverTimeouts.php:46
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:3361
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2851
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1031
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:985
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:628
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:228
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:83
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="2" time="288.646375">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='password']"}
-  (Session info: chrome=81.0.4044.129)
-  (Driver info: chromedriver=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 31 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '208-78-111-201', ip: '208.78.111.201', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1754}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}), userDataDir=C:\Windows\proxy\scoped_dir8764_1509440769}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=81.0.4044.129, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 28bac0e9652db26eefbaf80304f3b35f
-*** Element info: {Using=xpath, value=//*[@id='password']}
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2344
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:207
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="2" time="47.906368">
-      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture
-Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='password']"}
-  (Session info: chrome=81.0.4044.129)
-  (Driver info: chromedriver=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 24 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '208-78-111-201', ip: '208.78.111.201', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1754}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}), userDataDir=C:\Windows\proxy\scoped_dir8764_1509440769}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=81.0.4044.129, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 28bac0e9652db26eefbaf80304f3b35f
-*** Element info: {Using=xpath, value=//*[@id='password']}
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Exception/WebDriverException.php:102
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/HttpCommandExecutor.php:331
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:565
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/Remote/RemoteWebDriver.php:205
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverExpectedCondition.php:185
-/home/travis/build/wirecard/paymentSDK-php/vendor/facebook/webdriver/lib/WebDriverWait.php:67
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:2344
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:2408
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:207
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</error>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="2" time="62.716020">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund
-Failed asserting that '/examples/payments/CreditCard/cancel.php' contains "bank".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="2" time="64.263641">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel
-Failed asserting that '/examples/payments/CreditCard/cancel.php' contains "bank".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="2" time="63.210740">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSWppv2PurchaseHappyPath: purchase
-Failed asserting that '/examples/payments/CreditCard/cancel.php' contains "bank".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="3" time="66.452297">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">CreditCard3DSWppv2PurchaseHappyPath: voidPurchase
-Failed asserting that '/acssim/app/bank' contains "success".
-
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Module/WebDriver.php:1177
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Step.php:265
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Scenario.php:72
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/_generated/AcceptanceTesterActions.php:736
-/home/travis/build/wirecard/paymentSDK-php/tests/_support/AcceptanceTester.php:190
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:142
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Gherkin.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Test/Test.php:88
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/Runner.php:110
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/SuiteManager.php:158
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:192
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Codecept.php:159
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:494
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Command/Run.php:389
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Command/Command.php:255
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:1001
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:271
-/home/travis/build/wirecard/paymentSDK-php/vendor/symfony/console/Application.php:147
-/home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
-</failure>
-    </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="16.626531"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="45.124740"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="33.832327"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="25.296819"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="15.950614"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="22.397534"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="3" time="14.340395"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="4" time="20.446471"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="6" time="32.441667"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="17.925928"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="26.595671"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="18.794017"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="11.984785"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="20.447170"/>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="1" time="77.444041">
+  <testsuite name="acceptance" tests="32" assertions="147" failures="6" errors="0" time="1190.045947">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="54.445283"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="36.747289"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="42.863965"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="36.540408"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="5" time="30.453578"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCard3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="6" time="35.869684"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="8" time="51.608648"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="6" time="36.731188"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="8" time="44.347807"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCard3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="6" time="36.675804"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="5" time="30.649478"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCard3DSWppv2PurchaseHappyPath.feature" name="CreditCard3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="6" time="37.628205"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="3" time="14.562243"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="36.833074"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="6" time="24.759785"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSAuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSAuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="4" time="19.464138"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: purchase" feature="purchase" assertions="3" time="12.954564"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSPurchaseAndPostprocessingHappyPath.feature" name="CreditCardNon3DSPurchaseAndPostprocessingHappyPath: refundOrcancel" feature="refundOrcancel" assertions="4" time="19.137361"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: purchase" feature="purchase" assertions="3" time="12.856470"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSTokenizePurchaseHappyPath.feature" name="CreditCardNon3DSTokenizePurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="4" time="19.017174"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: authorization" feature="authorization" assertions="6" time="28.701114"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: capture" feature="capture" assertions="5" time="16.974008"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: refund" feature="refund" assertions="7" time="22.994299"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath.feature" name="CreditCardNon3DSWppv2AuthorizationAndPostprocessingHappyPath: cancel" feature="cancel" assertions="5" time="16.794389"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: purchase" feature="purchase" assertions="3" time="13.290152"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/CreditCardNon3DSWppv2PurchaseHappyPath.feature" name="CreditCardNon3DSWppv2PurchaseHappyPath: voidPurchase" feature="voidPurchase" assertions="5" time="17.162241"/>
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: authorization" feature="authorization" assertions="1" time="72.884102">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: authorization
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-11T0864762525592Y&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-41R59123VL1020911&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
@@ -434,9 +54,9 @@ Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-1
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="1" time="78.493902">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: capture" feature="capture" assertions="1" time="72.484919">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: capture
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-3M003036AE479502E&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-83840255UG550862J&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
@@ -461,9 +81,9 @@ Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-3
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="1" time="75.751943">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: refund" feature="refund" assertions="1" time="73.084853">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: refund
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-14103445AC6816239&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-7K1949851S693970N&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
@@ -488,9 +108,9 @@ Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-1
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="1" time="75.359875">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationAndPostProcessingHappyPath.feature" name="PayPalAuthorizationAndPostProcessingHappyPath: cancel" feature="cancel" assertions="1" time="74.074706">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationAndPostProcessingHappyPath: cancel
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-6GJ05321LM9369905&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-57762258757008818&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
@@ -515,9 +135,9 @@ Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-6
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="1" time="76.169172">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalAuthorizationHappyPath.feature" name="PayPalAuthorizationHappyPath: authorization" feature="authorization" assertions="1" time="73.859896">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalAuthorizationHappyPath: authorization
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-9ND112240M672900V&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-08F30499V5910533M&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
@@ -542,9 +162,9 @@ Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-9
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Application.php:107
 </failure>
     </testcase>
-    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="75.924068">
+    <testcase file="/home/travis/build/wirecard/paymentSDK-php/tests/acceptance/PayPalPurchaseHappyPath.feature" name="PayPalPurchaseHappyPath: purchase" feature="purchase" assertions="1" time="73.595122">
       <failure type="PHPUnit_Framework_ExpectationFailedException">PayPalPurchaseHappyPath: purchase
-Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-4FC93635YV1551839&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
+Failed asserting that '/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;token=EC-7E60779664232211F&amp;useraction=commit&amp;country.x=US&amp;locale.x=en_US' contains "checkout".
 
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/phpunit-wrapper/src/TestCase.php:47
 /home/travis/build/wirecard/paymentSDK-php/vendor/codeception/codeception/src/Codeception/Util/Shared/Asserts.php:449
