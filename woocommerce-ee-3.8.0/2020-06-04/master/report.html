@@ -209,13 +209,13 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 1</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (0.3s)</small></h1>
+ <h1>Codeception Results <small><span style="color: green">OK</span> (32.2s)</small></h1>
 
 
 
@@ -224,15 +224,15 @@
  <td>
      <h3>Acceptance (ci) Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioFailed">
+</tr>   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">AlipayCrossBorderInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">0.33s</span></p>
+     <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">AlipayCrossBorderInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">32.16s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioFailed">
+   <tr class="scenarioRow scenarioSuccess">
     <td>
-     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
 
 
       <tr>
@@ -248,13 +248,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5ed8d95e58627', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5ed90aa461e10', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed8d95e58627">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa461e10">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -316,7 +316,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-06-04 11:22:02&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-06-04 02:51:46&quot;}</span></td>
       </tr>
 
 
@@ -324,13 +324,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5ed8d95e5868a', this)"><span class="toggle">+</span> And i activate "alipay-xborder" payment action "debit" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5ed90aa461f17', this)"><span class="toggle">+</span> And i activate "alipay-xborder" payment action "debit" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed8d95e5868a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa461f17">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -352,19 +352,223 @@
  </td>
 </tr>
 <tr>
- <td class="stepName failedStep" ><p onclick="showHide('5ed8d95e586c0', this)"><span class="toggle">+</span> And i see "wirecard alipay cross-border"</p>
+ <td class="stepName " ><p onclick="showHide('5ed90aa461f63', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed8d95e586c0">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa461f63">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Alipay Cross-Border&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/product/polo/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,6</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;,80</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ed90aa461feb', this)"><span class="toggle">+</span> And i see "wirecard alipay cross-border"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa461feb">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Alipay Cross-Border&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ed90aa462049', this)"><span class="toggle">+</span> And i start "alipay cross border" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa462049">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_alipay-xborder']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_alipay-xborder']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ed90aa46208f', this)"><span class="toggle">+</span> Then i perform "alipay cross border" actions outside of the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ed90aa46208f">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/AlipayCrossBorder/AlipayCrossBorderLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/AlipayCrossBorderData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
 
@@ -372,14 +576,9 @@
  </td>
 </tr>
 
-         <tr >
-    <td class="error">
-        WebDriver: Current url is blank, no page was opened
-    </td>
-</tr>
-
-         <tr><td class='error'><div class='screenshot'><img src='AlipayCrossBorderInitialTransaction.initial.transaction....debit..ci.fail.png' alt='failure screenshot'></div></td></tr>
-         <tr><td class='error'>See <a href='AlipayCrossBorderInitialTransaction.initial.transaction....debit..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+         
+         
+         
      </table>
 
 
@@ -395,11 +594,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>0</strong></td>
+        <td class="scenarioSuccessValue"><strong>1</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>1</strong></td>
+        <td class="scenarioFailedValue"><strong>0</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
