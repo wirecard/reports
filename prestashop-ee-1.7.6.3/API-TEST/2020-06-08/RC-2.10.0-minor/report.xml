@@ -1,98 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="7" assertions="12" errors="2" failures="5" skipped="0" time="756.138780">
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="106.753995">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "20", "authorization"
-Failed asserting that  on page /index.php?payment_type=creditcard&amp;fc=module&amp;module=wirecardpaymentgateway&amp;controller=payment
---&gt; This page isn’t working
-79661591624868-prestashop-1.7.6.3.ngrok.io is currently unable to handle this request.
-HTTP ERROR 500
---&gt; contains "YOUR ORDER IS CONFIRMED".
-
-/project/tests/_support/_generated/AcceptanceTesterActions.php:344
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:173
-/project/tests/_support/AcceptanceTester.php:210
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</failure>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="95.166818">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "pay", "20", "purchase"
-Failed asserting that  on page /index.php?payment_type=creditcard&amp;fc=module&amp;module=wirecardpaymentgateway&amp;controller=payment
---&gt; This page isn’t working
-79661591624868-prestashop-1.7.6.3.ngrok.io is currently unable to handle this request.
-HTTP ERROR 500
---&gt; contains "YOUR ORDER IS CONFIRMED".
-
-/project/tests/_support/_generated/AcceptanceTesterActions.php:344
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:173
-/project/tests/_support/AcceptanceTester.php:210
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</failure>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="116.643005">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "reserve", "100", "authorization"
-Failed asserting that  on page /index.php?id_order=9&amp;payment_type=creditcard&amp;payment_state=success&amp;id_cart=9&amp;fc=module&amp;module=wirecardpaymentgateway&amp;controller=return
---&gt; This page isn’t working
-79661591624868-prestashop-1.7.6.3.ngrok.io is currently unable to handle this request.
-HTTP ERROR 500
---&gt; contains "YOUR ORDER IS CONFIRMED".
-
-/project/tests/_support/_generated/AcceptanceTesterActions.php:344
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:173
-/project/tests/_support/AcceptanceTester.php:210
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</failure>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="96.040143">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase"
-Failed asserting that  on page /index.php?id_order=10&amp;payment_type=creditcard&amp;payment_state=success&amp;id_cart=10&amp;fc=module&amp;module=wirecardpaymentgateway&amp;controller=return
---&gt; This page isn’t working
-79661591624868-prestashop-1.7.6.3.ngrok.io is currently unable to handle this request.
-HTTP ERROR 500
---&gt; contains "YOUR ORDER IS CONFIRMED".
-
-/project/tests/_support/_generated/AcceptanceTesterActions.php:344
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:173
-/project/tests/_support/AcceptanceTester.php:210
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</failure>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="2" time="95.781864">
-      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
-Failed asserting that  on page /index.php?id_order=11&amp;payment_type=creditcard&amp;payment_state=success&amp;id_cart=11&amp;fc=module&amp;module=wirecardpaymentgateway&amp;controller=return
---&gt; This page isn’t working
-79661591624868-prestashop-1.7.6.3.ngrok.io is currently unable to handle this request.
-HTTP ERROR 500
---&gt; contains "YOUR ORDER IS CONFIRMED".
-
-/project/tests/_support/_generated/AcceptanceTesterActions.php:344
-/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:173
-/project/tests/_support/AcceptanceTester.php:210
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</failure>
-    </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="1" time="117.855746">
+  <testsuite name="acceptance (ci)" tests="7" assertions="21" errors="2" failures="0" skipped="0" time="508.070909">
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="42.939136"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="37.123400"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="54.904035"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="49.004533"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="7" time="86.122266"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="1" time="117.158765">
       <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
 Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='email']"}
   (Session info: chrome=83.0.4103.61)
-  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 14 milliseconds
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 17 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-11-70', ip: '207.254.11.70', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
+System info: host: '207-254-76-190', ip: '207.254.76.190', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir4244_106367718}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 27836adb32c9d1f173f36b500cce8a1e
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1642}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir8080_126947988}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 49fc28c5e5c4302a2c291c2291e8f961
 *** Element info: {Using=xpath, value=//*[@id='email']}
 
 /repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
@@ -111,18 +36,18 @@ Session ID: 27836adb32c9d1f173f36b500cce8a1e
 /repo/codecept:7
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="1" time="127.897207">
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="1" time="120.818774">
       <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
 Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='email']"}
   (Session info: chrome=83.0.4103.61)
-  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 11 milliseconds
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 17 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: 'mac-207-254-75-108.browserstack.com', ip: '207.254.75.108', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_51'
+System info: host: '207-254-76-181', ip: '207.254.76.181', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=MAC, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64771}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=/var/folders/3y/zz_w6_s56sl__vcrf3r5bhzr0000hr/T/.com.google.Chrome.U7lYjq}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 31698d06d96387592b7fdd9178a63625
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1444}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir4300_134453377}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: c63945cf038ed1b6ec97028136ebb8f1
 *** Element info: {Using=xpath, value=//*[@id='email']}
 
 /repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
