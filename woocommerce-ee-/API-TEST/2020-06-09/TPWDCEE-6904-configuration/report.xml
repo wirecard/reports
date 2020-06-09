@@ -1,46 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="10" assertions="26" errors="2" failures="0" skipped="0" time="738.512752">
-    <testcase file="/project/tests/acceptance/Alipay/AlipayCrossBorderInitialTransaction.feature" name="AlipayCrossBorderInitialTransaction: initial transaction | &quot;debit&quot;" feature="AlipayCrossBorderInitialTransaction" assertions="1" time="102.355463"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="1" time="105.637417">
-      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "20", "authorization"
-Facebook\WebDriver\Exception\UnknownServerException: javascript error: Cannot read property 'getAttribute' of null
-  (Session info: chrome=83.0.4103.61)
-  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 22 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-10-238', ip: '207.254.10.238', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1595}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir5972_1006821848}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: bed6ab9b828f23bb6aae0c9bef841723
-
-/repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
-/repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
-/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
-/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:334
-/project/tests/_support/_generated/AcceptanceTesterActions.php:2671
-/project/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:63
-/project/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:24
-/project/tests/_support/AcceptanceTester.php:165
-/repo/app.php:46
-/repo/app.php:47
-/repo/codecept:7
-</error>
-    </testcase>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="72.831310"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="43.252424"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="48.277287"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="3" time="88.751717">
+  <testsuite name="acceptance (ci)" tests="10" assertions="25" errors="2" failures="0" skipped="0" time="540.025014">
+    <testcase file="/project/tests/acceptance/Alipay/AlipayCrossBorderInitialTransaction.feature" name="AlipayCrossBorderInitialTransaction: initial transaction | &quot;debit&quot;" feature="AlipayCrossBorderInitialTransaction" assertions="1" time="81.739117"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="0.000000"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="36.410590"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="49.628327"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="46.012853"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="3" time="99.031143">
       <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
 Facebook\WebDriver\Exception\UnknownServerException: javascript error: Cannot read property 'getAttribute' of null
   (Session info: chrome=83.0.4103.61)
-  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 12 milliseconds
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 64 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '207-254-7-74', ip: '207.254.7.74', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+System info: host: '207-254-7-51', ip: '207.254.7.51', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1677}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir8500_2011763174}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 3ce19d0f81621c9f0c232e450e296639
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir4908_2027901622}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: f515636e341f5744261e9748ea45fc83
 
 /repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
 /repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
@@ -55,9 +31,9 @@ Session ID: 3ce19d0f81621c9f0c232e450e296639
 /repo/codecept:7
 </error>
     </testcase>
-    <testcase file="/project/tests/acceptance/GuaranteedInvoice/GuaranteedInvoiceInitialTransactionHappyPath.feature" name="GuaranteedInvoiceInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="GuaranteedInvoiceInitialTransactionHappyPath" assertions="3" time="42.196599"/>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="3" time="96.677496"/>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="3" time="104.608234"/>
-    <testcase file="/project/tests/acceptance/iDEAL/IdealInitialTransactionHappyPath.feature" name="iDealInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="iDealInitialTransaction" assertions="3" time="33.924805"/>
+    <testcase file="/project/tests/acceptance/GuaranteedInvoice/GuaranteedInvoiceInitialTransactionHappyPath.feature" name="GuaranteedInvoiceInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="GuaranteedInvoiceInitialTransactionHappyPath" assertions="3" time="32.044720"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="3" time="76.108531"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="3" time="76.651359"/>
+    <testcase file="/project/tests/acceptance/iDEAL/IdealInitialTransactionHappyPath.feature" name="iDealInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="iDealInitialTransaction" assertions="3" time="42.398372"/>
   </testsuite>
 </testsuites>
