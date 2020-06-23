@@ -210,17 +210,1013 @@
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
      <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 2</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (0s)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (99.6s)</small></h1>
 
 
 
 	 <table border="0" style="width: 100%;">
-		
+		<tr>
+ <td>
+     <h3>Acceptance (ci) Tests</h3>
+ </td>
+</tr>   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardConfigurationHappyPath &raquo;</span> Configuration page check | &quot;reserve&quot;, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">53.1s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As admin user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to check that the credit card configuration page is working properly</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef2217c6d9da', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6d9da">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-06-23 03:35:31&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:1,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:1,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef2217c6da5e', this)"><span class="toggle">+</span> Given i deactivate "credit card" payment method in configuration</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6da5e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I delete from database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_creditcard_settings&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef2217c6da90', this)"><span class="toggle">+</span> When i go into the configuration page as "admin user" and activate "credit card" method</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6da90">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-login.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='user_login']&quot;,10</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='user_login']&quot;,&quot;test@test.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='user_pass']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='user_pass']&quot;,&quot;password&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='wp-submit']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='wp-submit']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a[contains(@class, 'button alignright')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a[contains(@class, 'button alignright')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5ef2217c6daff', this)"><span class="toggle">+</span> And i fill fields with "credit card" data for payment action "reserve" and transaction type "authorization"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6daff">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;CreditCard&quot;,&quot;reserve&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,&quot;https://api-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,&quot;https://wpp-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,&quot;70000-APITEST-AP&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,&quot;qD2wzQ_hrc!8&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,&quot;53f2895a-e4de-4e82-a813-0d87a10e55e6&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,100</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_min_limit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_min_limit']&quot;,50</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_title']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_title']&quot;,&quot;Wirecard Credit Card&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_payment_action']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_payment_action']&quot;,&quot;Authorization&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_challenge_indicator']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_challenge_indicator']&quot;,&quot;01&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_send_additional']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@class='button-primary woocommerce-save-button']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@class='button-primary woocommerce-save-button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef2217c6dba3', this)"><span class="toggle">+</span> Then i see that "credit card" payment method is enabled on payment page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6dba3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5ef2217c6dbd9', this)"><span class="toggle">+</span> And i see all data that was entered is shown in "credit card" configuration page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef2217c6dbd9">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&amp;section=wirecard_ee_creditcard&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,&quot;https://api-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,&quot;https://wpp-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,&quot;70000-APITEST-AP&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,&quot;qD2wzQ_hrc!8&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,&quot;53f2895a-e4de-4e82-a813-0d87a10e55e6&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,100</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed testing for '100' in woocommerce_wirecard_ee_creditcard_ssl_max_limit's value: '100'<br />
+Failed asserting that an array contains 100.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardConfigurationHappyPath.Configuration.page.check....reserve....authorization..ci.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardConfigurationHappyPath.Configuration.page.check....reserve....authorization..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('2', this)"><span class="toggle">+</span>
+          <span class="quiet">CreditCardConfigurationHappyPath &raquo;</span> Configuration page check | &quot;pay&quot;, &quot;purchase&quot; <span style="color: #34495e; font-size: 70%;">46.52s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As admin user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to check that the credit card configuration page is working properly</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef221b20a709', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a709">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-06-23 03:36:33&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:4,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:4,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:4,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:4,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:2,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:2,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef221b20a78c', this)"><span class="toggle">+</span> Given i deactivate "credit card" payment method in configuration</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a78c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I delete from database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_creditcard_settings&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef221b20a7bd', this)"><span class="toggle">+</span> When i go into the configuration page as "admin user" and activate "credit card" method</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a7bd">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-login.php&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='user_login']&quot;,10</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='user_login']&quot;,&quot;test@test.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='user_pass']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='user_pass']&quot;,&quot;password&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='wp-submit']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='wp-submit']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--disabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a[contains(@class, 'button alignright')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a[contains(@class, 'button alignright')]&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5ef221b20a82b', this)"><span class="toggle">+</span> And i fill fields with "credit card" data for payment action "pay" and transaction type "purchase"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a82b">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;CreditCard&quot;,&quot;pay&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,&quot;https://api-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,&quot;https://wpp-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,&quot;70000-APITEST-AP&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,&quot;qD2wzQ_hrc!8&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,&quot;53f2895a-e4de-4e82-a813-0d87a10e55e6&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,100</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_min_limit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_min_limit']&quot;,50</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_title']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_title']&quot;,&quot;Wirecard Credit Card&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_payment_action']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_payment_action']&quot;,&quot;Purchase&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_challenge_indicator']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//select[@id='woocommerce_wirecard_ee_creditcard_challenge_indicator']&quot;,&quot;01&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_descriptor']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_send_additional']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see checkbox is checked <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_cc_vault_enabled']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@class='button-primary woocommerce-save-button']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@class='button-primary woocommerce-save-button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef221b20a8d0', this)"><span class="toggle">+</span> Then i see that "credit card" payment method is enabled on payment page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a8d0">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see element <span style="color: #732E81">&quot;//*[contains(@data-gateway_id, 'wirecard_ee_creditcard')]/td/a/span[contains(@class, 'woocommerce-input-toggle woocommerce-input-toggle--enabled')]&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5ef221b20a906', this)"><span class="toggle">+</span> And i see all data that was entered is shown in "credit card" configuration page</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef221b20a906">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/wp-admin/admin.php?page=wc-settings&amp;tab=checkout&amp;section=wirecard_ee_creditcard&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_base_url']&quot;,&quot;https://api-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_wpp_url']&quot;,&quot;https://wpp-test.wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_user']&quot;,&quot;70000-APITEST-AP&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_http_pass']&quot;,&quot;qD2wzQ_hrc!8&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_three_d_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_merchant_account_id']&quot;,&quot;53f2895a-e4de-4e82-a813-0d87a10e55e6&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_secret']&quot;,&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see in field <span style="color: #732E81">&quot;//input[@id='woocommerce_wirecard_ee_creditcard_ssl_max_limit']&quot;,100</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed testing for '100' in woocommerce_wirecard_ee_creditcard_ssl_max_limit's value: '100'<br />
+Failed asserting that an array contains 100.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='CreditCardConfigurationHappyPath.Configuration.page.check....pay....purchase..ci.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='CreditCardConfigurationHappyPath.Configuration.page.check....pay....purchase..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+
    <tr>
     <td>
 	    <h2>Summary</h2>
@@ -232,7 +1228,7 @@
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>0</strong></td>
+        <td class="scenarioFailedValue"><strong>2</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
