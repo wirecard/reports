@@ -210,17 +210,332 @@
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
      <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (0s)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (12.9s)</small></h1>
 
 
 
 	 <table border="0" style="width: 100%;">
-		
+		<tr>
+ <td>
+     <h3>Acceptance (ci) Tests</h3>
+ </td>
+</tr>   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">AlipayCrossBorderInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">12.94s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioFailed">
+    <td>
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a guest user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with AlipayCrossBorder</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that initial transaction was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef318e559f38', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef318e559f38">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-06-24 09:11:49&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:3,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:1,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:1,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5ef318e559fb3', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef318e559fb3">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/product/polo/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,6</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;,80</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5ef318e55a02c', this)"><span class="toggle">+</span> And i see "wirecard alipay cross-border"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5ef318e55a02c">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Alipay Cross-Border&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         <tr >
+    <td class="error">
+        Failed asserting that  on page /checkout/<br />
+--&gt; Skip to navigation<br />
+Skip to content<br />
+test<br />
+Just another WordPress site<br />
+Search for:<br />
+Search<br />
+Home<br />
+Cart<br />
+Checkout<br />
+My account<br />
+Sample Page<br />
+Shop<br />
+&euro;120.00 6 items<br />
+Home / Checkout<br />
+Checkout<br />
+Have a coupon? Click here to enter your code<br />
+Billing details<br />
+First name *<br />
+Last name *<br />
+Company name (optional)<br />
+Country *<br />
+Sel<br />
+[Content too long to display. See complete response in '/project/tests/_output/' directory]<br />
+--&gt; contains &quot;Wirecard Alipay Cross-Border&quot;.
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='AlipayCrossBorderInitialTransaction.initial.transaction....debit..ci.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='AlipayCrossBorderInitialTransaction.initial.transaction....debit..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
+     </table>
+
+
+    </td>
+   </tr>
+
+
+
    <tr>
     <td>
 	    <h2>Summary</h2>
@@ -232,7 +547,7 @@
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>0</strong></td>
+        <td class="scenarioFailedValue"><strong>1</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
