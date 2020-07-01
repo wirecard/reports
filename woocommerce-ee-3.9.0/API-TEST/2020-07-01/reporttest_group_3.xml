@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (ci)" tests="8" assertions="20" errors="2" failures="0" skipped="0" time="364.586285">
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="1" time="42.204425">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;button class="button actionContinue scTrack:unifiedlogin-login-submit" type="submit" id="btnLogin" name="btnLogin" value="Login" pa-marked="1"&gt;...&lt;/button&gt; is not clickable at point (485, 515). Other element would receive the click: &lt;div id="ccpaCookieContent_wrapper" class="col-sm-12"&gt;...&lt;/div&gt;
+  (Session info: chrome=83.0.4103.61)
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.11 seconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '199-7-165-60', ip: '199.7.165.60', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1548}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir4192_1643191125}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 650c6a398cb249f0c9100b68f8b4b8f6
+
+/repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
+/repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebElement.php:74
+/project/tests/_support/_generated/AcceptanceTesterActions.php:628
+/project/tests/_support/Step/Acceptance/GenericStep.php:52
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:50
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:24
+/project/tests/_support/AcceptanceTester.php:223
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="1" time="55.611708">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;button class="button actionContinue scTrack:unifiedlogin-login-submit" type="submit" id="btnLogin" name="btnLogin" value="Login" pa-marked="1"&gt;...&lt;/button&gt; is not clickable at point (485, 515). Other element would receive the click: &lt;p class="ccpaCookieBanner_content ccpaCookieBanner_content-custom"&gt;...&lt;/p&gt;
+  (Session info: chrome=83.0.4103.61)
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 10.0.19041 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.13 seconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '199-7-165-125', ip: '199.7.165.125', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1780}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir7700_1071125966}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: a20647381d2e9b6ace3ff9c6b589bcc0
+
+/repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
+/repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebElement.php:74
+/project/tests/_support/_generated/AcceptanceTesterActions.php:628
+/project/tests/_support/Step/Acceptance/GenericStep.php:52
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:50
+/project/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:24
+/project/tests/_support/AcceptanceTester.php:223
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PaymentOnInvoicePaymentInAdvance/PaymentOnInvoicePaymentInAdvanceInitialTransactionHappyPath.feature" name="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment On Invoice&quot;, 100, &quot;authorization&quot;" feature="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath" assertions="3" time="31.354392"/>
+    <testcase file="/project/tests/acceptance/PaymentOnInvoicePaymentInAdvance/PaymentOnInvoicePaymentInAdvanceInitialTransactionHappyPath.feature" name="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment In Advance&quot;, 100, &quot;authorization&quot;" feature="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath" assertions="3" time="26.227626"/>
+    <testcase file="/project/tests/acceptance/SEPADirectDebit/SEPADirectDebitInitialTransactionHappyPath.feature" name="SEPADirectDebitInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="SEPADirectDebitInitialTransactionHappyPath" assertions="3" time="31.988912"/>
+    <testcase file="/project/tests/acceptance/SEPADirectDebit/SEPADirectDebitInitialTransactionHappyPath.feature" name="SEPADirectDebitInitialTransactionHappyPath: initial transaction | &quot;pay&quot;, &quot;20&quot;, &quot;debit&quot;" feature="SEPADirectDebitInitialTransactionHappyPath" assertions="3" time="32.823715"/>
+    <testcase file="/project/tests/acceptance/Sofort/SofortInitialTransactionHappyPath.feature" name="SofortInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="SofortInitialTransaction" assertions="3" time="109.166398"/>
+    <testcase file="/project/tests/acceptance/iDEAL/IdealInitialTransactionHappyPath.feature" name="iDealInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="iDealInitialTransaction" assertions="3" time="35.209109"/>
+  </testsuite>
+</testsuites>
