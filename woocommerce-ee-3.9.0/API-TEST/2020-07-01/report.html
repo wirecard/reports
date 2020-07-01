@@ -209,13 +209,13 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 5</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 6</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 2</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (250s)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (354.8s)</small></h1>
 
 
 
@@ -224,15 +224,15 @@
  <td>
      <h3>Acceptance (ci) Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioSuccess">
+</tr>   <tr class="scenarioRow scenarioFailed">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)"><span class="toggle">+</span>
-          <span class="quiet">AlipayCrossBorderInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">86.53s</span></p>
+     <p class="scenarioFailed" onclick="showHide('1', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalInitialTransaction &raquo;</span> initial transaction | &quot;pay&quot;, &quot;purchase&quot; <span style="color: #34495e; font-size: 70%;">41.67s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
 
 
       <tr>
@@ -240,7 +240,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with AlipayCrossBorder</strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with PayPal</strong></td>
       </tr>
 
       <tr>
@@ -248,13 +248,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815c8de', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e611', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815c8de">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e611">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -320,7 +320,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:18:33&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:20:47&quot;}</span></td>
       </tr>
 
       <tr>
@@ -360,27 +360,27 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815c944', this)"><span class="toggle">+</span> And i activate "alipay-xborder" payment action "debit" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e6b6', this)"><span class="toggle">+</span> And i activate "pay pal" payment action "pay" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815c944">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e6b6">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;Alipay-Xborder&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;PayPal&quot;,&quot;pay&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_alipay-xborder_settings&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_paypal_settings&quot;}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_alipay-xborder_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:16:&quot;70000-APITEST-AP&quot;;s:9:&quot;http_pass&quot;;s:12:&quot;qD2wzQ_hrc!8&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;7ca48aa0-ab12-4560-ab4a-af1c477cce43&quot;;s:6:&quot;secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:28:&quot;Wirecard Alipay Cross-border&quot;;s:10:&quot;descriptor&quot;;s:1:&quot;0&quot;;s:14:&quot;payment_action&quot;;s:5:&quot;debit&quot;;s:15:&quot;send_additional&quot;;s:1:&quot;1&quot;;}&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_paypal_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:16:&quot;70000-APITEST-AP&quot;;s:9:&quot;http_pass&quot;;s:12:&quot;qD2wzQ_hrc!8&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;2a0e9351-24ed-4110-9a1b-fd0fee6bec26&quot;;s:6:&quot;secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:15:&quot;Wirecard PayPal&quot;;s:10:&quot;descriptor&quot;;s:1:&quot;0&quot;;s:14:&quot;payment_action&quot;;s:3:&quot;pay&quot;;s:15:&quot;send_additional&quot;;s:1:&quot;0&quot;;}&quot;}</span></td>
       </tr>
 
 
@@ -388,13 +388,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815c972', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e6fc', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815c972">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e6fc">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -504,19 +504,19 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815c9d1', this)"><span class="toggle">+</span> And i see "wirecard alipay cross-border"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e79f', this)"><span class="toggle">+</span> And i see "wirecard pay pal"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815c9d1">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e79f">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Alipay Cross-Border&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard PayPal&quot;</span></td>
       </tr>
 
 
@@ -524,13 +524,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815c9f8', this)"><span class="toggle">+</span> And i start "alipay cross border" payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e7d9', this)"><span class="toggle">+</span> And i start "pay pal" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815c9f8">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e7d9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -540,11 +540,11 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_alipay-xborder']&quot;,30</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'paypal')]&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_alipay-xborder']&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'paypal')]&quot;</span></td>
       </tr>
 
 
@@ -552,13 +552,37 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8d815ca2a', this)"><span class="toggle">+</span> Then i perform "alipay cross border" actions outside of the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8dda8e81b', this)"><span class="toggle">+</span> And i place the order and continue "pay pal" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8d815ca2a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e81b">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName failedStep" ><p onclick="showHide('5efc8dda8e85b', this)"><span class="toggle">+</span> When i perform "pay pal" actions outside of the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dda8e85b">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -568,7 +592,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/AlipayCrossBorder/AlipayCrossBorderLocators.json&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/PayPal/PayPalLocators.json&quot;</span></td>
       </tr>
 
       <tr>
@@ -576,7 +600,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/AlipayCrossBorderData.json&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/PayPalData.json&quot;</span></td>
       </tr>
 
       <tr>
@@ -612,459 +636,43 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='email']&quot;,&quot;paypal.buyer2@wirecard.com&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;Wirecardbuyer&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;</span></td>
       </tr>
 
 
@@ -1072,9 +680,22 @@
  </td>
 </tr>
 
-         
-         
-         
+         <tr >
+    <td class="error">
+        element click intercepted: Element &lt;button class=&quot;button actionContinue scTrack:unifiedlogin-login-submit&quot; type=&quot;submit&quot; id=&quot;btnLogin&quot; name=&quot;btnLogin&quot; value=&quot;Login&quot; pa-marked=&quot;1&quot;&gt;...&lt;/button&gt; is not clickable at point (485, 515). Other element would receive the click: &lt;div id=&quot;ccpaCookieContent_wrapper&quot; class=&quot;col-sm-12&quot;&gt;...&lt;/div&gt;<br />
+  (Session info: chrome=83.0.4103.61)<br />
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)<br />
+Command duration or timeout: 1.08 seconds<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '199-7-164-48', ip: '199.7.164.48', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'<br />
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br />
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1602}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir4188_2050835304}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]<br />
+Session ID: 2fb2cecf33246e43adff43152ff8b3c4
+    </td>
+</tr>
+
+         <tr><td class='error'><div class='screenshot'><img src='PayPalInitialTransactionHappyPath.initial.transaction....pay....purchase..ci.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalInitialTransactionHappyPath.initial.transaction....pay....purchase..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
      </table>
 
 
@@ -1082,15 +703,15 @@
    </tr>
 
 
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('2', this)"><span class="toggle">+</span>
-          <span class="quiet">EpsInitialTransactionHappyPath &raquo;</span> initial transaction | &quot;debit&quot;, 20, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">53.24s</span></p>
+     <p class="scenarioFailed" onclick="showHide('2', this)"><span class="toggle">+</span>
+          <span class="quiet">PayPalInitialTransaction &raquo;</span> initial transaction | &quot;reserve&quot;, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">51.68s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
 
 
       <tr>
@@ -1098,7 +719,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with eps-Überweisung</strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with PayPal</strong></td>
       </tr>
 
       <tr>
@@ -1106,13 +727,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f32a', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6a2f', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f32a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6a2f">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1178,7 +799,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:20:06&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:21:37&quot;}</span></td>
       </tr>
 
       <tr>
@@ -1218,27 +839,27 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f38d', this)"><span class="toggle">+</span> Given i activate "eps-überweisung" payment action "debit" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6ace', this)"><span class="toggle">+</span> And i activate "pay pal" payment action "reserve" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f38d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6ace">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;Eps&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;PayPal&quot;,&quot;reserve&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_eps_settings&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_paypal_settings&quot;}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_eps_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:25:&quot;Wirecard eps-Überweisung&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;1f629760-1a66-4f83-a6b4-6a35620b4a6d&quot;;s:6:&quot;secret&quot;;s:36:&quot;20c6a95c-e39b-4e6a-971f-52cfb347d359&quot;;s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:11:&quot;test_button&quot;;s:16:&quot;Test Credentials&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;}&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_paypal_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:16:&quot;70000-APITEST-AP&quot;;s:9:&quot;http_pass&quot;;s:12:&quot;qD2wzQ_hrc!8&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;2a0e9351-24ed-4110-9a1b-fd0fee6bec26&quot;;s:6:&quot;secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:15:&quot;Wirecard PayPal&quot;;s:10:&quot;descriptor&quot;;s:1:&quot;0&quot;;s:14:&quot;payment_action&quot;;s:7:&quot;reserve&quot;;s:15:&quot;send_additional&quot;;s:1:&quot;0&quot;;}&quot;}</span></td>
       </tr>
 
 
@@ -1246,13 +867,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f3bb', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum 20 in shop system as "guest customer"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6b16', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f3bb">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6b16">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1262,7 +883,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,2</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,6</span></td>
       </tr>
 
       <tr>
@@ -1362,19 +983,19 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f41c', this)"><span class="toggle">+</span> And i see "wirecard eps-überweisung"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6bba', this)"><span class="toggle">+</span> And i see "wirecard pay pal"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f41c">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6bba">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard eps-Überweisung&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard PayPal&quot;</span></td>
       </tr>
 
 
@@ -1382,13 +1003,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f442', this)"><span class="toggle">+</span> And i start "eps-überweisung" payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6bf3', this)"><span class="toggle">+</span> And i start "pay pal" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f442">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6bf3">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1398,11 +1019,11 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_eps']&quot;,30</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'paypal')]&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_eps']&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'paypal')]&quot;</span></td>
       </tr>
 
 
@@ -1410,53 +1031,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f46c', this)"><span class="toggle">+</span> And i fill "eps-überweisung" fields in the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e19d6c34', this)"><span class="toggle">+</span> And i place the order and continue "pay pal" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f46c">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/Eps/EpsLocators.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/EpsData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='eps_bic']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='eps_bic']&quot;,&quot;BWFBATW1XXX&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f4a0', this)"><span class="toggle">+</span> And i place the order and continue "eps-überweisung" payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f4a0">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6c34">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1474,13 +1055,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f4ca', this)"><span class="toggle">+</span> And i perform "eps-überweisung" actions outside of the shop</p>
+ <td class="stepName failedStep" ><p onclick="showHide('5efc8e19d6c73', this)"><span class="toggle">+</span> When i perform "pay pal" actions outside of the shop</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f4ca">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19d6c73">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1490,7 +1071,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/Eps/EpsLocators.json&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/PayPal/PayPalLocators.json&quot;</span></td>
       </tr>
 
       <tr>
@@ -1498,63 +1079,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/EpsData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sbtnLogin']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@id='sbtnLogin']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sbtnSign']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@id='sbtnSign']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sbtnSignCollect']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@id='sbtnSignCollect']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sbtnOk']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@id='sbtnOk']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@name='back2Shop']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@name='back2Shop']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f50e', this)"><span class="toggle">+</span> Then i see successful payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f50e">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/PayPalData.json&quot;</span></td>
       </tr>
 
       <tr>
@@ -1594,49 +1119,62 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Order received&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='email']&quot;,&quot;paypal.buyer2@wirecard.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnNext']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='password']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='password']&quot;,&quot;Wirecardbuyer&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='btnLogin']&quot;</span></td>
       </tr>
 
 
   </table>
  </td>
 </tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8dbd8f549', this)"><span class="toggle">+</span> And i see "eps-überweisung" transaction type "debit" in transaction table</p>
 
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8dbd8f549">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I assert equals <span style="color: #732E81">true,true</span></td>
-      </tr>
-
-
-  </table>
- </td>
+         <tr >
+    <td class="error">
+        element click intercepted: Element &lt;button class=&quot;button actionContinue scTrack:unifiedlogin-login-submit&quot; type=&quot;submit&quot; id=&quot;btnLogin&quot; name=&quot;btnLogin&quot; value=&quot;Login&quot; pa-marked=&quot;1&quot;&gt;...&lt;/button&gt; is not clickable at point (489, 515). Other element would receive the click: &lt;div id=&quot;ccpaCookieContent_wrapper&quot; class=&quot;col-sm-12&quot;&gt;...&lt;/div&gt;<br />
+  (Session info: chrome=83.0.4103.61)<br />
+  (Driver info: chromedriver=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)<br />
+Command duration or timeout: 1.10 seconds<br />
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'<br />
+System info: host: '199-7-165-3', ip: '199.7.165.3', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'<br />
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br />
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1462}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}), userDataDir=C:\Windows\proxy\scoped_dir5124_891331254}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=83.0.4103.61, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]<br />
+Session ID: 59154a8a3bfcc99d1a386e0b7cb19290
+    </td>
 </tr>
 
-         
-         
-         
+         <tr><td class='error'><div class='screenshot'><img src='PayPalInitialTransactionHappyPath.initial.transaction....reserve....authorization..ci.fail.png' alt='failure screenshot'></div></td></tr>
+         <tr><td class='error'>See <a href='PayPalInitialTransactionHappyPath.initial.transaction....reserve....authorization..ci.fail.html' target='_blank'>HTML snapshot</a> of a failed page</td></tr>
      </table>
 
 
@@ -1647,7 +1185,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('3', this)"><span class="toggle">+</span>
-          <span class="quiet">GuaranteedInvoiceInitialTransactionHappyPath &raquo;</span> initial transaction | &quot;reserve&quot;, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">34.05s</span></p>
+          PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment On Invoice&quot;, 100, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">31.63s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -1660,7 +1198,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with GuaranteedInvoice</strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with PaymentOnInvoice/PaymentInAdvance</strong></td>
       </tr>
 
       <tr>
@@ -1668,13 +1206,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994bcd', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5b890', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994bcd">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5b890">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1740,7 +1278,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:21:08&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:22:37&quot;}</span></td>
       </tr>
 
       <tr>
@@ -1780,27 +1318,27 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994c33', this)"><span class="toggle">+</span> And i activate "guaranteed invoice" payment action "reserve" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5b933', this)"><span class="toggle">+</span> And i activate "payment on invoice/payment in advance" payment action "payment on invoice" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994c33">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5b933">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;Invoice&quot;,&quot;reserve&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;PoiPia&quot;,&quot;Payment On Invoice&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_invoice_settings&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_poipia_settings&quot;}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_invoice_settings&quot;,&quot;option_value&quot;:&quot;a:18:{s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:39:&quot;Wirecard Guaranteed Invoice by Wirecard&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;7d7edecb-b008-4f05-9103-308c81cf2ea2&quot;;s:6:&quot;secret&quot;;s:36:&quot;555d998b-15db-46a9-8f1f-d9bc3ec66b19&quot;;s:11:&quot;credentials&quot;;s:0:&quot;&quot;;s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:11:&quot;test_button&quot;;s:0:&quot;&quot;;s:8:&quot;advanced&quot;;s:0:&quot;&quot;;s:21:&quot;billing_shipping_same&quot;;s:3:&quot;yes&quot;;s:17:&quot;billing_countries&quot;;a:2:{i:0;s:2:&quot;AT&quot;;i:1;s:2:&quot;DE&quot;;}s:18:&quot;shipping_countries&quot;;a:2:{i:0;s:2:&quot;AT&quot;;i:1;s:2:&quot;DE&quot;;}s:18:&quot;allowed_currencies&quot;;a:1:{i:0;s:3:&quot;EUR&quot;;}s:10:&quot;min_amount&quot;;s:2:&quot;20&quot;;s:10:&quot;max_amount&quot;;s:4:&quot;3500&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;}&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_poipia_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:16:&quot;70000-APITEST-AP&quot;;s:9:&quot;http_pass&quot;;s:12:&quot;qD2wzQ_hrc!8&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;105ab3e8-d16b-4fa0-9f1f-18dd9b390c94&quot;;s:6:&quot;secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:48:&quot;Wirecard Payment On Invoice / Payment In Advance&quot;;s:12:&quot;payment_type&quot;;s:3:&quot;poi&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;}&quot;}</span></td>
       </tr>
 
 
@@ -1808,13 +1346,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994c65', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "registered customer"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5bbe7', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum 100 in shop system as "registered customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994c65">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5bbe7">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1952,19 +1490,19 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994cdb', this)"><span class="toggle">+</span> And i see "wirecard guaranteed invoice by wirecard"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5bdbc', this)"><span class="toggle">+</span> And i see "wirecard payment on invoice / payment in advance"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994cdb">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5bdbc">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Guaranteed Invoice by Wirecard&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Payment On Invoice / Payment In Advance&quot;</span></td>
       </tr>
 
 
@@ -1972,13 +1510,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994d03', this)"><span class="toggle">+</span> And i start "guaranteed invoice" payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5bef9', this)"><span class="toggle">+</span> And i start "payment on invoice/payment in advance" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994d03">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5bef9">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -1988,11 +1526,11 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_invoice']&quot;,30</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_poipia']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_invoice']&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_poipia']&quot;</span></td>
       </tr>
 
 
@@ -2000,61 +1538,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994d30', this)"><span class="toggle">+</span> When i fill "guaranteed invoice" fields in the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5c052', this)"><span class="toggle">+</span> When i place the order and continue "payment on invoice/payment in advance" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994d30">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/GuaranteedInvoice/GuaranteedInvoiceLocators.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/GuaranteedInvoiceData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='invoice_date_of_birth']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='invoice_date_of_birth']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I press key <span style="color: #732E81">&quot;//*[@id='invoice_date_of_birth']&quot;,&quot;01/01/1991&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//*[@id='invoice_data_protection']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994d69', this)"><span class="toggle">+</span> And i place the order and continue "guaranteed invoice" payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994d69">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5c052">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2072,13 +1562,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994d93', this)"><span class="toggle">+</span> Then i see successful payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5c192', this)"><span class="toggle">+</span> Then i see successful payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994d93">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5c192">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2112,13 +1602,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8de994dc7', this)"><span class="toggle">+</span> And i see "guaranteed invoice" transaction type "authorization" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e3e5c2e0', this)"><span class="toggle">+</span> And i see "payment on invoice/payment in advance" transaction type "authorization" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8de994dc7">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3e5c2e0">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2157,7 +1647,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('4', this)"><span class="toggle">+</span>
-          <span class="quiet">GiropayInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot;, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">42.53s</span></p>
+          PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment In Advance&quot;, 100, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">28.39s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -2170,7 +1660,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with giropay</strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with PaymentOnInvoice/PaymentInAdvance</strong></td>
       </tr>
 
       <tr>
@@ -2178,13 +1668,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907997', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbb3d', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907997">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbb3d">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2250,7 +1740,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:21:49&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:23:17&quot;}</span></td>
       </tr>
 
       <tr>
@@ -2290,27 +1780,27 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e19079fc', this)"><span class="toggle">+</span> And i activate "giropay" payment action "debit" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbbf1', this)"><span class="toggle">+</span> And i activate "payment on invoice/payment in advance" payment action "payment in advance" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e19079fc">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbbf1">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;giropay&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;PoiPia&quot;,&quot;Payment In Advance&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_giropay_settings&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_poipia_settings&quot;}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_giropay_settings&quot;,&quot;option_value&quot;:&quot;a:12:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:7:&quot;wpp_url&quot;;s:29:&quot;https://wpp-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;9b4b0e5f-1bc8-422e-be42-d0bad2eadabc&quot;;s:6:&quot;secret&quot;;s:36:&quot;0c8c6f3a-1534-4fa1-99d9-d1c644d43709&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:16:&quot;Wirecard giropay&quot;;s:14:&quot;payment_action&quot;;s:5:&quot;debit&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:16:&quot;cc_vault_enabled&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_poipia_settings&quot;,&quot;option_value&quot;:&quot;a:10:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:16:&quot;70000-APITEST-AP&quot;;s:9:&quot;http_pass&quot;;s:12:&quot;qD2wzQ_hrc!8&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;105ab3e8-d16b-4fa0-9f1f-18dd9b390c94&quot;;s:6:&quot;secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:48:&quot;Wirecard Payment On Invoice / Payment In Advance&quot;;s:12:&quot;payment_type&quot;;s:18:&quot;Payment in Advance&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;}&quot;}</span></td>
       </tr>
 
 
@@ -2318,15 +1808,43 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907a2c', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbc38', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum 100 in shop system as "registered customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907a2c">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbc38">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;my-account/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='username']&quot;,10</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='username']&quot;,&quot;registered_test@example.com&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='password']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@name='password']&quot;,&quot;testTest123&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='login']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='login']&quot;</span></td>
       </tr>
 
       <tr>
@@ -2362,7 +1880,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Registered Test&quot;</span></td>
       </tr>
 
       <tr>
@@ -2394,7 +1912,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Another Street&quot;</span></td>
       </tr>
 
       <tr>
@@ -2426,7 +1944,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;registered_test@example.com&quot;</span></td>
       </tr>
 
 
@@ -2434,19 +1952,19 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907a8d', this)"><span class="toggle">+</span> And i see "wirecard giropay"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbcf5', this)"><span class="toggle">+</span> And i see "wirecard payment on invoice / payment in advance"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907a8d">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbcf5">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard giropay&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Payment On Invoice / Payment In Advance&quot;</span></td>
       </tr>
 
 
@@ -2454,13 +1972,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907ab4', this)"><span class="toggle">+</span> And i start "giropay" payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbd30', this)"><span class="toggle">+</span> And i start "payment on invoice/payment in advance" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907ab4">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbd30">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2470,11 +1988,11 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'giropay')]&quot;,30</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_poipia']&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'giropay')]&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_poipia']&quot;</span></td>
       </tr>
 
 
@@ -2482,57 +2000,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907ae1', this)"><span class="toggle">+</span> When i fill "giropay" fields in the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbd73', this)"><span class="toggle">+</span> When i place the order and continue "payment on invoice/payment in advance" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907ae1">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/giropay/giropayLocators.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/giropayData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='giropay_bic']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='giropay_bic']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='giropay_bic']&quot;,&quot;GENODETT488&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907b16', this)"><span class="toggle">+</span> And i place the order and continue "giropay" payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907b16">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbd73">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2550,87 +2024,15 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907b40', this)"><span class="toggle">+</span> When i perform "giropay" actions outside of the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbdb0', this)"><span class="toggle">+</span> Then i see successful payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907b40">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbdb0">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@name='sc']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@name='sc']&quot;,&quot;10&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@name='extensionSc']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@name='extensionSc']&quot;,&quot;4000&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@name='customerName1']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@name='customerName1']&quot;,&quot;Paul Peterson&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@name='customerIBAN']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@name='customerIBAN']&quot;,&quot;DE12500105170648489890&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@value='Absenden']&quot;,60</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//input[@value='Absenden']&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907b90', this)"><span class="toggle">+</span> Then i see successful payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907b90">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
       </tr>
 
       <tr>
@@ -2662,13 +2064,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e1907bcd', this)"><span class="toggle">+</span> And i see "giropay" transaction type "debit" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e62bbe01', this)"><span class="toggle">+</span> And i see "payment on invoice/payment in advance" transaction type "authorization" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e1907bcd">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e62bbe01">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2707,7 +2109,7 @@
    <tr class="scenarioRow scenarioSuccess">
     <td>
      <p class="scenarioSuccess" onclick="showHide('5', this)"><span class="toggle">+</span>
-          <span class="quiet">IDealInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot;, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">33.65s</span></p>
+          <span class="quiet">SEPADirectDebitInitialTransactionHappyPath &raquo;</span> initial transaction | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot; <span style="color: #34495e; font-size: 70%;">32.03s</span></p>
     </td>
    </tr>
    <tr class="scenarioRow scenarioSuccess">
@@ -2720,7 +2122,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with iDeal</strong></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with SEPA Direct Debit</strong></td>
       </tr>
 
       <tr>
@@ -2728,13 +2130,13 @@
       </tr>
 
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed730', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a711af', this)"><span class="toggle">+</span> Given i initialize shop system</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed730">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a711af">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2800,7 +2202,7 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:22:36&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:23:51&quot;}</span></td>
       </tr>
 
       <tr>
@@ -2840,27 +2242,27 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed796', this)"><span class="toggle">+</span> And i activate "i deal" payment action "debit" in configuration</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a71258', this)"><span class="toggle">+</span> Given i activate "sepa direct debit" payment action "reserve" in configuration</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed796">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a71258">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;iDEAL&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;SEPADirectDebit&quot;,&quot;reserve&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_ideal_settings&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sepadirectdebit_settings&quot;}</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_ideal_settings&quot;,&quot;option_value&quot;:&quot;a:16:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:7:&quot;wpp_url&quot;;s:29:&quot;https://wpp-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:27:&quot;three_d_merchant_account_id&quot;;s:36:&quot;508b8896-b37d-4614-845c-26bf8bf2c948&quot;;s:14:&quot;three_d_secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;4aeccf39-0d47-47f6-a399-c05c1f2fc819&quot;;s:6:&quot;secret&quot;;s:36:&quot;7a353766-23b5-4992-ae96-cb4232998954&quot;;s:13:&quot;ssl_max_limit&quot;;i:100;s:17:&quot;three_d_min_limit&quot;;i:50;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:14:&quot;Wirecard iDEAL&quot;;s:14:&quot;payment_action&quot;;s:5:&quot;debit&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:16:&quot;cc_vault_enabled&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sepadirectdebit_settings&quot;,&quot;option_value&quot;:&quot;a:15:{s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:26:&quot;Wirecard SEPA Direct Debit&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;933ad170-88f0-4c3d-a862-cff315ecfbc0&quot;;s:6:&quot;secret&quot;;s:36:&quot;5caf2ed9-5f79-4e65-98cb-0b70d6f569aa&quot;;s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:11:&quot;creditor_id&quot;;s:18:&quot;DE98ZZZ09999999999&quot;;s:13:&quot;creditor_name&quot;;s:0:&quot;&quot;;s:13:&quot;creditor_city&quot;;s:0:&quot;&quot;;s:22:&quot;sepa_mandate_textextra&quot;;s:0:&quot;&quot;;s:14:&quot;payment_action&quot;;s:7:&quot;reserve&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:10:&quot;enable_bic&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
       </tr>
 
 
@@ -2868,13 +2270,1081 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed7c6', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a7129e', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "20" in shop system as "guest customer"</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed7c6">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a7129e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/product/polo/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;,80</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a71339', this)"><span class="toggle">+</span> And i see "wirecard sepa direct debit"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a71339">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard SEPA Direct Debit&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a71373', this)"><span class="toggle">+</span> And i start "sepa direct debit" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a71373">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_sepadirectdebit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_sepadirectdebit']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a713b4', this)"><span class="toggle">+</span> And i fill "sepa direct debit" fields in the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a713b4">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/SEPADirectDebit/SEPADirectDebitLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/SEPADirectDebitData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_firstname']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_firstname']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_lastname']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_lastname']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_iban']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_iban']&quot;,&quot;DE42512308000000060004&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a71412', this)"><span class="toggle">+</span> And i place the order and continue "sepa direct debit" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a71412">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a71451', this)"><span class="toggle">+</span> When i perform additional "sepa direct debit" payment steps inside the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a71451">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='ui-dialog-content ui-widget-content']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a714a1', this)"><span class="toggle">+</span> Then i see successful payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a714a1">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Order received&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8e8a714ef', this)"><span class="toggle">+</span> And i see "sepa direct debit" transaction type "authorization" in transaction table</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e8a714ef">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I assert equals <span style="color: #732E81">true,true</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         
+         
+         
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('6', this)"><span class="toggle">+</span>
+          <span class="quiet">SEPADirectDebitInitialTransactionHappyPath &raquo;</span> initial transaction | &quot;pay&quot;, &quot;20&quot;, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">26.82s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer6">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a guest user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with SEPA Direct Debit</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that initial transaction was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39c59', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39c59">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:24:30&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:8,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:8,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:8,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:8,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:6,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:6,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39ce2', this)"><span class="toggle">+</span> Given i activate "sepa direct debit" payment action "pay" in configuration</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39ce2">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;SEPADirectDebit&quot;,&quot;pay&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sepadirectdebit_settings&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sepadirectdebit_settings&quot;,&quot;option_value&quot;:&quot;a:15:{s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:26:&quot;Wirecard SEPA Direct Debit&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;933ad170-88f0-4c3d-a862-cff315ecfbc0&quot;;s:6:&quot;secret&quot;;s:36:&quot;5caf2ed9-5f79-4e65-98cb-0b70d6f569aa&quot;;s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:11:&quot;creditor_id&quot;;s:18:&quot;DE98ZZZ09999999999&quot;;s:13:&quot;creditor_name&quot;;s:0:&quot;&quot;;s:13:&quot;creditor_city&quot;;s:0:&quot;&quot;;s:22:&quot;sepa_mandate_textextra&quot;;s:0:&quot;&quot;;s:14:&quot;payment_action&quot;;s:3:&quot;pay&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:10:&quot;enable_bic&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39d1d', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "20" in shop system as "guest customer"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39d1d">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/product/polo/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;,80</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39daf', this)"><span class="toggle">+</span> And i see "wirecard sepa direct debit"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39daf">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard SEPA Direct Debit&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39de0', this)"><span class="toggle">+</span> And i start "sepa direct debit" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39de0">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_sepadirectdebit']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='wc_payment_method payment_method_wirecard_ee_sepadirectdebit']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39e17', this)"><span class="toggle">+</span> And i fill "sepa direct debit" fields in the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39e17">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/SEPADirectDebit/SEPADirectDebitLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/SEPADirectDebitData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_firstname']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_firstname']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_lastname']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_lastname']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='sepa_iban']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='sepa_iban']&quot;,&quot;DE42512308000000060004&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39e69', this)"><span class="toggle">+</span> And i place the order and continue "sepa direct debit" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39e69">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39e9e', this)"><span class="toggle">+</span> When i perform additional "sepa direct debit" payment steps inside the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39e9e">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='ui-dialog-content ui-widget-content']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I check option <span style="color: #732E81">&quot;//input[@id='sepa-check']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@id='sepa-button']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39ee1', this)"><span class="toggle">+</span> Then i see successful payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39ee1">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Order received&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8ead39f23', this)"><span class="toggle">+</span> And i see "sepa direct debit" transaction type "debit" in transaction table</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8ead39f23">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I assert equals <span style="color: #732E81">true,true</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         
+         
+         
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('7', this)"><span class="toggle">+</span>
+          <span class="quiet">SofortInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot;, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">107.19s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer7">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a guest user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with Sofort.</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that initial transaction was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f56350', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f56350">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:25:06&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:9,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:9,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:9,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:9,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:7,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:7,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f563cf', this)"><span class="toggle">+</span> And i activate "sofort." payment action "debit" in configuration</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f563cf">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;Sofortbanking&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sofortbanking_settings&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_sofortbanking_settings&quot;,&quot;option_value&quot;:&quot;a:12:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:7:&quot;wpp_url&quot;;s:29:&quot;https://wpp-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;6c0e7efd-ee58-40f7-9bbd-5e7337a052cd&quot;;s:6:&quot;secret&quot;;s:36:&quot;58764ab3-5c56-450e-b747-7237a24e92a7&quot;;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:16:&quot;Wirecard Sofort.&quot;;s:14:&quot;payment_action&quot;;s:5:&quot;debit&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:16:&quot;cc_vault_enabled&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f56406', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f56406">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -2984,19 +3454,19 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed890', this)"><span class="toggle">+</span> And i see "wirecard i deal"</p>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f56480', this)"><span class="toggle">+</span> And i see "wirecard sofort."</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed890">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f56480">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard iDEAL&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard Sofort.&quot;</span></td>
       </tr>
 
 
@@ -3004,13 +3474,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed8c6', this)"><span class="toggle">+</span> And i start "i deal" payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f564a8', this)"><span class="toggle">+</span> And i start "sofort" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed8c6">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f564a8">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -3020,11 +3490,11 @@
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'ideal')]&quot;,30</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'sofort')]&quot;,30</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'ideal')]&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'sofort')]&quot;</span></td>
       </tr>
 
 
@@ -3032,57 +3502,13 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed901', this)"><span class="toggle">+</span> When i fill "i deal" fields in the shop</p>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f564d3', this)"><span class="toggle">+</span> And i place the order and continue "sofort" payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed901">
-          <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/iDEAL/iDEALLocators.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/IdealData.json&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;,30</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;,&quot;ING&quot;</span></td>
-      </tr>
-
-
-  </table>
- </td>
-</tr>
-<tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed96a', this)"><span class="toggle">+</span> And i place the order and continue "i deal" payment</p>
-
-     </td>
-</tr>
-<tr>
- <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed96a">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f564d3">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -3100,23 +3526,119 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed994', this)"><span class="toggle">+</span> When i perform "i deal" actions outside of the shop</p>
+ <td class="stepName failedStep" ><p onclick="showHide('5efc8f1f564fd', this)"><span class="toggle">+</span> When i perform "sofort" actions outside of the shop</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed994">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f564fd">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='button.edit']&quot;,60</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='button.edit']&quot;</span></td>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/Sofort/SofortLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/SofortData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BankCodeSearch']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BankCodeSearch']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='BankCodeSearch']&quot;,&quot;Demo Bank&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//li[@class='initial']//a&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//li[@class='initial']//a&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormLOGINNAMEUSERID']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormUSERPIN']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormLOGINNAMEUSERID']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='BackendFormLOGINNAMEUSERID']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormUSERPIN']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='BackendFormUSERPIN']&quot;,&quot;test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName failedStep">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormTAN']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormTan']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//input[@id='BackendFormTan']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//input[@id='BackendFormTan']&quot;,&quot;12345&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//button[@class='button-right primary has-indicator']&quot;</span></td>
       </tr>
 
 
@@ -3124,15 +3646,23 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed9bd', this)"><span class="toggle">+</span> Then i see successful payment</p>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f56574', this)"><span class="toggle">+</span> Then i see successful payment</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed9bd">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f56574">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
       </tr>
 
       <tr>
@@ -3188,13 +3718,531 @@
  </td>
 </tr>
 <tr>
- <td class="stepName " ><p onclick="showHide('5efc8e3fed9ff', this)"><span class="toggle">+</span> And i see "i deal" transaction type "debit" in transaction table</p>
+ <td class="stepName " ><p onclick="showHide('5efc8f1f565b5', this)"><span class="toggle">+</span> And i see "sofort." transaction type "debit" in transaction table</p>
 
      </td>
 </tr>
 <tr>
  <td class="nostyle">
-  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8e3fed9ff">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f1f565b5">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get column from database no criteria <span style="color: #732E81">&quot;wp_wirecard_payment_gateway_tx&quot;,&quot;transaction_type&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I assert equals <span style="color: #732E81">true,true</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+
+         
+         
+         
+     </table>
+
+
+    </td>
+   </tr>
+
+
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <p class="scenarioSuccess" onclick="showHide('8', this)"><span class="toggle">+</span>
+          <span class="quiet">IDealInitialTransaction &raquo;</span> initial transaction | &quot;debit&quot;, &quot;debit&quot; <span style="color: #34495e; font-size: 70%;">35.41s</span></p>
+    </td>
+   </tr>
+   <tr class="scenarioRow scenarioSuccess">
+    <td>
+     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer8">
+
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>As a guest user</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>I want to make an initial transaction with iDeal</strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong>And to see that initial transaction was successful</strong></td>
+      </tr>
+
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845615', this)"><span class="toggle">+</span> Given i initialize shop system</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845615">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/config.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/ShopSystem/Woocommerce/WoocommerceLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodConfig/MappedPaymentActions/Woocommerce/WoocommerceMappedPaymentActions.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Customer/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/GuestCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/RegisteredCustomerData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Customer/AdminData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;EUR&quot;},{&quot;option_name&quot;:&quot;woocommerce_currency&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I update in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_value&quot;:&quot;AT&quot;},{&quot;option_name&quot;:&quot;woocommerce_default_country&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_users&quot;,&quot;user_email&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_users&quot;,{&quot;user_email&quot;:&quot;registered_test@example.com&quot;,&quot;user_pass&quot;:&quot;b1e93970879bbe2652bf43a02dc911bd&quot;,&quot;user_login&quot;:&quot;registered_test&quot;,&quot;user_registered&quot;:&quot;2020-07-01 01:26:59&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:10,&quot;meta_key&quot;:&quot;billing_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:10,&quot;meta_key&quot;:&quot;shipping_address_1&quot;,&quot;meta_value&quot;:&quot;Some Another Street&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:10,&quot;meta_key&quot;:&quot;billing_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_usermeta&quot;,{&quot;user_id&quot;:10,&quot;meta_key&quot;:&quot;shipping_country&quot;,&quot;meta_value&quot;:&quot;AT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,&quot;zone_name&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zones&quot;,{&quot;zone_name&quot;:&quot;AUT&quot;,&quot;zone_order&quot;:0}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_methods&quot;,{&quot;zone_id&quot;:8,&quot;method_id&quot;:&quot;flat_rate&quot;,&quot;method_order&quot;:1,&quot;is_enabled&quot;:1}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_woocommerce_shipping_zone_locations&quot;,{&quot;zone_id&quot;:8,&quot;location_code&quot;:&quot;AT&quot;,&quot;location_type&quot;:&quot;country&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f48456a1', this)"><span class="toggle">+</span> And i activate "i deal" payment action "debit" in configuration</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f48456a1">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I build payment method config <span style="color: #732E81">&quot;iDEAL&quot;,&quot;debit&quot;,&quot;stdClass&quot;,&quot;API-TEST&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I grab from database <span style="color: #732E81">&quot;wp_options&quot;,&quot;option_name&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_ideal_settings&quot;}</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I have in database <span style="color: #732E81">&quot;wp_options&quot;,{&quot;option_name&quot;:&quot;woocommerce_wirecard_ee_ideal_settings&quot;,&quot;option_value&quot;:&quot;a:16:{s:8:&quot;base_url&quot;;s:29:&quot;https://api-test.wirecard.com&quot;;s:7:&quot;wpp_url&quot;;s:29:&quot;https://wpp-test.wirecard.com&quot;;s:9:&quot;http_user&quot;;s:13:&quot;16390-testing&quot;;s:9:&quot;http_pass&quot;;s:14:&quot;3!3013=D3fD8X7&quot;;s:27:&quot;three_d_merchant_account_id&quot;;s:36:&quot;508b8896-b37d-4614-845c-26bf8bf2c948&quot;;s:14:&quot;three_d_secret&quot;;s:36:&quot;dbc5a498-9a66-43b9-bf1d-a618dd399684&quot;;s:19:&quot;merchant_account_id&quot;;s:36:&quot;4aeccf39-0d47-47f6-a399-c05c1f2fc819&quot;;s:6:&quot;secret&quot;;s:36:&quot;7a353766-23b5-4992-ae96-cb4232998954&quot;;s:13:&quot;ssl_max_limit&quot;;i:100;s:17:&quot;three_d_min_limit&quot;;i:50;s:7:&quot;enabled&quot;;s:3:&quot;yes&quot;;s:5:&quot;title&quot;;s:14:&quot;Wirecard iDEAL&quot;;s:14:&quot;payment_action&quot;;s:5:&quot;debit&quot;;s:10:&quot;descriptor&quot;;s:2:&quot;no&quot;;s:15:&quot;send_additional&quot;;s:3:&quot;yes&quot;;s:16:&quot;cc_vault_enabled&quot;;s:2:&quot;no&quot;;}&quot;}</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f48456dc', this)"><span class="toggle">+</span> And i prepare checkout with purchase sum "100" in shop system as "guest customer"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f48456dc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/product/polo/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='input-text qty text']&quot;,6</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;,80</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='add-to-cart']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I am on page <span style="color: #732E81">&quot;/checkout&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_first_name']&quot;,&quot;Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_last_name']&quot;,&quot;Guest Test&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='select2-billing_country-container']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@class='select2-search__field']&quot;,&quot;Austria&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@class='select2-results']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_address_1']&quot;,&quot;Some Street&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_city']&quot;,&quot;Graz&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_postcode']&quot;,&quot;8010&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_phone']&quot;,&quot;123456&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I fill field <span style="color: #732E81">&quot;//*[@id='billing_email']&quot;,&quot;guest_test@example.com&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845764', this)"><span class="toggle">+</span> And i see "wirecard i deal"</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845764">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Wirecard iDEAL&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845795', this)"><span class="toggle">+</span> And i start "i deal" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845795">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">2</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'ideal')]&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='payment']/ul/li[contains(@class, 'ideal')]&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f48457cc', this)"><span class="toggle">+</span> When i fill "i deal" fields in the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f48457cc">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/Locator/PaymentMethod/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/Locator/PaymentMethod/iDEAL/iDEALLocators.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get full path <span style="color: #732E81">&quot;/tests/_data/PaymentMethodData/&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I get data from data file <span style="color: #732E81">&quot;/project/tests/_data/PaymentMethodData/IdealData.json&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element visible <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I select option <span style="color: #732E81">&quot;//*[@name='ideal_bank_bic']&quot;,&quot;ING&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845811', this)"><span class="toggle">+</span> And i place the order and continue "i deal" payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845811">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@id='place_order']&quot;,30</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@id='place_order']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845845', this)"><span class="toggle">+</span> When i perform "i deal" actions outside of the shop</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845845">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait for element clickable <span style="color: #732E81">&quot;//*[@name='button.edit']&quot;,60</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I click <span style="color: #732E81">&quot;//*[@name='button.edit']&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f4845876', this)"><span class="toggle">+</span> Then i see successful payment</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f4845876">
+          <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">1</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I execute js <span style="color: #732E81">&quot;return location.href&quot;</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I wait <span style="color: #732E81">3</span></td>
+      </tr>
+
+      <tr>
+       <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;I see <span style="color: #732E81">&quot;Order received&quot;</span></td>
+      </tr>
+
+
+  </table>
+ </td>
+</tr>
+<tr>
+ <td class="stepName " ><p onclick="showHide('5efc8f48458d3', this)"><span class="toggle">+</span> And i see "i deal" transaction type "debit" in transaction table</p>
+
+     </td>
+</tr>
+<tr>
+ <td class="nostyle">
+  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5efc8f48458d3">
           <tr>
        <td class="stepName ">&nbsp;&nbsp;&nbsp;&nbsp;<strong></strong></td>
       </tr>
@@ -3238,11 +4286,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>5</strong></td>
+        <td class="scenarioSuccessValue"><strong>6</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>0</strong></td>
+        <td class="scenarioFailedValue"><strong>2</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>
