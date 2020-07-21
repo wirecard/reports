@@ -602,7 +602,7 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 <div class="woocommerce-notices-wrapper"></div>
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://295511595319708-woocommerce-ee-3.9.3.ngrok.io/checkout/" enctype="multipart/form-data" novalidate="novalidate" style="position: static; zoom: 1;"><div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout"><ul class="woocommerce-error" role="alert">
 			<li>
-			Payment or transaction was identified as duplicate  Please do not try again.<br>
+			Provider had a system error.  Please try again later.<br>
 		</li>
 	</ul>
 </div>
@@ -692,7 +692,7 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 	<td data-title="Shipping">
 					<ul id="shipping_method" class="woocommerce-shipping-methods">
 									<li>
-						<input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate9" value="flat_rate:9" class="shipping_method"><label for="shipping_method_0_flat_rate9">Flat rate</label>					</li>
+						<input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate16" value="flat_rate:16" class="shipping_method"><label for="shipping_method_0_flat_rate16">Flat rate</label>					</li>
 							</ul>
 						
 		
@@ -715,11 +715,17 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 
 <div id="payment" class="woocommerce-checkout-payment" style="position: static; zoom: 1;">
 			<ul class="wc_payment_methods payment_methods methods">
-			<li class="wc_payment_method payment_method_wirecard_ee_paypal">
-	<input id="payment_method_wirecard_ee_paypal" type="radio" class="input-radio" name="payment_method" value="wirecard_ee_paypal" checked="checked" data-order_button_text="" style="display: none;">
+			<li class="wc_payment_method payment_method_wirecard_ee_giropay">
+	<input id="payment_method_wirecard_ee_giropay" type="radio" class="input-radio" name="payment_method" value="wirecard_ee_giropay" checked="checked" data-order_button_text="" style="display: none;">
 
-	<label for="payment_method_wirecard_ee_paypal">
-		Wirecard PayPal <img src="http://295511595319708-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/wirecard-woocommerce-extension/constants/../assets/images/paypal.png" alt="Wirecard PayPal">	</label>
+	<label for="payment_method_wirecard_ee_giropay">
+		Wirecard giropay <img src="http://295511595319708-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/wirecard-woocommerce-extension/constants/../assets/images/giropay.png" alt="Wirecard giropay">	</label>
+			<div class="payment_box payment_method_wirecard_ee_giropay">
+			<input type="hidden" name="giropay_nonce" value="aa28674393">
+			<p class="form-row form-row-wide woocommerce-validated">
+				<label for="giropay_bic">BIC</label>
+				<input id="giropay_bic" class="input-text" type="text" name="giropay_bank_bic">
+			</p>		</div>
 	</li>
 		</ul>
 		<div class="form-row place-order">
@@ -735,7 +741,7 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 		
 		<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
 		
-		<input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="4978eb3b3b"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">	</div>
+		<input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="f1428edf1a"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">	</div>
 </div>
 
 	</div>
@@ -816,7 +822,7 @@ var wc_address_i18n_params = {"locale":"{\"AE\":{\"postcode\":{\"required\":fals
 </script>
 <script src="http://295511595319708-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min.js?ver=3.9.3"></script>
 <script>
-var wc_checkout_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","update_order_review_nonce":"13fe2c02b8","apply_coupon_nonce":"9db22d7678","remove_coupon_nonce":"0eb57e2d80","option_guest_checkout":"yes","checkout_url":"\/?wc-ajax=checkout","is_checkout":"1","debug_mode":"","i18n_checkout_error":"Error processing checkout. Please try again."};
+var wc_checkout_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","update_order_review_nonce":"21618b59a5","apply_coupon_nonce":"331f7a1485","remove_coupon_nonce":"ce03741327","option_guest_checkout":"yes","checkout_url":"\/?wc-ajax=checkout","is_checkout":"1","debug_mode":"","i18n_checkout_error":"Error processing checkout. Please try again."};
 </script>
 <script src="http://295511595319708-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/frontend/checkout.min.js?ver=3.9.3"></script>
 <script>
