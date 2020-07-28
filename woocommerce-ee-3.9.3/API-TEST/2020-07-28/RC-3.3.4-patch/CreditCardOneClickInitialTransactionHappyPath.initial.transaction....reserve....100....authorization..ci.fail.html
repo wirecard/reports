@@ -516,7 +516,7 @@ body /shadow-deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action
 body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
 </style></head>
 
-<body class="page-template-default page page-id-55 wp-embed-responsive theme-storefront woocommerce-checkout woocommerce-page woocommerce-js storefront-full-width-content storefront-align-wide right-sidebar woocommerce-active sf-input-focused" style="">
+<body class="page-template-default page page-id-55 logged-in wp-embed-responsive theme-storefront woocommerce-checkout woocommerce-page woocommerce-order-pay woocommerce-js storefront-full-width-content storefront-align-wide right-sidebar woocommerce-active">
 
 
 
@@ -566,7 +566,7 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 			</div></div>
 	</header><!-- #masthead -->
 
-	<div class="storefront-breadcrumb"><div class="col-full"><nav class="woocommerce-breadcrumb"><a href="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io">Home</a><span class="breadcrumb-separator"> / </span>Checkout</nav></div></div>
+	<div class="storefront-breadcrumb"><div class="col-full"><nav class="woocommerce-breadcrumb"><a href="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io">Home</a><span class="breadcrumb-separator"> / </span><a href="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/checkout/">Checkout</a><span class="breadcrumb-separator"> / </span>Pay for order</nav></div></div>
 	<div id="content" class="site-content" tabindex="-1">
 		<div class="col-full">
 
@@ -577,172 +577,62 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 			
 <article id="post-55" class="post-55 page type-page status-publish hentry">
 			<header class="entry-header">
-			<h1 class="entry-title">Checkout</h1>		</header><!-- .entry-header -->
+			<h1 class="entry-title">Pay for order</h1>		</header><!-- .entry-header -->
 				<div class="entry-content">
-			<div class="woocommerce"><div class="woocommerce-notices-wrapper"></div><div class="woocommerce-form-coupon-toggle">
-	
-	<div class="woocommerce-info">
-		Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>	</div>
-</div>
-
-<form class="checkout_coupon woocommerce-form-coupon" method="post" style="display:none">
-
-	<p>If you have a coupon code, please apply it below.</p>
-
-	<p class="form-row form-row-first">
-		<input type="text" name="coupon_code" class="input-text" placeholder="Coupon code" id="coupon_code" value="">
-	</p>
-
-	<p class="form-row form-row-last">
-		<button type="submit" class="button" name="apply_coupon" value="Apply coupon">Apply coupon</button>
-	</p>
-
-	<div class="clear"></div>
-</form>
-<div class="woocommerce-notices-wrapper"></div>
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/checkout/" enctype="multipart/form-data" novalidate="novalidate" style="position: static; zoom: 1;"><div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout"><ul class="woocommerce-error" role="alert">
-			<li>
-			Payment or transaction was identified as duplicate  Please do not try again.<br>
-		</li>
-	</ul>
-</div>
-
-	
-		
-		<div class="col2-set" id="customer_details">
-			<div class="col-1">
-				<div class="woocommerce-billing-fields">
-	
-		<h3>Billing details</h3>
-
-	
-	
-	<div class="woocommerce-billing-fields__field-wrapper">
-			<p class="form-row form-row-first validate-required woocommerce-validated" id="billing_first_name_field" data-priority="10"><label for="billing_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_first_name" id="billing_first_name" placeholder="" value="" autocomplete="given-name"></span></p><p class="form-row form-row-last validate-required woocommerce-validated" id="billing_last_name_field" data-priority="20"><label for="billing_last_name" class="">Last name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_last_name" id="billing_last_name" placeholder="" value="" autocomplete="family-name"></span></p><p class="form-row form-row-wide woocommerce-validated" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_company" id="billing_company" placeholder="" value="" autocomplete="organization"></span></p><p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Country&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><select name="billing_country" id="billing_country" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true"><option value="">Select a country…</option><option value="AX">Åland Islands</option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT" selected="selected">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="PW">Belau</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curaçao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MK">North Macedonia</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="ST">São Tomé and Príncipe</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Martin (Dutch part)</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia/Sandwich Islands</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom (UK)</option><option value="US">United States (US)</option><option value="UM">United States (US) Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select><span class="select2 select2-container select2-container--default select2-container--above" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-billing_country-container" role="combobox"><span class="select2-selection__rendered" id="select2-billing_country-container" role="textbox" aria-readonly="true" title="Austria">Austria</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span><noscript><button type="submit" name="woocommerce_checkout_update_totals" value="Update country">Update country</button></noscript></span></p><p class="form-row form-row-wide address-field validate-required woocommerce-validated" id="billing_address_1_field" data-priority="50"><label for="billing_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="House number and street name" value="" autocomplete="address-line1" data-placeholder="House number and street name"></span></p><p class="form-row form-row-wide address-field woocommerce-validated" id="billing_address_2_field" data-priority="60"><label for="billing_address_2" class="screen-reader-text">Apartment, suite, unit etc. (optional)&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_address_2" id="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)" value="" autocomplete="address-line2" data-placeholder="Apartment, suite, unit etc. (optional)"></span></p><p class="form-row form-row-wide address-field validate-required validate-postcode woocommerce-validated" id="billing_postcode_field" data-priority="65" data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label for="billing_postcode" class="">Postcode / ZIP&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_postcode" id="billing_postcode" placeholder="" value="" autocomplete="postal-code"></span></p><p class="form-row form-row-wide address-field validate-required woocommerce-validated" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="billing_city" id="billing_city" placeholder="" value="" autocomplete="address-level2"></span></p><p class="form-row form-row-wide address-field validate-state" id="billing_state_field" style="display: none" data-o_class="form-row form-row-wide address-field validate-state"><label for="billing_state" class="">State / County&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="hidden" id="billing_state" name="billing_state" placeholder="" data-input-classes="" class="hidden"></span></p><p class="form-row form-row-wide validate-required validate-phone woocommerce-validated" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Phone&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder="" value="" autocomplete="tel"></span></p><p class="form-row form-row-wide validate-required validate-email woocommerce-validated" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Email address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="email" class="input-text " name="billing_email" id="billing_email" placeholder="" value="" autocomplete="email username"></span></p></div>
-
-	</div>
-
-			</div>
-
-			<div class="col-2">
-				<div class="woocommerce-shipping-fields">
-	
-		<h3 id="ship-to-different-address">
-			<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
-				<input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" type="checkbox" name="ship_to_different_address" value="1"> <span>Ship to a different address?</span>
-			</label>
-		</h3>
-
-		<div class="shipping_address" style="display: none;">
-
-			
-			<div class="woocommerce-shipping-fields__field-wrapper">
-							<p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field" id="shipping_first_name_field" data-priority="10"><label for="shipping_first_name" class="">First name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_first_name" id="shipping_first_name" placeholder="" value="" autocomplete="given-name"></span></p><p class="form-row form-row-last validate-required woocommerce-invalid woocommerce-invalid-required-field" id="shipping_last_name_field" data-priority="20"><label for="shipping_last_name" class="">Last name&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_last_name" id="shipping_last_name" placeholder="" value="" autocomplete="family-name"></span></p><p class="form-row form-row-wide woocommerce-validated" id="shipping_company_field" data-priority="30"><label for="shipping_company" class="">Company name&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_company" id="shipping_company" placeholder="" value="" autocomplete="organization"></span></p><p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="shipping_country_field" data-priority="40"><label for="shipping_country" class="">Country&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><select name="shipping_country" id="shipping_country" class="country_to_state country_select select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true"><option value="">Select a country…</option><option value="AX">Åland Islands</option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT" selected="selected">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="PW">Belau</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire, Saint Eustatius and Saba</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curaçao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MK">North Macedonia</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russia</option><option value="RW">Rwanda</option><option value="ST">São Tomé and Príncipe</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Martin (Dutch part)</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia/Sandwich Islands</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom (UK)</option><option value="US">United States (US)</option><option value="UM">United States (US) Minor Outlying Islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-shipping_country-container" role="combobox"><span class="select2-selection__rendered" id="select2-shipping_country-container" role="textbox" aria-readonly="true" title="Austria">Austria</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span><noscript><button type="submit" name="woocommerce_checkout_update_totals" value="Update country">Update country</button></noscript></span></p><p class="form-row form-row-wide address-field validate-required woocommerce-invalid woocommerce-invalid-required-field" id="shipping_address_1_field" data-priority="50"><label for="shipping_address_1" class="">Street address&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_address_1" id="shipping_address_1" placeholder="House number and street name" value="" autocomplete="address-line1" data-placeholder="House number and street name"></span></p><p class="form-row form-row-wide address-field woocommerce-validated" id="shipping_address_2_field" data-priority="60"><label for="shipping_address_2" class="screen-reader-text">Apartment, suite, unit etc. (optional)&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_address_2" id="shipping_address_2" placeholder="Apartment, suite, unit etc. (optional)" value="" autocomplete="address-line2" data-placeholder="Apartment, suite, unit etc. (optional)"></span></p><p class="form-row form-row-wide address-field validate-required validate-postcode woocommerce-invalid woocommerce-invalid-required-field" id="shipping_postcode_field" data-priority="65" data-o_class="form-row form-row-wide address-field validate-required validate-postcode"><label for="shipping_postcode" class="">Postcode / ZIP&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_postcode" id="shipping_postcode" placeholder="" value="" autocomplete="postal-code"></span></p><p class="form-row form-row-wide address-field validate-required woocommerce-invalid woocommerce-invalid-required-field" id="shipping_city_field" data-priority="70" data-o_class="form-row form-row-wide address-field validate-required"><label for="shipping_city" class="">Town / City&nbsp;<abbr class="required" title="required">*</abbr></label><span class="woocommerce-input-wrapper"><input type="text" class="input-text " name="shipping_city" id="shipping_city" placeholder="" value="" autocomplete="address-level2"></span></p><p class="form-row form-row-wide address-field validate-state" id="shipping_state_field" style="display: none" data-o_class="form-row form-row-wide address-field validate-state"><label for="shipping_state" class="">State / County&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><input type="hidden" id="shipping_state" name="shipping_state" placeholder="" data-input-classes="" class="hidden"></span></p></div>
-
-			
-		</div>
-
-	</div>
-<div class="woocommerce-additional-fields">
-	
-	
-		
-		<div class="woocommerce-additional-fields__field-wrapper">
-							<p class="form-row notes woocommerce-validated" id="order_comments_field" data-priority=""><label for="order_comments" class="">Order notes&nbsp;<span class="optional">(optional)</span></label><span class="woocommerce-input-wrapper"><textarea name="order_comments" class="input-text " id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea></span></p>					</div>
-
-	
-	</div>
-			</div>
-		</div>
-
-		
-		
-		
-	<h3 id="order_review_heading">Your order</h3>
-	
-	
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<table class="shop_table woocommerce-checkout-review-order-table" style="position: static; zoom: 1;">
-	<thead>
-		<tr>
-			<th class="product-name">Product</th>
-			<th class="product-total">Subtotal</th>
-		</tr>
-	</thead>
-	<tbody>
-						<tr class="cart_item">
-					<td class="product-name">
-						Polo&nbsp;						 <strong class="product-quantity">×&nbsp;6</strong>											</td>
-					<td class="product-total">
-						<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>120.00</span>					</td>
-				</tr>
-					</tbody>
-	<tfoot>
-
-		<tr class="cart-subtotal">
-			<th>Subtotal</th>
-			<td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>120.00</span></td>
-		</tr>
-
-		
-		
-			
-			<tr class="woocommerce-shipping-totals shipping">
-	<th>Shipping</th>
-	<td data-title="Shipping">
-					<ul id="shipping_method" class="woocommerce-shipping-methods">
-									<li>
-						<input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate10" value="flat_rate:10" class="shipping_method"><label for="shipping_method_0_flat_rate10">Flat rate</label>					</li>
-							</ul>
-						
-		
-			</td>
-</tr>
-
-			
-		
-		
-		
-		
-		<tr class="order-total">
-			<th>Total</th>
-			<td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>120.00</span></strong> </td>
-		</tr>
-
-		
-	</tfoot>
-</table>
-
-<div id="payment" class="woocommerce-checkout-payment" style="position: static; zoom: 1;">
-			<ul class="wc_payment_methods payment_methods methods">
-			<li class="wc_payment_method payment_method_wirecard_ee_paypal">
-	<input id="payment_method_wirecard_ee_paypal" type="radio" class="input-radio" name="payment_method" value="wirecard_ee_paypal" checked="checked" data-order_button_text="" style="display: none;">
-
-	<label for="payment_method_wirecard_ee_paypal">
-		Wirecard PayPal <img src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/wirecard-woocommerce-extension/constants/../assets/images/paypal.png" alt="Wirecard PayPal">	</label>
+			<div class="woocommerce"><div class="woocommerce-notices-wrapper"></div>
+<ul class="order_details">
+	<li class="order">
+		Order number:		<strong>62</strong>
 	</li>
-		</ul>
-		<div class="form-row place-order">
-		<noscript>
-			Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals">Update totals</button>
-		</noscript>
+	<li class="date">
+		Date:		<strong>July 28, 2020</strong>
+	</li>
+	<li class="total">
+		Total:		<strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">€</span>120.00</span></strong>
+	</li>
+		<li class="method">
+		Payment method:		<strong>Wirecard Credit Card</strong>
+	</li>
+	</ul>
 
-			<div class="woocommerce-terms-and-conditions-wrapper">
-		<div class="woocommerce-privacy-policy-text"><p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/?page_id=3" class="woocommerce-privacy-policy-link" target="_blank">privacy policy</a>.</p>
-</div>
+<h2 class="credit-card-heading">Card Payments</h2>
+
+    <div id="wc_payment_method_wirecard_creditcard_vault">	
+     <fieldset>
+ 	<legend>Use saved card</legend>
+				<div class="cards"><table id="vault-table"><tbody><tr>
+				<td class="wd-card-selector"><input class="token" name="token" type="radio" data-token="5168216323601006"></td>
+				<td class="wd-card-number">541333******1006</td>
+				<td class="wd-card-delete-disabled" id="wd-token-5168216323601006" data-vault-id="1"><div class="delete-from-vault-disabled">Delete</div></td>
+			</tr></tbody></table></div>
+				<div class="clear"></div>
+				  </fieldset>
 			</div>
-	
+
 		
-		<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="Place order" data-value="Place order">Place order</button>
+			<div id="wc_payment_method_wirecard_new_credit_card">
+				<div id="wd-creditcard-messagecontainer" class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout" style=""><ul class="woocommerce-error" role="alert"><li>Seamless form render has timed out.</li></ul></div>
+				<div class="show-spinner" style="display: none;">
+					<div class="spinner" style="background: url('http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-admin/images/loading.gif') no-repeat;"></div>
+				</div>
+				
+				<form method="POST" id="wc_payment_method_wirecard_creditcard_response_form">
+					<input type="hidden" name="cc_nonce" value="b3d103eb6f">
+				</form>
+				
+				<div id="wc_payment_method_wirecard_creditcard_form"></div>
 		
-		<input type="hidden" id="woocommerce-process-checkout-nonce" name="woocommerce-process-checkout-nonce" value="dba060e829"><input type="hidden" name="_wp_http_referer" value="/?wc-ajax=update_order_review">	</div>
-</div>
-
-	</div>
-
-	
-</form>
-
+			<div class="save-later">
+				<label for="wirecard-store-card">
+				<input type="checkbox" id="wirecard-store-card">
+				&nbsp;Save for later use.</label>
+			</div>
+		
+				<button disabled="" id="seamless-submit" class="wd-submit checkout-button button alt wc-forward">Pay</button>
+				<div id="wd-cc-submit-spinner" class="spinner spinner-inline spinner-submit" style="display: none; background: url('http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-admin/images/loading.gif') no-repeat;"></div>
+			</div>
+		
+<div class="clear"></div>
 </div>
 					</div><!-- .entry-content -->
 		</article><!-- #post-## -->
@@ -791,12 +681,14 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
 	
 </div><!-- #page -->
 
-<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io"}},{"@type":"ListItem","position":2,"item":{"name":"Checkout","@id":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/checkout\/"}}]}</script>	<script type="text/javascript">
+<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io"}},{"@type":"ListItem","position":2,"item":{"name":"Checkout","@id":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/checkout\/"}},{"@type":"ListItem","position":3,"item":{"name":"Pay for order","@id":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/checkout\/order-pay\/62\/?key=wc_order_6rsVgBn6e0fVj"}}]}</script>	<script type="text/javascript">
 		var c = document.body.className;
 		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 		document.body.className = c;
 	</script>
-	<script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70"></script>
+	<link rel="stylesheet" id="basic_style-css" href="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/wirecard-woocommerce-extension/constants/..//assets/styles/frontend.css" media="">
+<link rel="stylesheet" id="jquery_ui_style-css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" media="">
+<script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70"></script>
 <script>
 var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
 </script>
@@ -816,7 +708,7 @@ var wc_address_i18n_params = {"locale":"{\"AE\":{\"postcode\":{\"required\":fals
 </script>
 <script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min.js?ver=3.9.3"></script>
 <script>
-var wc_checkout_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","update_order_review_nonce":"49bdc6bf9a","apply_coupon_nonce":"f3801d612d","remove_coupon_nonce":"dcf73726da","option_guest_checkout":"yes","checkout_url":"\/?wc-ajax=checkout","is_checkout":"1","debug_mode":"","i18n_checkout_error":"Error processing checkout. Please try again."};
+var wc_checkout_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","update_order_review_nonce":"73ffb435cb","apply_coupon_nonce":"a62cae7e21","remove_coupon_nonce":"fa0967a952","option_guest_checkout":"yes","checkout_url":"\/?wc-ajax=checkout","is_checkout":"0","debug_mode":"","i18n_checkout_error":"Error processing checkout. Please try again."};
 </script>
 <script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/woocommerce/assets/js/frontend/checkout.min.js?ver=3.9.3"></script>
 <script>
@@ -829,7 +721,13 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 <script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/themes/storefront/assets/js/woocommerce/header-cart.min.js?ver=2.5.8"></script>
 <script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/themes/storefront/assets/js/footer.min.js?ver=2.5.8"></script>
 <script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-includes/js/wp-embed.min.js?ver=5.4.2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script src="https://wpp-test.wirecard.com/loader/paymentPage.js"></script>
+<script>
+var phpVars = {"ajax_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=get_credit_card_request_data","submit_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=submit_creditcard_response","token_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=submit_token_response","base_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/","vault_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=save_cc_to_vault","vault_get_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=get_cc_from_vault","vault_delete_url":"http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/?wc-api=remove_cc_from_vault","spinner":"<div class=\"spinner spinner-inline spinner-inline-delete-token\" style=\"display:inline-block; background: url('http:\/\/116231595924588-woocommerce-ee-3.9.3.ngrok.io\/wp-admin\/images\/loading.gif') no-repeat;\"><\/div>"};
+</script>
+<script src="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/wp-content/plugins/wirecard-woocommerce-extension/constants/../assets/js/creditcard.js"></script>
 
 
 
-</body></html>
+<form id="undefined" method="POST" action="https://wpp-test.wirecard.com/api/payment/load" target="wirecard-integrated-payment-page-frame"><input type="hidden" name="request_time_stamp" value="20200728083254"><input type="hidden" name="request_id" value="c34b5a82f7a08fe3faa09ff1897a7697680f641c1e5cfd2546009321dd3f96c8"><input type="hidden" name="transaction_type" value="authorization"><input type="hidden" name="merchant_account_id" value="508b8896-b37d-4614-845c-26bf8bf2c948"><input type="hidden" name="requested_amount" value="120"><input type="hidden" name="requested_amount_currency" value="EUR"><input type="hidden" name="locale" value="en"><input type="hidden" name="payment_method" value="creditcard"><input type="hidden" name="attempt_three_d" value="true"><input type="hidden" name="shop_system_name" value="WooCommerce"><input type="hidden" name="shop_system_version" value="3.9.3+WordPress+5.4.2"><input type="hidden" name="plugin_name" value="woocommerce-ee+Wirecard"><input type="hidden" name="plugin_version" value="3.3.4"><input type="hidden" name="email" value="registered_test@example.com"><input type="hidden" name="phone" value="123456"><input type="hidden" name="city" value="Graz"><input type="hidden" name="country" value="AT"><input type="hidden" name="postal_code" value="8010"><input type="hidden" name="street1" value="Some Another Street"><input type="hidden" name="merchant_crm_id" value="8"><input type="hidden" name="authentication_method" value="02"><input type="hidden" name="authentication_timestamp" value="2020-07-28T08:32:54Z"><input type="hidden" name="challenge_indicator" value="01"><input type="hidden" name="account_creation_date" value="2020-07-28"><input type="hidden" name="account_update_date" value="2020-07-28"><input type="hidden" name="shipping_address_first_use" value="2020-07-28"><input type="hidden" name="card_creation_date" value="2020-07-28"><input type="hidden" name="purchases_last_six_months" value="1"><input type="hidden" name="shipping_city" value="Graz"><input type="hidden" name="shipping_country" value="AT"><input type="hidden" name="shipping_postal_code" value="8010"><input type="hidden" name="shipping_street1" value="Some Another Street"><input type="hidden" name="orderItems1.name" value="Polo"><input type="hidden" name="orderItems1.quantity" value="6"><input type="hidden" name="orderItems1.amount.value" value="20"><input type="hidden" name="orderItems1.amount.currency" value="EUR"><input type="hidden" name="orderItems1.articleNumber" value="17"><input type="hidden" name="orderItems1.taxRate" value="0"><input type="hidden" name="field_name_1" value="paysdk_orderId"><input type="hidden" name="field_value_1" value="62"><input type="hidden" name="field_name_2" value="paysdk_multisite"><input type="hidden" name="field_value_2" value=""><input type="hidden" name="field_name_3" value="paysdk_phpVersion"><input type="hidden" name="field_value_3" value="7.2.32"><input type="hidden" name="success_redirect_url" value="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/?wc-api=WC_Wirecard_Payment_Gateway_Redirect&amp;order-id=62&amp;payment-state=success&amp;payment-method=creditcard"><input type="hidden" name="cancel_redirect_url" value="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/?wc-api=WC_Wirecard_Payment_Gateway_Redirect&amp;order-id=62&amp;payment-state=cancel&amp;payment-method=creditcard"><input type="hidden" name="fail_redirect_url" value="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/?wc-api=WC_Wirecard_Payment_Gateway_Redirect&amp;order-id=62&amp;payment-state=failure&amp;payment-method=creditcard"><input type="hidden" name="risk_info_delivery_mail" value="registered_test@example.com"><input type="hidden" name="notification_transaction_url" value="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io/?wc-api=WC_Wirecard_Payment_Gateway&amp;payment-method=creditcard&amp;order-id=62"><input type="hidden" name="notifications_format" value="application/xml"><input type="hidden" name="descriptor" value="test62"><input type="hidden" name="order_number" value="62"><input type="hidden" name="ip_address" value="199.7.164.58"><input type="hidden" name="consumer_id" value="8"><input type="hidden" name="iso_transaction_type" value="01"><input type="hidden" name="request_signature" value="3f46f84477e6b043e7e1a223a7519e53e0c0725fec28571f6f26741646aff670"><input type="hidden" name="wpp_options_mode" value="seamless-no-redirect"><input type="hidden" name="wpp_options_frame_ancestor" value="http://116231595924588-woocommerce-ee-3.9.3.ngrok.io"></form></body></html>
