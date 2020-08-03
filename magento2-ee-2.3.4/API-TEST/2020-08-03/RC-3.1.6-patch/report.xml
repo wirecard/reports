@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci_magento2)" tests="7" assertions="49" errors="0" failures="0" skipped="0" time="1217.769054">
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="238.995193"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="112.324290"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="138.075137"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="142.391247"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="9" time="232.778227"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="6" time="178.696475"/>
-    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="6" time="174.508485"/>
+  <testsuite name="acceptance (ci_magento2)" tests="7" assertions="40" errors="0" failures="2" skipped="0" time="1279.232599">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="276.353052"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="130.332692"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="127.588218">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "reserve", "100", "authorization"
+Failed asserting that  on page /index.php/checkout/#shipping
+--&gt; Checkout
+Sign In
+Shipping Review &amp; Payments
+Shipping Address
+Email Address
+Tooltip
+You can create an account after checkout.
+First Name
+Last Name
+Company
+Street Address
+Street Address: Line 1
+Street Address: Line 2
+Street Address: Line 3
+City
+State/Province
+Please select a region, state or province.
+[Content too long to display. See complete response in '/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_output/' directory]
+--&gt; contains "Wirecard Credit Card".
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:163
+</failure>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="146.383596"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="9" time="285.763811"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="6" time="196.517513"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="2" time="116.293717">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
+Failed asserting that  on page /index.php/checkout/#shipping
+--&gt; Checkout
+Sign In
+Shipping Review &amp; Payments
+Shipping Address
+Email Address
+Tooltip
+You can create an account after checkout.
+First Name
+Last Name
+Company
+Street Address
+Street Address: Line 1
+Street Address: Line 2
+Street Address: Line 3
+City
+State/Province
+Please select a region, state or province.
+[Content too long to display. See complete response in '/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_output/' directory]
+--&gt; contains "Wirecard PayPal".
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:163
+</failure>
+    </testcase>
   </testsuite>
 </testsuites>
