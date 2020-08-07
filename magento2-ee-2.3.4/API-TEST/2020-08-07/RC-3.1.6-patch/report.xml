@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (ci_magento2)" tests="7" assertions="35" errors="3" failures="1" skipped="0" time="1217.051636">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="262.053380"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="110.330398"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="7" time="131.176496"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="2" time="118.871101">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase"
+Failed asserting that  on page /index.php/checkout/#shipping
+--&gt; Checkout
+Sign In
+Shipping Review &amp; Payments
+Shipping Address
+Email Address
+Tooltip
+You can create an account after checkout.
+First Name
+Last Name
+Company
+Street Address
+Street Address: Line 1
+Street Address: Line 2
+Street Address: Line 3
+City
+State/Province
+Please select a region, state or province.
+[Content too long to display. See complete response in '/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_output/' directory]
+--&gt; contains "Wirecard Credit Card".
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:163
+</failure>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="4" time="124.851588">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
+Facebook\WebDriver\Exception\UnknownServerException: javascript error: Cannot read property 'getAttribute' of null
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '199-7-164-60', ip: '199.7.164.60', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1627}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir6576_2097429131}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: ed5d2e0d24d9bcbd633e193adb13a237
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:334
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2671
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:67
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:24
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:184
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="4" time="235.977698">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "pay", "purchase"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='acceptAllButton']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 42 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '208-52-164-116', ip: '208.52.164.116', os.name: 'windows', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1555}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir3916_979423963}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1c1a4c2c7dcf135bbbf1dd5389eeaa15
+*** Element info: {Using=xpath, value=//*[@id='acceptAllButton']}
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:423
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2453
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:51
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:40
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:24
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:223
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="4" time="233.790975">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">PayPalInitialTransaction: initial transaction | "reserve", "authorization"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='acceptAllButton']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.19041 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-11-238', ip: '207.254.11.238', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1662}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir8840_770119133}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 8d01febebf2ce2eb7746226ab1929f2f
+*** Element info: {Using=xpath, value=//*[@id='acceptAllButton']}
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:423
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2453
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:51
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:40
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/PayPalStep.php:24
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:223
+</error>
+    </testcase>
+  </testsuite>
+</testsuites>
