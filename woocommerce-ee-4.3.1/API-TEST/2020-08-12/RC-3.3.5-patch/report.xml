@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (ci)" tests="17" assertions="54" errors="1" failures="0" skipped="0" time="856.645055">
+    <testcase file="/project/tests/acceptance/Alipay/AlipayCrossBorderInitialTransaction.feature" name="AlipayCrossBorderInitialTransaction: initial transaction | &quot;debit&quot;" feature="AlipayCrossBorderInitialTransaction" assertions="1" time="78.939167"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="4" time="27.566694"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="4" time="26.120597"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="4" time="44.355753"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="1" time="29.039603">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='wc_payment_method_wirecard_new_credit_card']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.19041 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-19-42', ip: '207.254.19.42', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:4240}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir8416_485689084}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 84e5f7c5d5d2fcd4c2cce6434e66300e
+*** Element info: {Using=xpath, value=//*[@id='wc_payment_method_wirecard_new_credit_card']}
+
+/repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/repo/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/repo/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/project/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/project/tests/_support/Step/Acceptance/ShopSystem/WoocommerceBackendStep.php:146
+/project/tests/_support/Step/Acceptance/ShopSystem/WoocommerceStep.php:200
+/project/tests/_support/AcceptanceTester.php:340
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="7" time="95.290466"/>
+    <testcase file="/project/tests/acceptance/Eps/EpsInitialTransactionHappyPath.feature" name="EpsInitialTransactionHappyPath: initial transaction | &quot;debit&quot;, 20, &quot;debit&quot;" feature="EpsInitialTransactionHappyPath" assertions="3" time="44.974613"/>
+    <testcase file="/project/tests/acceptance/GuaranteedInvoice/GuaranteedInvoiceInitialTransactionHappyPath.feature" name="GuaranteedInvoiceInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="GuaranteedInvoiceInitialTransactionHappyPath" assertions="3" time="30.133861"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;" feature="PayPalInitialTransaction" assertions="3" time="97.130361"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;" feature="PayPalInitialTransaction" assertions="3" time="96.369447"/>
+    <testcase file="/project/tests/acceptance/PaymentOnInvoicePaymentInAdvance/PaymentOnInvoicePaymentInAdvanceInitialTransactionHappyPath.feature" name="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment On Invoice&quot;, 100, &quot;authorization&quot;" feature="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath" assertions="3" time="33.498100"/>
+    <testcase file="/project/tests/acceptance/PaymentOnInvoicePaymentInAdvance/PaymentOnInvoicePaymentInAdvanceInitialTransactionHappyPath.feature" name="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath: initial transaction | &quot;Payment In Advance&quot;, 100, &quot;authorization&quot;" feature="PaymentOnInvoice/PaymentInAdvanceInitialTransactionHappyPath" assertions="3" time="24.266975"/>
+    <testcase file="/project/tests/acceptance/SEPADirectDebit/SEPADirectDebitInitialTransactionHappyPath.feature" name="SEPADirectDebitInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="SEPADirectDebitInitialTransactionHappyPath" assertions="3" time="22.953406"/>
+    <testcase file="/project/tests/acceptance/SEPADirectDebit/SEPADirectDebitInitialTransactionHappyPath.feature" name="SEPADirectDebitInitialTransactionHappyPath: initial transaction | &quot;pay&quot;, &quot;20&quot;, &quot;debit&quot;" feature="SEPADirectDebitInitialTransactionHappyPath" assertions="3" time="29.395094"/>
+    <testcase file="/project/tests/acceptance/Sofort/SofortInitialTransactionHappyPath.feature" name="SofortInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="SofortInitialTransaction" assertions="3" time="108.654938"/>
+    <testcase file="/project/tests/acceptance/giropay/giropayInitialTransactionHappyPath.feature" name="giropayInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="giropayInitialTransaction" assertions="3" time="36.742475"/>
+    <testcase file="/project/tests/acceptance/iDEAL/IdealInitialTransactionHappyPath.feature" name="iDealInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;" feature="iDealInitialTransaction" assertions="3" time="31.213503"/>
+  </testsuite>
+</testsuites>
