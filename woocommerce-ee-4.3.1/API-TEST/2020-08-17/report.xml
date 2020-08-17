@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="1" assertions="6" errors="1" failures="0" skipped="0" time="133.128089">
-    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="6" time="133.128089">
-      <error type="Facebook\WebDriver\Exception\TimeoutException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
-Facebook\WebDriver\Exception\TimeoutException: Waited for 10 secs but text 'Use different card' still not found
+  <testsuite name="acceptance (ci)" tests="1" assertions="5" errors="1" failures="0" skipped="0" time="175.525334">
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="5" time="175.525334">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardOneClickInitialTransactionHappyPath: initial transaction | "reserve", "100", "authorization"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='password']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 31 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-10-189', ip: '207.254.10.189', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:7300}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir8136_486188040}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 61b2cd8d89a9dfc201af37a5d7542544
+*** Element info: {Using=xpath, value=//*[@id='password']}
 
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:71
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2480
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardOneClickStep.php:44
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:211
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:40
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:43
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:223
 </error>
     </testcase>
   </testsuite>
