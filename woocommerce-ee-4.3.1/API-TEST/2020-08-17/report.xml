@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="1" assertions="5" errors="1" failures="0" skipped="0" time="149.438470">
-    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="5" time="149.438470">
-      <error type="Facebook\WebDriver\Exception\ElementNotVisibleException">CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "20", "authorization"
-Facebook\WebDriver\Exception\ElementNotVisibleException: element not interactable
-  (Session info: chrome=84.0.4147.89)
-  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 6.2.9200 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 56 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: '199-7-165-244', ip: '199.7.165.244', os.name: 'windows', os.arch: 'x86', os.version: '6.2', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:4189}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir6512_120702177}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: 81d720caf987884575f38b4ae0b5ca8a
+  <testsuite name="acceptance (ci)" tests="1" assertions="6" errors="0" failures="1" skipped="0" time="204.921264">
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="6" time="204.921264">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "20", "authorization"
+Failed asserting that  on page /checkout/order-pay/68/?key=wc_order_4ZFHkmId3XFxE
+--&gt; Skip to navigation
+Skip to content
+test
+Just another WordPress site
+Search for:
+Search
+Home
+Cart
+Checkout
+My account
+Sample Page
+Shop
+€40.00 2 items
+Home / Checkout / Pay for order
+Pay for order
+ORDER NUMBER:
+68
+DATE:
+August 17, 2020
+TOTAL:
+€40.00
+PAYMENT METHOD:
+Wirecard Credit Card
+Card Paymen
+[Content too long to display. See complete response in '/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_output/' directory]
+--&gt; contains "Order received".
 
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:171
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebElement.php:59
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:1505
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardOneClickStep.php:47
-/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:211
-</error>
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:183
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:231
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
