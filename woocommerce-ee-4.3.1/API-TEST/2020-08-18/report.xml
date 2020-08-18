@@ -1,8 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="1" assertions="0" errors="0" failures="0" skipped="1" time="0.000000">
-    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/iDEAL/IdealInitialTransactionHappyPath.feature" name="iDealInitialTransaction: initial transaction | &quot;debit&quot;, &quot;debit&quot;, processing" feature="iDealInitialTransaction" assertions="0" time="0.000000">
-      <skipped/>
+  <testsuite name="acceptance (ci)" tests="4" assertions="18" errors="0" failures="1" skipped="0" time="214.792239">
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="5" time="32.579541"/>
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="5" time="32.994228"/>
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="5" time="52.169167"/>
+    <testcase file="/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="97.049303">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "pay", "100", "purchase", "processing"
+Failed asserting that  on page /engine/rest/hpp/acs/2d8523b2-b864-4473-bd01-d41a1afcbc12/
+--&gt; Your connection is not private
+Attackers might be trying to steal your information from api-test.wirecard.com (for example, passwords, messages, or credit cards). Learn more
+NET::ERR_CERTIFICATE_TRANSPARENCY_REQUIRED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Content too long to display. See complete response in '/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_output/' directory]
+--&gt; contains "Order received".
+
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:344
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:183
+/home/runner/work/shopsystems-ui-testsuite/shopsystems-ui-testsuite/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:231
+</failure>
     </testcase>
   </testsuite>
 </testsuites>
