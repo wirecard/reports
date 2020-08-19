@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (ci_magento2)" tests="7" assertions="34" errors="3" failures="0" skipped="0" time="1332.748684">
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="6" time="391.473452"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="6" time="165.967619"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="4" time="166.536814">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardInitialTransactionHappyPath: initial transaction 3DS | "reserve", "100", "authorization", "authorized"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='pp-cc-last-name']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-10-179', ip: '207.254.10.179', os.name: 'windows', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1516}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir6208_1020543735}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 3884ac2a9b7dc16633a3e41b1efa5232
+*** Element info: {Using=xpath, value=//*[@id='pp-cc-last-name']}
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:40
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:26
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:184
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="6" time="171.293723"/>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="3" time="161.519182">
+      <error type="Facebook\WebDriver\Exception\NoSuchElementException">CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "100", "authorization", "authorized"
+Facebook\WebDriver\Exception\NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='pp-cc-last-name']"}
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 42 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-76-104', ip: '207.254.76.104', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1660}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir3688_1353725333}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: a945d9d434cbaf0eb637fad5821d01d8
+*** Element info: {Using=xpath, value=//*[@id='pp-cc-last-name']}
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:163
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:214
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverExpectedCondition.php:176
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/WebDriverWait.php:54
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:2408
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:40
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/PaymentMethod/CreditCardStep.php:26
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:184
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="PayPalInitialTransaction" assertions="4" time="82.242376">
+      <error type="Facebook\WebDriver\Exception\UnknownServerException">PayPalInitialTransaction: initial transaction | "pay", "purchase", "processing"
+Facebook\WebDriver\Exception\UnknownServerException: element click intercepted: Element &lt;button class="action primary checkout" type="submit" data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('place_order')}
+                        " title="Place Order"&gt;...&lt;/button&gt; is not clickable at point (567, 634). Other element would receive the click: &lt;div class="loading-mask" data-role="loader" style="display: block;"&gt;...&lt;/div&gt;
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.16 seconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-10-2', ip: '207.254.10.2', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1656}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir4736_1046803516}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: bbabce106742d499d619bd513f5a2165
+
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:175
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebElement.php:74
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/_generated/AcceptanceTesterActions.php:628
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/GenericStep.php:52
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/Step/Acceptance/ShopSystem/Magento2Step.php:324
+/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/_support/AcceptanceTester.php:344
+</error>
+    </testcase>
+    <testcase file="/home/travis/build/wirecard/magento2-ee/shopsystems-ui-testsuite/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="PayPalInitialTransaction" assertions="5" time="193.715518"/>
+  </testsuite>
+</testsuites>
