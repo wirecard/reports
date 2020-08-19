@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (ci)" tests="7" assertions="19" errors="0" failures="2" skipped="0" time="493.932091">
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="51.636895"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="40.844401"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="43.502228"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="55.075023"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="3" time="99.056640">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | "reserve", "100", "authorization", "authorized"
+Failed asserting that  on page /acssim/app/bank
+--&gt; This is a TEST SYSTEM page
+Enter SecureCode™
+Please insert your MasterCard®-Secure code into the field below. With entering the code you verify your identity for this purchase.
+Merchant Wirecard Demo Shop
+Amount 95.60 EUR
+Transaction Date 2020-08-19 08:37:40
+Card Number xxxxxxxxxxxx1006
+Personal 
+[Content too long to display. See complete response in '/project/tests/_output/' directory]
+--&gt; contains "YOUR ORDER IS CONFIRMED".
+
+/project/tests/_support/_generated/AcceptanceTesterActions.php:344
+/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:183
+/project/tests/_support/AcceptanceTester.php:231
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</failure>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="PayPalInitialTransaction" assertions="2" time="98.341591">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">PayPalInitialTransaction: initial transaction | "pay", "purchase", "processing"
+Failed asserting that  on page /index.php?controller=order-confirmation&amp;id_cart=12&amp;id_module=64&amp;id_order=11&amp;key=cf203523d010cd1813e5308a3d7c93ba
+--&gt; 500 Server Error
+Oops, something went wrong.
+
+Try to refresh this page or feel free to contact us if the problem persists.
+--&gt; contains "YOUR ORDER IS CONFIRMED".
+
+/project/tests/_support/_generated/AcceptanceTesterActions.php:344
+/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:183
+/project/tests/_support/AcceptanceTester.php:231
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</failure>
+    </testcase>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="PayPalInitialTransaction" assertions="2" time="105.475313"/>
+  </testsuite>
+</testsuites>
