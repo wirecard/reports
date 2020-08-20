@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="acceptance (ci)" tests="7" assertions="24" errors="0" failures="1" skipped="0" time="464.080607">
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="47.684734"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="40.457148"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="47.748082"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="48.529763"/>
-    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="8" time="73.529321"/>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="PayPalInitialTransaction" assertions="2" time="100.971062">
+  <testsuite name="acceptance (ci)" tests="7" assertions="21" errors="1" failures="1" skipped="0" time="454.765308">
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="51.168537"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | &quot;pay&quot;, &quot;20&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="0" time="3.714094">
+      <error type="Facebook\WebDriver\Exception\StaleElementReferenceException">CreditCardInitialTransactionHappyPath: initial transaction Non 3DS | "pay", "20", "purchase", "processing"
+Facebook\WebDriver\Exception\StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.89)
+  (Driver info: chromedriver=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 38 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: '207-254-19-62', ip: '207.254.19.62', os.name: 'windows', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:1662}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=84.0.4147.30 (48b3e868b4cc0aa7e8149519690b6f6949e110a8-refs/branch-heads/4147@{#310}), userDataDir=C:\Windows\proxy\scoped_dir7964_283850144}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=84.0.4147.89, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 4868af74d0dbb53d7067b7c2d1cfce43
+
+/repo/vendor/php-webdriver/webdriver/lib/Exception/WebDriverException.php:169
+/repo/vendor/php-webdriver/webdriver/lib/Remote/HttpCommandExecutor.php:376
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebDriver.php:590
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteExecuteMethod.php:27
+/repo/vendor/php-webdriver/webdriver/lib/Remote/RemoteWebElement.php:74
+/project/tests/_support/_generated/AcceptanceTesterActions.php:628
+/project/tests/_support/Step/Acceptance/GenericStep.php:52
+/project/tests/_support/Step/Acceptance/ShopSystem/GenericShopSystemStep.php:133
+/project/tests/_support/Step/Acceptance/ShopSystem/PrestashopStep.php:160
+/project/tests/_support/AcceptanceTester.php:152
+/repo/app.php:46
+/repo/app.php:47
+/repo/codecept:7
+</error>
+    </testcase>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;reserve&quot;, &quot;100&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="52.235205"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardInitialTransactionHappyPath.feature" name="CreditCardInitialTransactionHappyPath: initial transaction 3DS | &quot;pay&quot;, &quot;100&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="CreditCardInitialTransactionHappyPath" assertions="3" time="58.108005"/>
+    <testcase file="/project/tests/acceptance/CreditCard/CreditCardOneClickInitialTransactionHappyPath.feature" name="CreditCardOneClickInitialTransactionHappyPath: initial transaction Non 3DS | &quot;reserve&quot;, &quot;20&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="CreditCardOneClickInitialTransactionHappyPath" assertions="8" time="72.428959"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;pay&quot;, &quot;purchase&quot;, &quot;processing&quot;" feature="PayPalInitialTransaction" assertions="2" time="106.392042">
       <failure type="PHPUnit\Framework\ExpectationFailedException">PayPalInitialTransaction: initial transaction | "pay", "purchase", "processing"
-Failed asserting that  on page /index.php?controller=order-confirmation&amp;id_cart=13&amp;id_module=64&amp;id_order=12&amp;key=928fc51c84fe21181b0ce26b0f76ba77
+Failed asserting that  on page /index.php?controller=order-confirmation&amp;id_cart=12&amp;id_module=64&amp;id_order=11&amp;key=07f9f797c6f026907b2bb285da773e5e
 --&gt; 500 Server Error
 Oops, something went wrong.
 
@@ -23,6 +50,6 @@ Try to refresh this page or feel free to contact us if the problem persists.
 /repo/codecept:7
 </failure>
     </testcase>
-    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="PayPalInitialTransaction" assertions="2" time="105.160496"/>
+    <testcase file="/project/tests/acceptance/PayPal/PayPalInitialTransactionHappyPath.feature" name="PayPalInitialTransaction: initial transaction | &quot;reserve&quot;, &quot;authorization&quot;, &quot;authorized&quot;" feature="PayPalInitialTransaction" assertions="2" time="110.718467"/>
   </testsuite>
 </testsuites>
